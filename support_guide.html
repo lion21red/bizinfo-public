@@ -1,0 +1,1512 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="data/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data/icon_180.png">
+<title>지원 서비스 안내 · 사업나침반</title>
+<meta name="description" content="정부·지자체 지원사업이 실제로 무엇을 해 주는지 컨설팅·판로·정책자금 등 12가지 유형별로 정리했습니다.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+/* 토큰: design.py / plan2026.html 과 같은 값. scripts/build_support_guide.py가 빈자리를 채워 docs/mockups/support_guide.html을 만든다 */
+:root{
+  --bg-page:#F8FAFC; --bg-surface:#FFFFFF; --bg-muted:#F1F5F9; --bg-accent:#EFF6FF;
+  --action:#0F172A; --text:#0F172A; --text-2:#475569; --text-3:#64748B; --text-accent:#2563EB;
+  --border:#E2E8F0; --border-strong:#CBD5E1; --blue-200:#BFDBFE; --ok-bg:#F0FDF4; --ok:#15803D;
+  --r-md:12px; --r-lg:16px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg-page);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mock-note{background:#FFFBEB;border-bottom:1px solid #FDE68A;color:#92400E;font-size:12.5px;text-align:center;padding:6px 16px}
+.gnb{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.gnb .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap}
+.logo i{width:28px;height:28px;border-radius:8px;background:var(--action);display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px}
+.gnb .crumb{flex:1;font-size:14px;color:var(--text-2)}
+.gnb .crumb a{text-decoration:none;color:var(--text-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-weight:600;text-decoration:none;
+  background:var(--action);color:#fff;border:1px solid var(--action);padding:9px 16px;font-size:14px;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--text);border-color:var(--border-strong)}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:#334155;white-space:nowrap}
+
+.head{padding:48px 0 28px;background:linear-gradient(var(--bg-surface),var(--bg-page))}
+.asof{background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:var(--r-md);padding:10px 14px;font-size:13.5px;color:#1E3A8A;margin:0 0 24px}
+.asof a{color:var(--text-accent);font-weight:700}
+.eyebrow{font-size:13px;font-weight:600;color:var(--text-accent);margin:0 0 8px}
+h1{font-size:34px;line-height:1.25;letter-spacing:-.02em;margin:0 0 10px}
+h2{font-size:24px;letter-spacing:-.01em;margin:0 0 6px}
+.lead{color:var(--text-2);margin:0;max-width:720px}
+section{padding:36px 0}
+.sec-lead{color:var(--text-2);margin:0 0 20px;font-size:14.5px}
+
+/* 분류표 */
+.taxgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tx{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;display:flex;flex-direction:column;gap:10px}
+.tx.hot{border-color:var(--text-accent);box-shadow:inset 0 0 0 1px var(--text-accent)}
+.tx header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tx h3{margin:0;font-size:16.5px}
+.tx .n{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.tx .n small{font-size:12.5px;color:var(--text-2);margin-left:1px}
+.tx p{margin:0;font-size:13.5px;color:var(--text-2)}
+.subs{display:flex;flex-wrap:wrap;gap:6px}
+.subs span{font-size:12.5px;background:var(--bg-muted);border-radius:999px;padding:3px 10px;color:#334155}
+.subs b{color:var(--text-3);font-weight:600;margin-left:2px;font-variant-numeric:tabular-nums}
+.tx footer{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--text-3);padding-top:8px;border-top:1px solid var(--border)}
+.tx footer a{margin-left:auto;font-weight:700;color:var(--text-accent);text-decoration:none}
+.tx footer em{margin-left:auto;font-style:normal}
+
+/* 컨설팅 */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px}
+.fact{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px}
+.fact b{display:block;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.2}
+.fact span{font-size:13px;color:var(--text-2)}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.toc a{font-size:13px;font-weight:600;color:var(--text-2);text-decoration:none;border:1px solid var(--border);background:#fff;border-radius:999px;padding:5px 12px}
+.toc a:hover{border-color:var(--text-accent);color:var(--text-accent)}
+.cd{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin-bottom:14px}
+.cd header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.cd h3{margin:0;font-size:18px}
+.cd .desc{margin:6px 0 16px;color:var(--text-2)}
+.cols{display:grid;grid-template-columns:1fr 1.15fr;gap:24px}
+.cd h4{margin:0 0 8px;font-size:13px;color:var(--text-3);font-weight:700}
+.cd ul{margin:0;padding-left:18px}
+.cd li{margin:2px 0}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+dt{color:var(--text-3);white-space:nowrap}
+dd{margin:0}
+dd small{color:var(--text-3);font-size:12px;margin-left:4px}
+.ex{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.ex ul{list-style:none;padding:0}
+.ex li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14px}
+.ex li a{text-decoration:none}
+.ex li a:hover{color:var(--text-accent);text-decoration:underline}
+.ex li span{color:var(--text-3);font-size:12.5px;white-space:nowrap}
+.tip{background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:var(--r-md);padding:16px 18px;color:#1E3A8A;font-size:14px;margin:0 0 20px}
+.tip b{display:block;margin-bottom:4px}
+.tip ul{margin:0;padding-left:18px}
+.cta{background:var(--action);color:#fff;border-radius:var(--r-lg);padding:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.cta p{margin:0;color:#CBD5E1;font-size:14px}
+.cta h3{margin:0 0 4px;font-size:19px}
+.cta .btn{background:#fff;color:var(--action);border-color:#fff}
+section.alt{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.jump{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px;font-size:13px;color:var(--text-3)}
+.jump a{font-weight:700;color:var(--text-accent);text-decoration:none;background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:999px;padding:4px 12px}
+.basis{font-size:12.5px;color:var(--text-3);line-height:1.8;margin-top:28px}
+footer.site{border-top:1px solid var(--border);background:#fff;padding:24px 0 32px;font-size:12.5px;color:var(--text-3);line-height:1.8}
+
+@media (max-width:900px){.taxgrid{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr;gap:16px}}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .gnb .wrap{height:56px;gap:12px}
+  .gnb .crumb{display:none}
+  .gnb .logo{margin-right:auto}
+  .gnb .btn{padding:7px 12px;font-size:13px}
+  .head{padding:28px 0 16px}
+  h1{font-size:25px} h2{font-size:20px}
+  .taxgrid{grid-template-columns:1fr}
+  .cd{padding:16px}
+  .ex li{flex-direction:column;gap:0}
+  dl{grid-template-columns:1fr;gap:0}
+  dt{margin-top:6px}
+}
+</style>
+</head>
+<body>
+
+<header class="gnb">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="data/icon.svg" width="28" height="28" alt="" style="flex:none">사업나침반</a>
+    <span class="crumb"><a href="index.html">홈</a> › 지원 서비스 안내</span>
+    <a class="btn" href="https://app.biznachim.kr">로그인·가입</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <p class="asof"><b>2026년 10월 24일 기준 분석</b> · 기업마당에서 2026년 7월부터 10월 24일까지 모은 공고 2,189건을 바탕으로 정리했어요. 지원 내용·금액·조건은 공고마다, 해마다 달라질 수 있으니 신청 전에 반드시 <a href="https://www.bizinfo.go.kr" target="_blank" rel="noopener">기업마당</a>과 공고 원문을 확인해 주세요.</p>
+    <p class="eyebrow">지원 서비스 안내</p>
+    <h1>정부·지자체는 기업에<br>실제로 무엇을 해 줄까요?</h1>
+    <p class="lead">공고 제목만으로는 알기 어려운 지원 내용을 서비스 종류별로 정리했어요. 공고문과 첨부파일까지 읽어 보면 돈 말고도 전문가, 공간, 인증, 판로처럼 받을 수 있는 게 생각보다 많습니다.</p>
+  </div>
+</div>
+
+<main>
+<section id="types">
+  <div class="wrap">
+    <h2>지원 서비스 분류표</h2>
+    <p class="sec-lead">기업마당 공고 2,189건을 지원 방식에 따라 12가지로 나눴어요. 숫자는 해당 공고 수입니다.</p>
+    <div class="jump"><span>자세한 안내</span><a href="#market">판로·마케팅</a><a href="#consulting">교육·컨설팅</a><a href="#cost">경영비용 절감</a><a href="#commercial">사업화</a><a href="#export">수출·해외진출</a><a href="#ip">인증·지식재산</a><a href="#loan">정책자금</a><a href="#space">공간·장비</a><a href="#hire">인력·고용</a><a href="#dx">디지털전환</a><a href="#rnd">기술개발</a><a href="#startup">창업 준비</a></div>
+    <div class="taxgrid"><article class="tx hot">
+  <header><h3>판로·마케팅</h3><span class="n">629<small>건</small></span></header>
+  <p>국내 판로·홍보·온라인몰 입점·국내 전시회·디자인</p>
+  <div class="subs"><span>홍보 콘텐츠·광고 <b>131</b></span><span>온라인 판로 (온라인몰·라이브커머스) <b>119</b></span><span>디자인·브랜드·포장 <b>116</b></span><span>국내 전시회·박람회·판매전 <b>102</b></span><span>유통 매장·홈쇼핑 입점 <b>36</b></span><span>공공조달·공공구매 <b>35</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#market">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>교육·컨설팅</h3><span class="n">628<small>건</small></span></header>
+  <p>교육·컨설팅·멘토링·경영 진단</p>
+  <div class="subs"><span>컨설팅·멘토링 <b>527</b></span><span>교육·강의 <b>101</b></span></div>
+  <footer><span>주된 방식: 현물·서비스</span><a href="#consulting">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>경영비용 절감</h3><span class="n">572<small>건</small></span></header>
+  <p>카드 수수료·보험료·공과금 등 운영비 절감</p>
+  <div class="subs"><span>대출 이자·보증 수수료 지원 <b>136</b></span><span>시설·환경 개선비 <b>67</b></span><span>보험료 지원 <b>51</b></span><span>물류·택배비 <b>36</b></span><span>카드·인증 수수료 환급 <b>32</b></span><span>인증 기업 혜택 (세무조사 유예 등) <b>28</b></span><span>근로자 복지·근로환경 <b>26</b></span><span>임대료·공과금 <b>25</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#cost">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>사업화</h3><span class="n">411<small>건</small></span></header>
+  <p>사업화 자금·시제품 제작 등 보조금</p>
+  <div class="subs"><span>제품 고도화·실증(PoC) <b>83</b></span><span>시제품·목업 제작 <b>79</b></span><span>설비·시설 도입 보조 <b>56</b></span><span>사업화 자금·바우처 <b>48</b></span><span>공모전·포상 <b>17</b></span><span>오픈이노베이션 (대기업 협업) <b>13</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#commercial">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>수출·해외진출</h3><span class="n">382<small>건</small></span></header>
+  <p>수출·해외 전시회·바이어 발굴·통번역·수출 물류·수출 보험</p>
+  <div class="subs"><span>수출상담회·바이어 매칭 <b>110</b></span><span>수출 물류비·국제특송 <b>96</b></span><span>해외 전시회·시장개척단 <b>86</b></span><span>해외 규격인증 <b>31</b></span><span>해외 온라인몰·현지 유통 입점 <b>29</b></span><span>해외 지식재산·위조 대응 <b>22</b></span><span>해외지사화·현지 진출 <b>21</b></span><span>수출바우처 (골라 쓰는 지원) <b>8</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#export">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>인증·지식재산</h3><span class="n">340<small>건</small></span></header>
+  <p>인증 취득·특허·상표·지식재산</p>
+  <div class="subs"><span>국내 특허·상표·디자인 출원 <b>96</b></span><span>품질·규격 인증 비용 <b>54</b></span><span>우수기업·혁신제품 인증 <b>39</b></span><span>IP 분쟁·기술 보호 <b>19</b></span><span>해외 출원·해외 IP 보호 <b>17</b></span><span>IP 가치평가·IP 금융 <b>17</b></span><span>정보보호·보안 인증 <b>10</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#ip">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>정책자금</h3><span class="n">280<small>건</small></span></header>
+  <p>융자·보증·이자 지원 등 자금 조달</p>
+  <div class="subs"><span>이자 지원 (이차보전) <b>141</b></span><span>경영안정(운전)자금 융자 <b>136</b></span><span>특례보증·신용보증 <b>67</b></span><span>시설자금 융자 <b>53</b></span><span>긴급·재해·위기 대응 자금 <b>27</b></span><span>창업기업 전용 자금 <b>23</b></span></div>
+  <footer><span>주된 방식: 융자</span><a href="#loan">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>공간·장비</h3><span class="n">267<small>건</small></span></header>
+  <p>입주 공간·시설·장비 사용·임차비</p>
+  <div class="subs"><span>장비 활용·장비 사용료 바우처 <b>90</b></span><span>작업장 시설·환경 개선 <b>39</b></span><span>임차료 지원 <b>28</b></span><span>전시 부스·행사 공간 <b>24</b></span><span>창업보육·입주 공간 <b>21</b></span><span>테스트베드·실증 공간 <b>18</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#space">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>인력·고용</h3><span class="n">225<small>건</small></span></header>
+  <p>채용·고용 지원금·인건비·인력 양성</p>
+  <div class="subs"><span>청년 채용 지원금 <b>54</b></span><span>인턴·일경험 <b>54</b></span><span>재직자 교육·훈련 <b>41</b></span><span>중장년·신중년 채용 <b>29</b></span><span>근속·복지 지원 <b>20</b></span><span>근무제도 개선 지원 <b>10</b></span><span>외국인·특화 인력 매칭 <b>9</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#hire">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>디지털전환</h3><span class="n">136<small>건</small></span></header>
+  <p>디지털 전환·스마트공장·AI·자동화 도입</p>
+  <div class="subs"><span>제조 AI·데이터 활용 <b>58</b></span><span>디지털 전환 진단·컨설팅 <b>54</b></span><span>스마트공장 구축 <b>24</b></span><span>자동화·로봇 도입 <b>19</b></span><span>정보보호·클라우드 <b>16</b></span><span>환경 IoT 측정기기 <b>15</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#dx">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>기술개발</h3><span class="n">116<small>건</small></span></header>
+  <p>R&amp;D·기술개발·연구 과제</p>
+  <div class="subs"><span>R&amp;D 과제 (연구개발비) <b>65</b></span><span>시험·분석·성능평가 <b>36</b></span><span>R&amp;D 기획·과제 신청 준비 <b>18</b></span><span>대학·연구기관 공동개발 <b>15</b></span><span>기술이전·기술사업화 <b>7</b></span><span>국제공동 R&amp;D <b>6</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#rnd">자세히 보기 →</a></footer>
+</article><article class="tx hot">
+  <header><h3>창업 준비</h3><span class="n">29<small>건</small></span></header>
+  <p>창업 교육·창업 아이템 발굴 등 창업 전 단계 지원</p>
+  <div class="subs"><span>멘토링·액셀러레이팅 <b>15</b></span><span>창업 교육·아카데미 <b>8</b></span><span>아이디어 권리화 (IP 디딤돌) <b>6</b></span><span>창업 경진대회 <b>5</b></span><span>창업 초기비용·활동비 <b>5</b></span></div>
+  <footer><span>주된 방식: 보조금</span><a href="#startup">자세히 보기 →</a></footer>
+</article></div>
+  </div>
+</section>
+
+<section id="market" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 판로·마케팅</p>
+    <h2>판로·마케팅 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">물건을 '어디에 팔지'와 '어떻게 알릴지'를 도와주는 지원이에요. 온라인몰 입점부터 전시회 부스, 홍보영상, 공공기관 납품까지 판로·마케팅 공고 629건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>70%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>41%</b><span>비용을 보조금으로 지원</span></div><div class="fact"><b>71%</b><span>시·도가 여는 공고 (지역 기업 대상)</span></div><div class="fact"><b>36곳</b><span>이 지원을 여는 부처·광역 시도<br><small>(시·군 공고는 소속 시도로 셈)</small></span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>공고의 약 71%는 시·도가 엽니다. 우리 지역 공고를 꼭 챙겨 보세요.</li><li>전시회·박람회 지원은 약 47%가 자부담이 있고, 자부담은 보통 20% 안팎이에요.</li><li>대부분(약 94%) 이미 팔 제품이 있는 기존 사업자가 대상이에요.</li><li>온라인몰·라이브커머스 지원은 절반 이상(약 56%)이 현물이에요. 돈 대신 방송·입점 자리를 받는다고 보면 돼요.</li></ul></div>
+    <div class="toc"><a href="#market-0">홍보 콘텐츠·광고</a><a href="#market-1">온라인 판로 (온라인몰·라이브커머스)</a><a href="#market-2">디자인·브랜드·포장</a><a href="#market-3">국내 전시회·박람회·판매전</a><a href="#market-4">유통 매장·홈쇼핑 입점</a><a href="#market-5">공공조달·공공구매</a></div>
+    <article class="cd" id="market-0">
+  <header><h3>홍보 콘텐츠·광고</h3><span class="tag">관련 공고 131건</span></header>
+  <p class="desc">홍보영상·SNS 콘텐츠를 만들어 주거나 광고비를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>홍보영상·숏폼·SNS 콘텐츠 제작</li><li>키워드·배너 광고비 지원</li><li>상세페이지·홍보물·메뉴판 제작</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 70%<small> (자부담이 적힌 공고 80건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 300만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경기도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>제품은 좋은데 알릴 방법이 없는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소방산업 해외 마케팅 홍보물 제작경비 지원사업 · 콘텐츠 제작 지원사업 · 상세페이지 제작지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="market-1">
+  <header><h3>온라인 판로 (온라인몰·라이브커머스)</h3><span class="tag">관련 공고 119건</span></header>
+  <p class="desc">큰 온라인몰 기획전에 넣어 주거나, 라이브커머스 방송을 대신 꾸려 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>온라인몰 기획전 입점과 할인쿠폰·프로모션</li><li>라이브커머스 스튜디오·쇼호스트·방송 송출</li><li>플랫폼 이용 수수료·광고비 일부 지원 (소상공인용)</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 78%<small> (자부담이 적힌 공고 73건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 전남광주통합특별시 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>온라인 판매를 시작하거나 늘리려는 기업·소상공인</dd>
+      <dt>이런 사업이 있어요</dt><dd>동행축제 우수 소상공인 제품 현장 라이브커머스 · 행복한백화점 매장 입점 · 중소기업 온라인몰 입점 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="market-2">
+  <header><h3>디자인·브랜드·포장</h3><span class="tag">관련 공고 116건</span></header>
+  <p class="desc">제품·포장 디자인과 브랜드를 새로 만들거나 다듬도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>제품·포장 디자인 개발과 개선</li><li>브랜드(BI·CI) 개발</li><li>목업·3D 모델링 제작</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 43%<small> (자부담이 적힌 공고 65건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 480만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상북도 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>제품 경쟁력을 디자인으로 높이고 싶은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>디자인어워드 출품지원 · 인쇄소공인 공동포장재 지원사업 · 패션 브랜드 협업활성화 원단지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="market-3">
+  <header><h3>국내 전시회·박람회·판매전</h3><span class="tag">관련 공고 102건</span></header>
+  <p class="desc">전시회 공동관 부스나 판매 행사 자리를 마련해 주고 비용을 덜어 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>공동관 부스 임차료·장치비 지원</li><li>현장 판매·시음 공간과 집기 지원</li><li>바이어와 1:1 상담 연결</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 53%<small> (자부담이 적힌 공고 53건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 300만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경기도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>신제품을 알리고 바이어를 만나고 싶은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>전시박람회 참가 지원사업 · 관내기업 국내외 박람회 참가 지원사업 · 기업박람회<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="market-4">
+  <header><h3>유통 매장·홈쇼핑 입점</h3><span class="tag">관련 공고 36건</span></header>
+  <p class="desc">공공 홍보관·판매장에 제품을 진열하거나 홈쇼핑·대형 유통망에 오를 기회를 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>공공 홍보관·판매장 진열 입점</li><li>홈쇼핑 방송·대형 유통망 입점 기회</li><li>판매 수수료 부담을 덜어 주는 경우도 있어요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 61%<small> (자부담이 적힌 공고 18건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 전남광주통합특별시 · 산업통상부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>오프라인 판로를 넓히려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>사회적경제 팝업스토어 · 사회적경제 홍보관 입점 · 소상공인 온라인 홍보관<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="market-5">
+  <header><h3>공공조달·공공구매</h3><span class="tag">관련 공고 35건</span></header>
+  <p class="desc">공공기관에 납품할 수 있도록 조달 등록과 지정 절차를 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>나라장터 등록·조달제도 1:1 컨설팅</li><li>벤처나라·혁신제품 지정 추천</li><li>공공 수요처 연결</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 100%<small> (자부담이 적힌 공고 21건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 과학기술정보통신부 · 산업통상부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>공공기관 납품을 노리는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>공공조달 컨설팅 · 공공조달 멘토링 지원 · 공공조달시장 진출지원 컨설팅<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 제품에 맞는 판로 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="consulting">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 교육·컨설팅</p>
+    <h2>컨설팅 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">컨설팅 지원은 대개 돈을 직접 주지 않고 <b>전문가를 보내 주는</b> 방식이에요. 그래서 공고 제목만 보면 무엇을 받는지 알기 어렵습니다. 컨설팅·멘토링 공고 527건을 16가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>77%</b><span>자부담 없이 무료<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>59%</b><span>돈이 아니라 전문가 서비스로 지원</span></div><div class="fact"><b>102건</b><span>전문가가 회사로 직접 찾아오는 현장 컨설팅</span></div><div class="fact"><b>36곳</b><span>이 지원을 여는 부처·광역 시도<br><small>(시·군 공고는 소속 시도로 셈)</small></span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>대부분(약 83%) 사업자등록을 한 기업이 대상이에요. 예비창업자는 &#x27;창업 멘토링&#x27; 유형을 보세요.</li><li>신청은 이메일 접수가 많고(약 42%), 대개 신청서 양식을 내려받아 작성해 보내요.</li><li>컨설팅 횟수는 기업당 2~5회가 흔하고, 한 번에 2~3시간 정도 진행돼요.</li><li>컨설팅을 받으면 후속 지원(시설 개선비, 인증 비용, 사업화 자금)으로 이어지는 사업이 많아요.</li></ul></div>
+    <div class="toc"><a href="#consulting-0">분야별 전문가 종합 상담</a><a href="#consulting-1">디지털·스마트공장·정보보호</a><a href="#consulting-2">수출·해외 진출</a><a href="#consulting-3">투자·IR</a><a href="#consulting-4">특허·지식재산</a><a href="#consulting-5">법률·인허가·규제</a><a href="#consulting-6">기술 지도·애로기술</a><a href="#consulting-7">노무·인사</a><a href="#consulting-8">창업 멘토링</a><a href="#consulting-9">ESG·환경·안전</a><a href="#consulting-10">세무·회계·재무</a><a href="#consulting-11">경영 진단·전략</a><a href="#consulting-12">인증 취득</a><a href="#consulting-13">공공조달 진출</a><a href="#consulting-14">점포·상권 (소상공인)</a><a href="#consulting-15">사업 정리·재기</a></div>
+    <article class="cd" id="consulting-0">
+  <header><h3>분야별 전문가 종합 상담</h3><span class="tag">관련 공고 33건</span></header>
+  <p class="desc">세무·노무·법률·특허·마케팅 전문가를 한 창구에서 연결해 줍니다. 무엇부터 물어야 할지 모를 때 먼저 두드릴 곳이에요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>분야별 전문가와 1:1 상담 (전화·온라인·방문)</li><li>필요하면 심화 컨설팅이나 다른 지원사업으로 연결</li><li>상시 접수가 많고 대부분 무료</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 89%<small> (자부담이 적힌 공고 28건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 중소벤처기업부 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>막연한 고민이 여러 개인 기업, 처음 지원사업을 알아보는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>창업 멘토링 · 창업기업 상시 멘토링 · 소공인 컨설팅지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-1">
+  <header><h3>디지털·스마트공장·정보보호</h3><span class="tag">관련 공고 128건</span></header>
+  <p class="desc">공장·업무를 디지털로 바꾸기 전에 무엇부터 할지 진단하고 설계합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>스마트공장 도입 전 수준 진단</li><li>제조 AI·데이터 활용 컨설팅</li><li>정보보호 취약점 진단과 모의훈련</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 70%<small> (자부담이 적힌 공고 96건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 450만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 산업통상부 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>스마트공장·AI 도입을 검토하는 제조기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업 정보보호 지원 사업 · 스마트공장 컨설팅 지원사업 · 제조 AI 현장 적용 지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-2">
+  <header><h3>수출·해외 진출</h3><span class="tag">관련 공고 88건</span></header>
+  <p class="desc">해외 시장 진출 전략부터 무역 실무까지 전문가가 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 시장조사·진출 전략</li><li>무역·관세 실무 자문</li><li>수출 전문위원의 현장 멘토링</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 75%<small> (자부담이 적힌 공고 60건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 경기도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>첫 수출을 준비하거나 새 시장을 찾는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>OK FTA 컨설팅 지원사업 · FTA활용 지원사업 · 유망수출품목발굴 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-3">
+  <header><h3>투자·IR</h3><span class="tag">관련 공고 78건</span></header>
+  <p class="desc">투자 유치를 위한 자료 준비와 투자자 연결을 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>IR 자료·발표 코칭</li><li>투자자 미팅·데모데이 연결</li><li>후속 투자 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 89%<small> (자부담이 적힌 공고 56건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 440만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경기도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>투자 유치를 준비하는 창업기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>투자연계형 기술확보지원사업 · 기업공개 맞춤형 투자지원 사업 · 투자청 투자유치 원스톱 패키지 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-4">
+  <header><h3>특허·지식재산</h3><span class="tag">관련 공고 73건</span></header>
+  <p class="desc">특허 전략을 세우고, 출원하고, 분쟁에 대비하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>특허 분석·IP 전략 보고서</li><li>국내·해외 출원 비용 지원</li><li>수출할 때 특허 분쟁 위험 대응</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 65%<small> (자부담이 적힌 공고 52건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 440만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 중소벤처기업부 · 지식재산처</dd>
+      <dt>이런 기업에 맞아요</dt><dd>기술·브랜드를 지켜야 하는 기업, 해외 진출을 앞둔 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>지식재산 긴급지원사업 · IP 디딤돌 프로그램 · 지식재산경영인증 멘토링<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-5">
+  <header><h3>법률·인허가·규제</h3><span class="tag">관련 공고 68건</span></header>
+  <p class="desc">계약·분쟁·인허가·규제 문제를 전문가가 함께 검토합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>계약·분쟁 법률 자문 (1:1 변호사 연결 등)</li><li>인허가 절차 안내</li><li>신기술 규제 특례 신청 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 81%<small> (자부담이 적힌 공고 53건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 700만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 산업통상부 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>새 사업을 시작하거나 계약 분쟁이 있는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>특화단지 조성사업 규제특례지원 컨설팅 지원사업 · 스타트업 법률지원사업 · SW융합 규제개선 컨설팅 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-6">
+  <header><h3>기술 지도·애로기술</h3><span class="tag">관련 공고 65건</span></header>
+  <p class="desc">생산·공정·제품의 기술 문제를 전문가가 현장에서 함께 풉니다. &#x27;기술닥터&#x27;라는 이름으로도 많이 나와요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>전문가 현장 방문 기술지도 (한 번에 2~3시간 정도)</li><li>설계·시제품·고장분석 등 개발 단계별 자문</li><li>대학·연구기관 장비 활용과 연결</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 80%<small> (자부담이 적힌 공고 46건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 400만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 전북특별자치도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>불량·공정 문제를 겪는 제조기업, 시제품을 만드는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>기술닥터제 지원사업 · 기술닥터 기업애로상담 프로그램 · 기술이전지원사업 기술코칭프로그램<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-7">
+  <header><h3>노무·인사</h3><span class="tag">관련 공고 61건</span></header>
+  <p class="desc">근로계약·취업규칙 같은 인사 노무 문제를 점검하고 바로잡습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>취업규칙 등 인사 서류 점검</li><li>노동환경 개선·가족친화인증 컨설팅</li><li>현장 방문 무료 컨설팅이 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 96%<small> (자부담이 적힌 공고 53건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전남광주통합특별시 · 고용노동부 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>직원이 늘어나는 기업, 노무 분쟁이 걱정되는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>노동환경개선컨설팅 사업 · 콘텐츠 기업 노무 컨설팅 · 찾아가는 노무서비스 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-8">
+  <header><h3>창업 멘토링</h3><span class="tag">관련 공고 60건</span></header>
+  <p class="desc">사업 아이템을 다듬고 시장성을 검증하도록 멘토가 함께합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>사업모델 설계·시장 검증 멘토링</li><li>창업 교육·경진대회 연계</li><li>우수팀은 사업화 자금으로 연결</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 88%<small> (자부담이 적힌 공고 42건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 200만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경기도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>예비창업자, 창업 초기 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>방산 멘토링사업 · 공공조달 멘토링 지원 · 제조 DX멘토단 활용지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-9">
+  <header><h3>ESG·환경·안전</h3><span class="tag">관련 공고 58건</span></header>
+  <p class="desc">산업안전·환경 규제와 ESG 요구에 대응하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>위험성평가·안전보건관리체계 컨설팅</li><li>화학물질 등 환경 규제 대응</li><li>ESG 진단 보고서</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 79%<small> (자부담이 적힌 공고 42건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 300만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 전남광주통합특별시 · 기후에너지환경부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>중대재해·환경 규제 대응이 필요한 기업, 대기업 납품 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>IBK ESG 컨설팅 · 공동안전관리자 지원사업 · 위험성평가 컨설팅 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-10">
+  <header><h3>세무·회계·재무</h3><span class="tag">관련 공고 54건</span></header>
+  <p class="desc">세무·회계 실무부터 자금 조달, 인수합병·상장 준비까지 다룹니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>세무·회계 실무 자문</li><li>자금 조달 방안 상담</li><li>M&amp;A·IPO 준비 컨설팅 (기업가치평가 등)</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 86%<small> (자부담이 적힌 공고 43건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경기도 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>투자·대출을 앞둔 기업, 회사를 키우거나 넘기려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>기업승계 M&amp;A 활성화를 위한 컨설팅 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-11">
+  <header><h3>경영 진단·전략</h3><span class="tag">관련 공고 49건</span></header>
+  <p class="desc">전문가가 회사를 진단하고 개선 방향을 함께 세웁니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>현장 방문 진단과 진단 보고서</li><li>사업계획·사업모델(BM) 다듬기</li><li>소상공인용은 진단 뒤 시설·홍보 개선비를 함께 주기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 89%<small> (자부담이 적힌 공고 38건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 150만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 중소벤처기업부 · 울산광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>매출이 정체됐거나 다음 단계 전략이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>장애인기업 경영개선 지원사업 · ESG경영 진단 및 컨설팅 지원사업 · 우리동네 소상공인 경영주치의<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-12">
+  <header><h3>인증 취득</h3><span class="tag">관련 공고 41건</span></header>
+  <p class="desc">HACCP·ISO·혁신제품 지정·원산지 인증처럼 인증을 받는 데 필요한 컨설팅과 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>인증 준비 컨설팅 (서류·현장심사 대비)</li><li>컨설팅비·심사비 일부 지원 (예: 비용의 50% 이내)</li><li>FTA 원산지확인서·원산지인증수출자 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 81%<small> (자부담이 적힌 공고 27건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 전남광주통합특별시 · 부산광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>납품·수출·입찰에 인증이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>이노비즈 코칭 지원 · 가족친화인증 컨설팅 · 원산지 사후검증 컨설팅 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-13">
+  <header><h3>공공조달 진출</h3><span class="tag">관련 공고 24건</span></header>
+  <p class="desc">공공기관에 물건을 팔 수 있도록 조달 시장 진출을 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>조달 등록 절차 안내</li><li>혁신제품 지정 준비</li><li>공공 판로 개척 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 81%<small> (자부담이 적힌 공고 21건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 강원특별자치도 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>공공기관 납품을 노리는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>공공조달 컨설팅 · 공공조달시장 진출지원 컨설팅 · 해외공공조달 시장진출 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-14">
+  <header><h3>점포·상권 (소상공인)</h3><span class="tag">관련 공고 13건</span></header>
+  <p class="desc">가게 운영·진열·홍보를 컨설턴트가 직접 와서 봐 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>1:1 현장 컨설팅 (회당 2시간, 2~3회)</li><li>진열(VMD)·간판 등 점포 환경 개선</li><li>메뉴판·홍보물 개선</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 67%<small> (자부담이 적힌 공고 6건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>서울특별시 · 경상북도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>매장을 운영하는 소상공인</dd>
+      <dt>이런 사업이 있어요</dt><dd>강구안 동네상권 컨설팅 사업 · 소상공인 상권분석 경영컨설팅 지원사업 · 디지털 골목상점 참여업소<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="consulting-15">
+  <header><h3>사업 정리·재기</h3><span class="tag">관련 공고 13건</span></header>
+  <p class="desc">어려운 사업장을 다시 세우거나, 정리할 때 손실을 줄이도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>사업정리 컨설팅 (세무·부동산·심리)</li><li>점포 철거비·원상복구비 지원</li><li>재기를 위한 경영개선 비용</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 100%<small> (자부담이 적힌 공고 8건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 산업통상부 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>경영 위기에 놓였거나 업종 전환을 고민하는 소상공인</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 사업정리 지원사업 · 새 길 여는 폐업지원 사업 · 희망리턴패키지 원스톱폐업지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 컨설팅만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="cost" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 경영비용 절감</p>
+    <h2>경영비용 절감 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">새 사업을 주는 게 아니라 <b>이미 나가는 돈</b>(이자, 카드 수수료, 보험료, 임대료, 택배비)을 덜어 주는 지원이에요. 조건만 맞으면 받기 쉬운데 몰라서 놓치는 경우가 많습니다. 공고 572건을 8가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>89%</b><span>지자체(시·도, 시·군)가 여는 공고</span></div><div class="fact"><b>51%</b><span>방문·우편으로 접수</span></div><div class="fact"><b>162건</b><span>대출·보증과 함께 주는 공고</span></div><div class="fact"><b>29곳</b><span>이 지원을 여는 부처·광역 시도<br><small>(시·군 공고는 소속 시도로 셈)</small></span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>거의 모두(약 89%) 지자체가 자기 지역 사업자에게 주는 지원이에요. 같은 지원도 시·군마다 금액과 조건이 달라요.</li><li>약 51%는 시·군청이나 지정 기관에 직접 가거나 우편으로 신청해요.</li><li>카드 수수료·보험료 지원은 이미 낸 돈을 나중에 돌려받는 방식이 많아, 영수증과 납부 내역을 챙겨 두면 좋아요.</li><li>대출 이자 지원은 정해진 은행·보증재단을 거쳐야 받을 수 있는 경우가 많으니 대출 전에 먼저 확인하세요.</li></ul></div>
+    <div class="toc"><a href="#cost-0">대출 이자·보증 수수료 지원</a><a href="#cost-1">시설·환경 개선비</a><a href="#cost-2">보험료 지원</a><a href="#cost-3">물류·택배비</a><a href="#cost-4">카드·인증 수수료 환급</a><a href="#cost-5">인증 기업 혜택 (세무조사 유예 등)</a><a href="#cost-6">근로자 복지·근로환경</a><a href="#cost-7">임대료·공과금</a></div>
+    <article class="cd" id="cost-0">
+  <header><h3>대출 이자·보증 수수료 지원</h3><span class="tag">관련 공고 136건</span></header>
+  <p class="desc">은행 대출 이자의 일부를 지자체가 대신 내 주거나 보증 수수료를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>대출 이자 중 연 2~3%p를 지자체가 대신 부담</li><li>신용보증 수수료 지원</li><li>보통 1~2년, 길면 4년까지 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 80%<small> (자부담이 적힌 공고 35건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>강원특별자치도 · 경기도 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>운영자금 대출을 받았거나 받을 예정인 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 특례보증 지원사업 · 소상공인 융자금 이차보전 지원 · 중소기업육성자금 이차보전 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-1">
+  <header><h3>시설·환경 개선비</h3><span class="tag">관련 공고 67건</span></header>
+  <p class="desc">점포 리모델링이나 오염 방지·안전 시설 설치 비용을 보탭니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>점포 리모델링·간판 교체 (총사업비의 50% 이내 등)</li><li>미세먼지·악취·대기오염 방지시설 설치</li><li>안전 방호장치·보호구 구입</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 19%<small> (자부담이 적힌 공고 36건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 1,000만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 경상북도 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>낡은 점포를 고치려는 소상공인, 오염·안전 규제를 맞춰야 하는 사업장</dd>
+      <dt>이런 사업이 있어요</dt><dd>소규모 사업장 방지시설 설치 지원사업 · 중소기업 환경개선 지원사업 · 음식점 미세먼지ㆍ악취 방지시설 설치 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-2">
+  <header><h3>보험료 지원</h3><span class="tag">관련 공고 51건</span></header>
+  <p class="desc">사장님이나 회사가 내는 보험료 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>1인 자영업자 고용보험료 20~50% 지원</li><li>산재보험료 일부 환급</li><li>제조물책임(PL)·수출 보험료 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 69%<small> (자부담이 적힌 공고 39건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 200만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상북도 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>1인 자영업자, 제조·수출 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 고용보험료 지원사업 · 수출보험료 지원 사업 · 수출보증보험료 지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-3">
+  <header><h3>물류·택배비</h3><span class="tag">관련 공고 36건</span></header>
+  <p class="desc">국내 택배비나 수출 운송비 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>국내 물류비·택배 발송료 지원</li><li>수출 국제운송비·특송비의 50% 수준 지원</li><li>창고료·현지 내륙운송료까지 주는 경우도 있어요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 30%<small> (자부담이 적힌 공고 27건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 700만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>강원특별자치도 · 경상북도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>택배 발송이 많은 온라인 판매 기업, 수출기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>수출물류비 지원사업 · 수출기업 해외 물류비 지원 · 스마트 물류비 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-4">
+  <header><h3>카드·인증 수수료 환급</h3><span class="tag">관련 공고 32건</span></header>
+  <p class="desc">이미 낸 카드 수수료나 인증 수수료 일부를 돌려줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>전년도 카드 매출의 0.4% 안팎을 돌려줌 (최대 수십만원)</li><li>벤처·이노비즈 인증 수수료 지원</li><li>지역화폐 결제액 일부 환급</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 79%<small> (자부담이 적힌 공고 28건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 경상남도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>카드 매출이 있는 소상공인, 인증을 준비하는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 카드수수료 지원사업 · 동백전 카드수수료 지원사업 · 기술평가 인증 수수료 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-5">
+  <header><h3>인증 기업 혜택 (세무조사 유예 등)</h3><span class="tag">관련 공고 28건</span></header>
+  <p class="desc">우수기업으로 인증받으면 돈 대신 부담을 덜어 주는 혜택이 따라옵니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>정기 세무조사 유예·제외</li><li>각종 검사·평가 면제</li><li>다른 지원사업 신청 시 가점</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 100%<small> (자부담이 적힌 공고 16건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 경상남도 · 전북특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>고용을 늘렸거나 우수기업 인증을 노리는 기업</dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-6">
+  <header><h3>근로자 복지·근로환경</h3><span class="tag">관련 공고 26건</span></header>
+  <p class="desc">직원 기숙사비나 휴게실·화장실 같은 근무 환경 개선 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>직원 기숙사 임차비 80% 수준 지원</li><li>휴게실·여성화장실·탈의실 개선</li><li>가족친화 근무환경 공사·물품</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 0%<small> (자부담이 적힌 공고 17건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 경상북도 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>직원 구하기가 어려운 지방·제조 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>기숙사임차비지원사업 · 가족친화기업 환경개선 지원사업 · 외국인근로자 생활환경 개선 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="cost-7">
+  <header><h3>임대료·공과금</h3><span class="tag">관련 공고 25건</span></header>
+  <p class="desc">가게·사무실 임대료나 전기·수도요금 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>월 임대료 일부 (월 10~20만원 수준)</li><li>공유주방 같은 공용 공간 제공</li><li>전기·수도요금 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 41%<small> (자부담이 적힌 공고 17건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 100만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 경상북도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>임대료 부담이 큰 창업 초기 소상공인</dd>
+      <dt>이런 사업이 있어요</dt><dd>청년농업인 농지임대료 지원사업 · 청년 창업자 임차료 지원사업 · 소상공인 창업 임대료 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사가 받을 수 있는 비용 절감 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="commercial">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 사업화</p>
+    <h2>사업화 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">아이디어·기술을 실제 제품과 매출로 만들도록 시제품, 실증, 설비, 사업화 자금을 지원해요. 대부분 <b>사업계획서 평가</b>로 뽑습니다. 공고 411건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>72%</b><span>보조금으로 지원 (갚지 않는 돈)</span></div><div class="fact"><b>64%</b><span>자부담이 있는 공고<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>20%</b><span>자부담이 있을 때 흔한 비율 (총사업비 대비)</span></div><div class="fact"><b>69%</b><span>시·도가 여는 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>갚지 않는 보조금이 많지만, 자부담이 있는 공고가 약 64%예요. 자부담은 총사업비의 20% 안팎이 흔해요.</li><li>약 74%는 신청서·사업계획서 양식을 내고 평가를 받아요. 서류와 발표 준비가 중요합니다.</li><li>지원금은 재료비·외주 용역비처럼 정해진 용도로만 쓰고, 사용 내역을 증빙해야 해요.</li><li>창업 초기라면 &#x27;창업 준비&#x27; 안내도 함께 보세요.</li></ul></div>
+    <div class="toc"><a href="#commercial-0">제품 고도화·실증(PoC)</a><a href="#commercial-1">시제품·목업 제작</a><a href="#commercial-2">설비·시설 도입 보조</a><a href="#commercial-3">사업화 자금·바우처</a><a href="#commercial-4">공모전·포상</a><a href="#commercial-5">오픈이노베이션 (대기업 협업)</a></div>
+    <article class="cd" id="commercial-0">
+  <header><h3>제품 고도화·실증(PoC)</h3><span class="tag">관련 공고 83건</span></header>
+  <p class="desc">만든 제품을 실제 현장에서 시험하고 성능을 높이도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>실제 현장·수요처에서 시험(PoC)</li><li>성능·디자인·공정 개선</li><li>시험·인증 비용 함께 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 37%<small> (자부담이 적힌 공고 54건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 1,500만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 중소벤처기업부 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>제품은 있지만 판매 전 검증이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>TRYOUT 글로벌실증 사업 · 반도체 첨단패키징 실증센터 구축사업 · 미래 모빌리티 테스트베드 실증지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="commercial-1">
+  <header><h3>시제품·목업 제작</h3><span class="tag">관련 공고 79건</span></header>
+  <p class="desc">아이디어를 실제로 만져 볼 수 있는 시제품으로 만드는 비용을 지원해요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>시제품·목업 설계와 제작비</li><li>재료비·가공비, 장비 사용료</li><li>3D 모델링·기구 설계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 35%<small> (자부담이 적힌 공고 46건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 2,300만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 경상북도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>아이디어나 기술은 있는데 제품이 없는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>시제품제작센터 · 시제품 제작터 지원 · YUnicorn 시제품 제작 및 사업화 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="commercial-2">
+  <header><h3>설비·시설 도입 보조</h3><span class="tag">관련 공고 56건</span></header>
+  <p class="desc">생산 설비나 사업장 시설을 바꾸는 비용 일부를 보조합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>공정 설비 교체·신규 도입 비용 일부</li><li>위험 설비 개선 (산업안전 관련)</li><li>간판·소규모 시설 설치</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 3%<small> (자부담이 적힌 공고 34건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 400만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 경상남도 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>설비가 낡았거나 생산성을 높이려는 제조기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>수산식품 가공설비 지원사업 · 음식점 미세먼지ㆍ악취 방지시설 설치 지원사업 · 사물인터넷 설치 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="commercial-3">
+  <header><h3>사업화 자금·바우처</h3><span class="tag">관련 공고 48건</span></header>
+  <p class="desc">제품 개발부터 마케팅까지 필요한 곳에 쓰는 사업화 자금을 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>사업화 자금 (기업당 수천만원 수준이 흔해요)</li><li>필요한 서비스를 골라 쓰는 바우처</li><li>선정 뒤 단계별 후속 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 46%<small> (자부담이 적힌 공고 28건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 2,000만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상북도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>사업 모델이 구체적인 창업·성장 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>블록체인 바우처 지원사업 · 기업 애로해결 바우처 지원사업 · 소상공인 에너지바우처 지급<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="commercial-4">
+  <header><h3>공모전·포상</h3><span class="tag">관련 공고 17건</span></header>
+  <p class="desc">우수 아이디어·제품·기업을 뽑아 상금과 혜택을 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>상금·상장 수여</li><li>후속 지원사업 연계·가점</li><li>홍보 효과</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 100%<small> (자부담이 적힌 공고 11건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>과학기술정보통신부 · 전북특별자치도 · 기후에너지환경부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>성과를 알리고 싶은 기업, 아이디어가 좋은 팀</dd>
+      <dt>이런 사업이 있어요</dt><dd>AI 창업 경진대회 · 사회적경제 청년 창업 아이디어 경진대회 · 호남권 AX랩 지능형농업 데이터 활용 경진대회<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="commercial-5">
+  <header><h3>오픈이노베이션 (대기업 협업)</h3><span class="tag">관련 공고 13건</span></header>
+  <p class="desc">대기업·공공기관과 함께 기술을 검증하고 사업 기회를 만듭니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>대기업·공공기관과 공동 PoC</li><li>1:1 비즈니스 미팅</li><li>PoC 자금 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 80%<small> (자부담이 적힌 공고 5건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 서울특별시 · 충청남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>대기업과 협업할 기술을 가진 스타트업</dd>
+      <dt>이런 사업이 있어요</dt><dd>산림분야 오픈이노베이션 · 사회문제 해결 오픈이노베이션 · 서초창업스테이션 프리 오픈 이노베이션<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 사업화 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="export" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 수출·해외진출</p>
+    <h2>수출·해외진출 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">해외 바이어를 만나고, 인증을 따고, 물건을 보내는 과정마다 비용과 서비스를 지원해요. 공고 382건을 8가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>45%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>65%</b><span>시·도가 여는 공고</span></div><div class="fact"><b>29곳</b><span>이 지원을 여는 부처·광역 시도<br><small>(시·군 공고는 소속 시도로 셈)</small></span></div><div class="fact"><b>382건</b><span>분석한 수출·해외진출 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>처음 수출한다면 통번역·디자인·물류·인증을 골라 쓰는 &#x27;수출바우처&#x27;형 지원부터 보세요.</li><li>해외 전시회·시장개척단은 부스비·항공료 일부만 지원하는 경우가 많아요. 자부담이 있는 공고 비율은 약 64%예요.</li><li>수출 실적이 있어야만 신청할 수 있는 공고는 약 17%예요. 나머지는 수출 준비 기업도 신청할 수 있어요.</li><li>약 65%를 시·도가 열어요. 같은 지원도 지역마다 금액이 달라요.</li></ul></div>
+    <div class="toc"><a href="#export-0">수출상담회·바이어 매칭</a><a href="#export-1">수출 물류비·국제특송</a><a href="#export-2">해외 전시회·시장개척단</a><a href="#export-3">해외 규격인증</a><a href="#export-4">해외 온라인몰·현지 유통 입점</a><a href="#export-5">해외 지식재산·위조 대응</a><a href="#export-6">해외지사화·현지 진출</a><a href="#export-7">수출바우처 (골라 쓰는 지원)</a></div>
+    <article class="cd" id="export-0">
+  <header><h3>수출상담회·바이어 매칭</h3><span class="tag">관련 공고 110건</span></header>
+  <p class="desc">해외 바이어를 찾아 1:1 상담을 연결해 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 바이어 발굴·섭외</li><li>1:1 상담 매칭과 통역</li><li>상담 후 후속 협상 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 58%<small> (자부담이 적힌 공고 50건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 300만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 중소벤처기업부 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>수출할 제품은 있는데 바이어가 없는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외바이어 초청 수출상담회 · 중국 상하이 무역상담회 · 찾아가는 베트남 수출상담회<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-1">
+  <header><h3>수출 물류비·국제특송</h3><span class="tag">관련 공고 96건</span></header>
+  <p class="desc">해외로 물건을 보내는 운송비 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>국제운송비·특송비 일부 (50% 수준)</li><li>창고료·현지 내륙운송료</li><li>샘플 발송비</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 20%<small> (자부담이 적힌 공고 60건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 500만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 중소벤처기업부 · 산업통상부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>소량 수출이 잦은 기업, 물류비 부담이 큰 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>수출물류비 지원사업 · 수출기업 해외 물류비 지원 · 국제특송 해외물류비 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-2">
+  <header><h3>해외 전시회·시장개척단</h3><span class="tag">관련 공고 86건</span></header>
+  <p class="desc">해외 전시회 한국관 부스나 현지 시장개척단에 참여하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>부스 임차료·장치비 일부</li><li>항공료·숙박비 일부</li><li>현지 바이어 상담 주선과 통역</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 39%<small> (자부담이 적힌 공고 38건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 경상북도 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>해외 바이어를 직접 만나고 싶은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외 전시회 개별 참가 지원 · 해외전시회 참가기업 지원사업 · 기업박람회<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-3">
+  <header><h3>해외 규격인증</h3><span class="tag">관련 공고 31건</span></header>
+  <p class="desc">수출국에서 요구하는 인증(CE, FDA 등)을 따는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>인증비·시험비·컨설팅비 일부 (50~70% 수준)</li><li>기업당 수백만원 한도가 흔해요</li><li>인증 컨설팅 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 20%<small> (자부담이 적힌 공고 25건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 500만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 경기도 · 농림축산식품부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>수출국 인증이 필요한 제조기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외규격인증획득지원사업 · 창업기업 CES 탐방단 · 중소벤처기업 지식재산권 및 해외인증 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-4">
+  <header><h3>해외 온라인몰·현지 유통 입점</h3><span class="tag">관련 공고 29건</span></header>
+  <p class="desc">해외 온라인몰이나 현지 매장에 제품을 올리도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 온라인몰 입점·상품페이지 제작</li><li>현지 오프라인 매장 입점</li><li>배송·홍보·고객응대 대행</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 56%<small> (자부담이 적힌 공고 18건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>농림축산식품부 · 산업통상부 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>소비재를 해외 소비자에게 직접 팔려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외플랫폼 입점 지원사업 · 수출기업 홍보 웹사이트 입점 · 해외 온라인 플랫폼 활용지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-5">
+  <header><h3>해외 지식재산·위조 대응</h3><span class="tag">관련 공고 22건</span></header>
+  <p class="desc">해외에서 특허·상표를 지키고 위조 상품에 대응하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 특허·상표 출원비</li><li>현지 위조·모방 상품 대응</li><li>수출 전 IP 분쟁 위험 진단</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 11%<small> (자부담이 적힌 공고 19건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>지식재산처 · 충청북도 · 전북특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>브랜드·기술을 해외에서 지켜야 하는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>글로벌 IP스타기업 육성 해외등록비용지원사업 · 글로벌 IP스타기업 육성 해외OA비용지원사업 · 글로벌 IP스타기업 육성 해외출원비용 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-6">
+  <header><h3>해외지사화·현지 진출</h3><span class="tag">관련 공고 21건</span></header>
+  <p class="desc">현지 무역관·전문기관이 해외 지사 역할을 대신해 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외지사화 참가비 지원 (기업당 300만원 수준)</li><li>현지 시장조사·거래선 관리</li><li>현지 법인 설립 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 8%<small> (자부담이 적힌 공고 12건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>농림축산식품부 · 산업통상부 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>특정 국가에 꾸준히 진출하려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외지사화 지원사업 · 농식품 현지화지원사업 · 긴급지사화 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="export-7">
+  <header><h3>수출바우처 (골라 쓰는 지원)</h3><span class="tag">관련 공고 8건</span></header>
+  <p class="desc">정해진 금액 안에서 필요한 수출 서비스를 골라 쓰는 방식이에요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>통번역·홍보·디자인·물류·인증 중 선택</li><li>비용의 50~90% 지원</li><li>수출 활동에 쓴 비용을 돌려받기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 25%<small> (자부담이 적힌 공고 8건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>부산광역시 · 중소벤처기업부 · 인천광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>필요한 지원이 여러 가지인 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>수출입 애로 중소기업 바우처 지원사업 · 중동 특화 긴급 물류바우처 사업 · 신발산업 해외물류 바우처 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 수출·해외진출 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="ip">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 인증·지식재산</p>
+    <h2>인증·지식재산 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">특허·상표를 내고 지키는 비용, 품질·해외 인증을 따는 비용을 지원해요. 지자체가 주는 '우수기업 인증'처럼 혜택이 따라오는 인증도 있어요. 공고 340건을 7가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>47%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>20%</b><span>자부담이 있을 때 흔한 비율</span></div><div class="fact"><b>58%</b><span>시·도가 여는 공고</span></div><div class="fact"><b>340건</b><span>분석한 인증·지식재산 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>인증 비용 지원은 보통 비용의 50~70%를 주고 나머지는 기업이 냅니다.</li><li>특허는 출원 전에 특허성 조사(먼저 나온 기술이 있는지 확인)부터 지원하는 사업이 있어요.</li><li>지자체 &#x27;우수기업 인증&#x27;은 돈 대신 다른 지원사업 가점, 세무조사 유예 같은 혜택을 줘요.</li><li>해외 출원·해외 인증은 &#x27;수출·해외진출&#x27; 안내에도 함께 정리돼 있어요.</li></ul></div>
+    <div class="toc"><a href="#ip-0">국내 특허·상표·디자인 출원</a><a href="#ip-1">품질·규격 인증 비용</a><a href="#ip-2">우수기업·혁신제품 인증</a><a href="#ip-3">IP 분쟁·기술 보호</a><a href="#ip-4">해외 출원·해외 IP 보호</a><a href="#ip-5">IP 가치평가·IP 금융</a><a href="#ip-6">정보보호·보안 인증</a></div>
+    <article class="cd" id="ip-0">
+  <header><h3>국내 특허·상표·디자인 출원</h3><span class="tag">관련 공고 96건</span></header>
+  <p class="desc">특허·상표·디자인을 출원하는 비용과 전략 수립을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>특허성 조사·출원 비용</li><li>상표·디자인권 출원</li><li>IP 전략 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 25%<small> (자부담이 적힌 공고 65건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 360만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>지식재산처 · 경기도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>기술·브랜드를 권리로 지키려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 IP출원 지원 사업 · 지식재산 긴급지원 사업 · 지식재산 첫걸음 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-1">
+  <header><h3>품질·규격 인증 비용</h3><span class="tag">관련 공고 54건</span></header>
+  <p class="desc">ISO·KC·HACCP·해외 규격 같은 인증을 따는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>인증비·시험비·컨설팅비 일부</li><li>공인 시험 성적서 발급</li><li>인증 준비 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 18%<small> (자부담이 적힌 공고 34건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 500만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 산업통상부 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>납품·수출에 인증이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>해외규격인증획득지원사업 · 중소벤처기업 지식재산권 및 해외인증 지원사업 · 해외인증 획득지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-2">
+  <header><h3>우수기업·혁신제품 인증</h3><span class="tag">관련 공고 39건</span></header>
+  <p class="desc">지자체·부처가 우수기업이나 혁신제품으로 인증해 혜택을 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>인증서·현판 수여</li><li>다른 지원사업 가점·우대</li><li>공공구매 우대, 세무조사 유예 등</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 87%<small> (자부담이 적힌 공고 30건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>과학기술정보통신부 · 산업통상부 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>성과가 있는 기업, 공공 판로를 노리는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>청년기업 인증 · 가족친화 우수기업 공모전 · 강소기업 육성 기술 혁신 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-3">
+  <header><h3>IP 분쟁·기술 보호</h3><span class="tag">관련 공고 19건</span></header>
+  <p class="desc">특허 분쟁 대응과 기술 유출 예방을 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>심판·소송·경고장 대응 비용</li><li>기술자료 임치 수수료 (최대 75% 등)</li><li>영업비밀 보호 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 20%<small> (자부담이 적힌 공고 15건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>지식재산처 · 경기도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>기술 탈취·분쟁이 걱정되는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>특허분쟁 대응전략 지원사업 · 영업비밀ㆍ기술 보호 컨설팅 · 산업기술보호 컨설팅 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-4">
+  <header><h3>해외 출원·해외 IP 보호</h3><span class="tag">관련 공고 17건</span></header>
+  <p class="desc">해외에 특허·상표를 출원하는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 특허·상표 출원비</li><li>PCT 국제출원</li><li>현지 대리인 비용</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 7%<small> (자부담이 적힌 공고 14건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>충청북도 · 경기도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>해외 진출을 앞둔 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>글로벌 IP스타기업 육성 해외출원비용 지원사업 · 소상공인 해외상표 출원 지원사업 · 특허기술 해외 출원ㆍ등록 비용 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-5">
+  <header><h3>IP 가치평가·IP 금융</h3><span class="tag">관련 공고 17건</span></header>
+  <p class="desc">특허의 가치를 평가받아 대출·보증·투자로 연결합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>IP 가치평가 비용 (전액 지원되기도)</li><li>IP 보증·담보 대출 연계</li><li>투자 유치 자료로 활용</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 15%<small> (자부담이 적힌 공고 13건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 900만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>지식재산처 · 과학기술정보통신부 · 부산광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>특허는 있는데 자금이 필요한 기술기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>데이터 가치평가 지원사업 · 기술이전ㆍ가치평가 지원사업 · IP보증연계 지식재산평가 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="ip-6">
+  <header><h3>정보보호·보안 인증</h3><span class="tag">관련 공고 10건</span></header>
+  <p class="desc">보안 인증이나 보안 기능 확인을 받는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>보안인증 시험·평가 비용</li><li>보안 서비스 이용료</li><li>정보보호 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 33%<small> (자부담이 적힌 공고 9건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>과학기술정보통신부 · 산업통상부 · 전북특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>보안 인증이 필요한 SW·IT 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업 정보보호 지원 사업 · 정보보호 맞춤형 패키지 지원사업 · IoT 보안인증 인증시험 수수료 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 인증·지식재산 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="loan" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 정책자금</p>
+    <h2>정책자금, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">정책자금은 대부분 <b>갚아야 하는 돈(융자)</b>이에요. 대신 시중보다 금리가 낮거나, 담보 대신 보증서로 빌리거나, 이자 일부를 지자체가 대신 내 줍니다. 공고 280건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>73%</b><span>융자(대출)로 지원</span></div><div class="fact"><b>42%</b><span>보증서 발급과 함께 지원</span></div><div class="fact"><b>82%</b><span>시·도가 여는 공고</span></div><div class="fact"><b>57%</b><span>방문·우편으로 접수</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>시·군 육성자금은 정해진 은행·신용보증재단을 거쳐 신청하는 경우가 많고, 약 57%는 방문·우편 접수예요.</li><li>약 49%는 국세·지방세 체납이 있으면 신청할 수 없다고 적혀 있어요. 신청 전에 납세 상태를 확인하세요.</li><li>공고 하나에 경영안정·시설·창업자금처럼 여러 자금이 함께 들어 있는 경우가 많아요. 우리 회사에 맞는 자금 이름을 먼저 찾으세요.</li><li>이자 지원과 보증 수수료 지원은 &#x27;경영비용 절감&#x27; 안내에도 함께 정리돼 있어요.</li></ul></div>
+    <div class="toc"><a href="#loan-0">이자 지원 (이차보전)</a><a href="#loan-1">경영안정(운전)자금 융자</a><a href="#loan-2">특례보증·신용보증</a><a href="#loan-3">시설자금 융자</a><a href="#loan-4">긴급·재해·위기 대응 자금</a><a href="#loan-5">창업기업 전용 자금</a></div>
+    <article class="cd" id="loan-0">
+  <header><h3>이자 지원 (이차보전)</h3><span class="tag">관련 공고 141건</span></header>
+  <p class="desc">은행에서 빌린 돈의 이자 일부를 지자체가 대신 냅니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>대출 이자 중 연 1.5~5%p 지원</li><li>보통 1~2년, 길면 4년</li><li>벤처·우수기업은 더 높게 지원하기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 88%<small> (자부담이 적힌 공고 25건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>인천광역시 · 경기도 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>이미 대출이 있거나 받을 예정인 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업육성자금 이차보전금 지원 · 소상공인 융자금 이차보전 지원 · 지역산업위기대응 이차보전 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-1">
+  <header><h3>경영안정(운전)자금 융자</h3><span class="tag">관련 공고 136건</span></header>
+  <p class="desc">인건비·원자재비 같은 운영 자금을 낮은 금리로 빌려줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>운영 자금 대출 (업체당 수천만~수억원 한도)</li><li>시중보다 낮은 금리, 또는 이자 일부 지원</li><li>보통 1~2년 거치 후 나눠 갚기</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 74%<small> (자부담이 적힌 공고 19건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 전남광주통합특별시 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>일시적으로 자금이 부족한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업육성자금 융자지원 · 소상공인 경영안정자금 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-2">
+  <header><h3>특례보증·신용보증</h3><span class="tag">관련 공고 67건</span></header>
+  <p class="desc">담보가 없어도 보증서를 발급해 은행 대출을 받을 수 있게 합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>신용보증재단 보증서로 은행 대출</li><li>일반 보증보다 심사 기준 완화 (특례보증)</li><li>보증 수수료를 함께 지원하는 경우가 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 86%<small> (자부담이 적힌 공고 22건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 인천광역시 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>담보가 부족한 소상공인·창업기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 특례보증 지원사업 · 중소기업 특례보증 지원 · 중소기업 신용보증수수료 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-3">
+  <header><h3>시설자금 융자</h3><span class="tag">관련 공고 53건</span></header>
+  <p class="desc">공장·설비·사업장 마련처럼 오래 쓰는 시설 투자 자금을 빌려줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>기계·설비 구입, 공장 확보 자금 대출</li><li>상환 기간이 길어요 (최대 10년 안팎)</li><li>에너지 절약 설비 등 목적별 자금도 있어요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 33%<small> (자부담이 적힌 공고 6건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전남광주통합특별시 · 강원특별자치도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>설비를 늘리거나 사업장을 옮기려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>구조고도화자금 지원 · 산업재해예방시설자금 융자금 지원사업 · 중소유통업 시설투자 및 운전자금 융자지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-4">
+  <header><h3>긴급·재해·위기 대응 자금</h3><span class="tag">관련 공고 27건</span></header>
+  <p class="desc">경기 침체·재해·통상 위기로 어려워진 기업에 특별 자금을 풉니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>우대 금리·한도의 특별 자금</li><li>재해·위기 피해 기업 우선 지원</li><li>재기·대환 대출이 포함되기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 인천광역시 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>매출이 갑자기 줄었거나 피해를 입은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>긴급 운전자금 융자 지원 · 산업재해예방 우수기업 인증사업 · 보증기업 위기극복 패키지 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-5">
+  <header><h3>창업기업 전용 자금</h3><span class="tag">관련 공고 23건</span></header>
+  <p class="desc">업력이 짧은 창업기업만 신청할 수 있는 자금이에요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>창업 초기 운영·시설 자금 대출</li><li>청년 창업자 우대</li><li>특례보증과 묶어 주는 경우가 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 71%<small> (자부담이 적힌 공고 7건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 인천광역시 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>창업 7년 이내 기업, 청년 창업자</dd>
+      <dt>이런 사업이 있어요</dt><dd>창업기업자금 동행지원 · 창업기업 신용보증수수료 지원사업 · 청년창업자금 무이자 대출지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 정책자금 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="space">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 공간·장비</p>
+    <h2>공간·장비 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">사무실·작업장 같은 공간과, 혼자 사기 어려운 비싼 장비를 싸게 쓰도록 지원해요. 공고 267건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>51%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>44%</b><span>공간·장비를 현물로 제공</span></div><div class="fact"><b>73%</b><span>시·도가 여는 공고</span></div><div class="fact"><b>267건</b><span>분석한 공간·장비 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>입주 공간은 보통 심사를 거쳐 1~2년 단위로 들어가고, 평가를 받아 연장해요.</li><li>장비 지원은 대학·테크노파크·연구기관의 장비를 바우처로 싸게 쓰는 방식이 많아요.</li><li>지역 전략산업(바이오, 로봇, 반도체 등) 기업만 대상인 경우가 많으니 분야 조건을 확인하세요.</li><li>약 73%를 시·도가 열어요. 우리 지역 센터 공고를 챙겨 보세요.</li></ul></div>
+    <div class="toc"><a href="#space-0">장비 활용·장비 사용료 바우처</a><a href="#space-1">작업장 시설·환경 개선</a><a href="#space-2">임차료 지원</a><a href="#space-3">전시 부스·행사 공간</a><a href="#space-4">창업보육·입주 공간</a><a href="#space-5">테스트베드·실증 공간</a></div>
+    <article class="cd" id="space-0">
+  <header><h3>장비 활용·장비 사용료 바우처</h3><span class="tag">관련 공고 90건</span></header>
+  <p class="desc">연구기관·센터의 비싼 장비를 싸게 쓰도록 사용료를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>장비 사용료 바우처 (기업당 수백만원 이내)</li><li>전문 인력의 장비 운용 지원</li><li>시제품 제작·시험과 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 61%<small> (자부담이 적힌 공고 54건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 경기도 · 중소벤처기업부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>장비를 사기엔 부담스러운 제조·연구 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>사회적기업 시설장비 지원사업 · 나눔장비 이전지원사업 · 연구장비 공동활용 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="space-1">
+  <header><h3>작업장 시설·환경 개선</h3><span class="tag">관련 공고 39건</span></header>
+  <p class="desc">작업장 환경·오염 방지 시설을 개선하는 비용 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>작업환경·복지 공간 개선</li><li>오염 방지시설·측정기기 설치 (비용의 60% 수준)</li><li>기숙사·휴게실 개보수</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 12%<small> (자부담이 적힌 공고 24건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 경상남도 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>작업 환경이 낡은 제조 사업장</dd>
+      <dt>이런 사업이 있어요</dt><dd>소규모 사업장 방지시설 설치 지원사업 · 외국인근로자 생활환경 개선 지원사업 · 기업 환경 개선 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="space-2">
+  <header><h3>임차료 지원</h3><span class="tag">관련 공고 28건</span></header>
+  <p class="desc">직접 구한 사업장의 임차료 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>월 임차료 일부 (월 10~35만원 수준)</li><li>보통 3~12개월</li><li>청년 창업자 대상이 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 50%<small> (자부담이 적힌 공고 16건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 200만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>전북특별자치도 · 경상북도 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>임대료 부담이 큰 창업 초기 사업자</dd>
+      <dt>이런 사업이 있어요</dt><dd>청년 창업자 임차료 지원사업 · 청년농업인 농지임대료 지원사업 · 소상공인 창업 임대료 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="space-3">
+  <header><h3>전시 부스·행사 공간</h3><span class="tag">관련 공고 24건</span></header>
+  <p class="desc">행사·전시회에서 쓸 부스와 기본 집기를 제공합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>부스 무상 제공 또는 임차료 지원</li><li>테이블·전기·인터넷 등 기본 집기</li><li>행사 연계 홍보</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 75%<small> (자부담이 적힌 공고 8건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 문화체육관광부 · 충청남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>행사에서 제품을 보여 주고 싶은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>세일페스타 수도권 팝업스토어 · 청년 롯데 프리미엄 아울렛 동부산점 팝업스토어 · 국제수산EXPO 운영 부스<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="space-4">
+  <header><h3>창업보육·입주 공간</h3><span class="tag">관련 공고 21건</span></header>
+  <p class="desc">창업센터·보육센터에 싼값이나 무료로 사무실을 내줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>사무 공간 (임대료 감면·면제)</li><li>회의실·공용 장비 이용</li><li>입주 기업 대상 교육·멘토링</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 83%<small> (자부담이 적힌 공고 6건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전북특별자치도 · 서울특별시 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>사무실이 필요한 창업기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>K-뷰티 글로벌 라운지 입점 · 창업센터 관악 × SK에코플랜트 오픈이노베이션 · 시흥창업센터 메이커스페이스<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="space-5">
+  <header><h3>테스트베드·실증 공간</h3><span class="tag">관련 공고 18건</span></header>
+  <p class="desc">제품을 실제 환경처럼 시험해 볼 공간과 설비를 제공합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>실증 공간·설비 이용</li><li>성능·안정성 검증</li><li>실증 결과 보고서</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 62%<small> (자부담이 적힌 공고 13건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 부산광역시 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>출시 전 실제 환경 검증이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>탄소저감형 테스트베드 활용 지원 · 반도체 소부장기업 실증 지원사업 · AI데이터센터 테스트베드 실증지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 공간·장비 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="hire" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 인력·고용</p>
+    <h2>인력·고용 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">사람을 뽑을 때 드는 인건비를 보태고, 직원 교육과 근무 환경을 지원해요. 공고 225건을 7가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>80%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>67%</b><span>인건비 등 보조금으로 지원</span></div><div class="fact"><b>18%</b><span>청년 채용·일자리 공고</span></div><div class="fact"><b>57%</b><span>시·도가 여는 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>채용 지원금은 보통 먼저 뽑은 뒤, 고용을 일정 기간 유지하면 매달 또는 나눠서 받아요.</li><li>청년·신중년·외국인 유학생처럼 뽑는 사람의 조건이 정해진 경우가 많아요. 채용 전에 대상자 조건을 먼저 확인하세요.</li><li>4대보험 가입과 최저임금 이상 지급이 기본 조건인 경우가 대부분이에요.</li><li>인원·기간 한도(예: 기업당 최대 몇 명, 몇 개월)가 있으니 공고에서 꼭 확인하세요.</li></ul></div>
+    <div class="toc"><a href="#hire-0">청년 채용 지원금</a><a href="#hire-1">인턴·일경험</a><a href="#hire-2">재직자 교육·훈련</a><a href="#hire-3">중장년·신중년 채용</a><a href="#hire-4">근속·복지 지원</a><a href="#hire-5">근무제도 개선 지원</a><a href="#hire-6">외국인·특화 인력 매칭</a></div>
+    <article class="cd" id="hire-0">
+  <header><h3>청년 채용 지원금</h3><span class="tag">관련 공고 54건</span></header>
+  <p class="desc">청년을 새로 뽑으면 인건비 일부를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>청년 인건비 일부 (월 수십만원~200만원대)</li><li>보통 6개월~1년, 기업당 인원 한도</li><li>오래 근무하면 근속 장려금을 주기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 89%<small> (자부담이 적힌 공고 37건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>고용노동부 · 경상남도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>청년 직원을 새로 뽑으려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>청년일자리도약장려금 · 청년여성 일경험 지원사업 · 청년 일경험 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-1">
+  <header><h3>인턴·일경험</h3><span class="tag">관련 공고 54건</span></header>
+  <p class="desc">인턴이나 일경험 참여자를 받으면 인건비와 운영비를 보탭니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>참여자 인건비 (수개월)</li><li>운영비·멘토 수당</li><li>정규직 전환 시 추가 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 91%<small> (자부담이 적힌 공고 32건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>고용노동부 · 보건복지부 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>채용 전에 함께 일해 보고 싶은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>현장실습 훈련 지원사업 · 시니어 인턴십 · 미래내일 일경험<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-2">
+  <header><h3>재직자 교육·훈련</h3><span class="tag">관련 공고 41건</span></header>
+  <p class="desc">직원 역량을 키우는 교육·훈련 과정과 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>맞춤형 직무 훈련 과정</li><li>AI·디지털 등 신기술 교육</li><li>훈련 로드맵 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 87%<small> (자부담이 적힌 공고 23건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>고용노동부 · 보건복지부 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>직원 역량을 높이려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>기업훈련 탄력운영제 · 중소기업 AI훈련확산센터 · 스마트제조 고급인력양성 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-3">
+  <header><h3>중장년·신중년 채용</h3><span class="tag">관련 공고 29건</span></header>
+  <p class="desc">경력 있는 중장년을 채용하면 인건비나 환경개선비를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>중장년 인건비·활동비 지원</li><li>고용 인원에 따라 근로환경 개선비</li><li>경력 인재 매칭</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 89%<small> (자부담이 적힌 공고 19건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>보건복지부 · 경상남도 · 고용노동부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>경험 많은 인력이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>신중년 고용지원사업 · 신중년 내일이음 50+사업 · 시니어 취업지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-4">
+  <header><h3>근속·복지 지원</h3><span class="tag">관련 공고 20건</span></header>
+  <p class="desc">직원이 오래 다니도록 근속 장려금이나 복지 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>근속 장려금·근로소득 보전금</li><li>휴가비·여가 활동비</li><li>직원 복지 경비 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 88%<small> (자부담이 적힌 공고 16건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>고용노동부 · 경상북도 · 전남광주통합특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>직원 이직이 잦은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>김해형 중소기업 근로소득 청년지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-5">
+  <header><h3>근무제도 개선 지원</h3><span class="tag">관련 공고 10건</span></header>
+  <p class="desc">유연근무·단축근무 같은 제도를 도입하면 지원금을 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>단축·유연 근무 도입 지원금</li><li>육아기 직원 지원</li><li>제도 설계 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 100%<small> (자부담이 적힌 공고 8건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전북특별자치도 · 고용노동부 · 서울특별시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>일·생활 균형 제도를 도입하려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>신중년 유연근무형 일자리 지원사업 · 육아휴직 대체인력 근로자 지원사업 · 소상공인 육아휴직자 대체인력 인건비 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="hire-6">
+  <header><h3>외국인·특화 인력 매칭</h3><span class="tag">관련 공고 9건</span></header>
+  <p class="desc">외국인 유학생, 특성화고 학생 같은 인력을 연결해 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>외국인 유학생 인턴 인건비</li><li>특성화고 학생 추천·매칭</li><li>병역특례(산업기능요원) 가점</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 57%<small> (자부담이 적힌 공고 7건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 전남광주통합특별시 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>인력 구하기 어려운 제조·수출 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>외국인유학생 산업캠퍼스 실습인턴제 · 외국인 취업채용박람회 · 외국인 근로자 숙소지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 인력·고용 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="dx">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 디지털전환</p>
+    <h2>디지털전환 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">스마트공장, 제조 AI, 자동화, 소상공인 스마트기술처럼 일하는 방식을 디지털로 바꾸는 비용과 컨설팅을 지원해요. 공고 136건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>46%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>25%</b><span>자부담이 있을 때 흔한 비율</span></div><div class="fact"><b>54%</b><span>구축 비용을 보조금으로 지원</span></div><div class="fact"><b>136건</b><span>분석한 디지털전환 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>스마트공장 구축은 정부·지자체가 일부를 내고 기업 부담이 붙는 경우가 많아요. &#x27;기초 → 고도화&#x27; 단계로 나뉘어요.</li><li>구축 전에 수준 진단·컨설팅만 따로 주는 무료 지원부터 받아 보면 무엇을 도입할지 정하기 쉬워요.</li><li>솔루션 공급기업과 함께 신청하는 구조가 많아요. 공급기업 선정 방식을 먼저 확인하세요.</li><li>대부분(약 98%) 기존 사업자가 대상이에요.</li></ul></div>
+    <div class="toc"><a href="#dx-0">제조 AI·데이터 활용</a><a href="#dx-1">디지털 전환 진단·컨설팅</a><a href="#dx-2">스마트공장 구축</a><a href="#dx-3">자동화·로봇 도입</a><a href="#dx-4">정보보호·클라우드</a><a href="#dx-5">환경 IoT 측정기기</a></div>
+    <article class="cd" id="dx-0">
+  <header><h3>제조 AI·데이터 활용</h3><span class="tag">관련 공고 58건</span></header>
+  <p class="desc">공장 데이터를 모으고 AI로 공정을 개선하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>데이터 수집·활용 체계 구축</li><li>AI 기반 공정 최적화 솔루션</li><li>디지털 트윈 실증</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 58%<small> (자부담이 적힌 공고 43건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 700만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 산업통상부 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>스마트공장 다음 단계를 준비하는 제조기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>제조 AI 현장 적용 지원 사업 · 중소기업 AI훈련확산센터 · 초거대 AI 기술 컨설팅<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="dx-1">
+  <header><h3>디지털 전환 진단·컨설팅</h3><span class="tag">관련 공고 54건</span></header>
+  <p class="desc">무엇을 디지털로 바꿀지 전문가가 진단하고 계획을 세웁니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>현장·공정 진단</li><li>디지털 전환 로드맵</li><li>구축 사업 신청 준비</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 62%<small> (자부담이 적힌 공고 39건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 610만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상남도 · 과학기술정보통신부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>디지털 전환을 처음 검토하는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>스마트공장 컨설팅 지원사업 · 스마트공장 수준확인 사업 · 스마트공장 공급기업 역량진단<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="dx-2">
+  <header><h3>스마트공장 구축</h3><span class="tag">관련 공고 24건</span></header>
+  <p class="desc">생산 관리 솔루션과 연동 설비를 갖춘 스마트공장 구축 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>솔루션(MES 등)과 연동 설비·센서 구축</li><li>총사업비의 50~60% 수준 지원이 흔해요</li><li>기초·고도화 단계별 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 24%<small> (자부담이 적힌 공고 17건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상남도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>생산 관리를 데이터로 바꾸려는 제조기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>지역특화형 스마트공장 구축지원사업 · 스마트공장 기초구축 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="dx-3">
+  <header><h3>자동화·로봇 도입</h3><span class="tag">관련 공고 19건</span></header>
+  <p class="desc">사람이 하던 반복 작업을 자동화 장비·로봇으로 바꾸는 비용을 보탭니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>자동화 장비·제어기 구축</li><li>로봇 공정 성능 개선</li><li>안전 설비 함께 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 18%<small> (자부담이 적힌 공고 11건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 경상북도 · 경상남도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>인력난이 심한 제조기업</dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="dx-4">
+  <header><h3>정보보호·클라우드</h3><span class="tag">관련 공고 16건</span></header>
+  <p class="desc">보안 서비스와 클라우드 이용 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>클라우드 보안 서비스 이용료</li><li>보안 취약점 점검</li><li>정보보호 컨설팅</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 33%<small> (자부담이 적힌 공고 12건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 480만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>과학기술정보통신부 · 경상남도 · 전북특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>고객 정보를 다루는 기업, 보안이 걱정되는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업 정보보호 지원 사업 · 사이버 위기대응 모의훈련 및 보안점검<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="dx-5">
+  <header><h3>환경 IoT 측정기기</h3><span class="tag">관련 공고 15건</span></header>
+  <p class="desc">오염 방지시설에 원격 측정기기(IoT)를 다는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>IoT 측정기기·게이트웨이 설치</li><li>설치비의 60% 수준 지원</li><li>방지시설 개선과 함께 지원하기도</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>대부분 자부담 있음 · 자부담 없음 0%<small> (자부담이 적힌 공고 9건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 전남광주통합특별시 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>대기 배출시설이 있는 소규모 사업장</dd>
+      <dt>이런 사업이 있어요</dt><dd>사물인터넷 측정기기 부착 지원사업 · 사물인터넷 설치 지원사업 · 소규모 사물인터넷 측정기기 설치 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 디지털전환 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="rnd" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 기술개발</p>
+    <h2>기술개발(R&amp;D) 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">새 기술·제품을 개발하는 데 드는 연구개발비와 전문 인력·장비를 지원해요. 시·도보다 <b>중앙부처 공고</b>가 많은 유형이에요. 공고 116건을 6가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>62%</b><span>중앙부처가 여는 공고</span></div><div class="fact"><b>47%</b><span>연구개발비 등 보조금으로 지원</span></div><div class="fact"><b>28%</b><span>기업부설연구소·연구전담부서를 조건이나 우대로 둔 공고</span></div><div class="fact"><b>116건</b><span>분석한 기술개발 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>약 62%가 산업통상부·중소벤처기업부 같은 중앙부처 공고예요. 부처별 통합 공고를 연초에 확인하세요.</li><li>기업부설연구소나 연구전담부서가 있으면 신청 자격이나 가점에서 유리한 경우가 많아요.</li><li>정부 연구개발비에는 보통 기업 분담금(현금·현물)이 붙고, 서면·발표 평가를 거쳐요.</li><li>R&amp;D 신청이 처음이라면 과제 기획·계획서 작성을 도와주는 지원부터 보세요.</li></ul></div>
+    <div class="toc"><a href="#rnd-0">R&amp;D 과제 (연구개발비)</a><a href="#rnd-1">시험·분석·성능평가</a><a href="#rnd-2">R&amp;D 기획·과제 신청 준비</a><a href="#rnd-3">대학·연구기관 공동개발</a><a href="#rnd-4">기술이전·기술사업화</a><a href="#rnd-5">국제공동 R&amp;D</a></div>
+    <article class="cd" id="rnd-0">
+  <header><h3>R&amp;D 과제 (연구개발비)</h3><span class="tag">관련 공고 65건</span></header>
+  <p class="desc">정부가 정한 주제나 기업이 낸 주제로 연구개발비를 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>과제당 연구개발비 (수천만~수억원)</li><li>1~3년 단위 과제</li><li>성공하면 사업화 후속 지원 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 43%<small> (자부담이 적힌 공고 30건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>기업당 5,000만원 안팎<small> (금액이 적힌 공고의 중간값)</small></dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 중소벤처기업부 · 과학기술정보통신부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>개발할 기술 목표가 분명한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>미래개척융합과학기술개발사업 신규과제 · 한-독 국제공동기술개발사업 · 투ㆍ융자 연계 기술개발사업 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="rnd-1">
+  <header><h3>시험·분석·성능평가</h3><span class="tag">관련 공고 36건</span></header>
+  <p class="desc">개발한 제품의 성능을 공인 기관에서 시험·분석하도록 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>공인 시험·분석 비용</li><li>성능 평가 성적서 발급</li><li>결과 분석과 개선 자문</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 67%<small> (자부담이 적힌 공고 9건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 경상북도 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>개발을 마치고 성능을 입증해야 하는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>e-다목적차량 주행안정성 성능평가 기반구축 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="rnd-2">
+  <header><h3>R&amp;D 기획·과제 신청 준비</h3><span class="tag">관련 공고 18건</span></header>
+  <p class="desc">정부 R&amp;D에 처음 도전하는 기업의 과제 기획과 계획서 작성을 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>R&amp;D 과제 기획 컨설팅</li><li>사업계획서 작성 지도</li><li>기술·시장 조사 지원</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 57%<small> (자부담이 적힌 공고 7건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 산업통상부 · 방위사업청</dd>
+      <dt>이런 기업에 맞아요</dt><dd>정부 R&amp;D 신청이 처음인 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>대학-기업 공동 기술ㆍ제품 기획 지원 과제 · 중소기업 정부기술개발공모사업 선정지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="rnd-3">
+  <header><h3>대학·연구기관 공동개발</h3><span class="tag">관련 공고 15건</span></header>
+  <p class="desc">대학·연구기관의 연구 인력과 장비를 활용해 함께 개발합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>대학·연구소와 공동 기술개발</li><li>대학 기술을 활용한 제품화</li><li>연구 인력 매칭</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 43%<small> (자부담이 적힌 공고 7건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>과학기술정보통신부 · 산업통상부 · 대구광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>자체 연구 인력이 부족한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>대학ㆍ기업 협업 프로젝트 · 원자력 산학공동 프로젝트 지원사업 · 디지털혁신기술국제공동연구사업 신규지원 대상과제<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="rnd-4">
+  <header><h3>기술이전·기술사업화</h3><span class="tag">관련 공고 7건</span></header>
+  <p class="desc">공공기관·대학이 가진 기술을 사 오고 사업으로 연결하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>기술료 일부 지원 (예: 최대 1천만원)</li><li>이전받은 기술의 시제품·인증 지원</li><li>기술 가치평가</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 전남광주통합특별시 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>직접 개발하기보다 검증된 기술을 들여오려는 기업</dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="rnd-5">
+  <header><h3>국제공동 R&amp;D</h3><span class="tag">관련 공고 6건</span></header>
+  <p class="desc">해외 기업·연구기관과 함께 기술을 개발하는 비용을 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>해외 파트너와 공동개발 연구비</li><li>해외 네트워크 연결</li><li>해외 시장 진출과 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>산업통상부 · 중소벤처기업부 · 과학기술정보통신부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>해외 기술 협력이 필요한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>산업기술국제협력<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 기술개발 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section><section id="startup">
+  <div class="wrap">
+    <p class="eyebrow">자세히 보기 · 창업 준비</p>
+    <h2>창업 준비 지원, 무엇을 받을 수 있나요?</h2>
+    <p class="sec-lead">사업자등록 전후의 예비창업자에게 교육, 아이디어 권리화, 멘토링, 초기 비용을 지원해요. 이 유형으로 분류된 공고는 29건으로 적어서, 창업 자금은 '사업화'와 '정책자금' 안내도 함께 보세요. 5가지로 나눠 정리했어요.</p>
+    <div class="facts"><div class="fact"><b>86%</b><span>사업자등록 전에도 신청할 수 있는 공고</span></div><div class="fact"><b>86%</b><span>자부담 없이 지원<br><small>(자부담이 적힌 공고 기준)</small></span></div><div class="fact"><b>17곳</b><span>이 지원을 여는 부처·광역 시도</span></div><div class="fact"><b>29건</b><span>분석한 창업 준비 공고</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>창업 준비 단계 지원은 사업자등록 전에도 신청할 수 있는 경우가 많아요.</li><li>교육을 마치면 사업화 자금이나 보육 공간으로 이어지는 단계형 프로그램이 많아요.</li><li>아이디어만 있어도 특허 출원까지 도와주는 &#x27;IP 디딤돌&#x27; 같은 지원이 있어요.</li><li>창업 자금과 공간은 &#x27;사업화&#x27;, &#x27;정책자금&#x27;, &#x27;공간·장비&#x27; 안내를 함께 보세요.</li></ul></div>
+    <div class="toc"><a href="#startup-0">멘토링·액셀러레이팅</a><a href="#startup-1">창업 교육·아카데미</a><a href="#startup-2">아이디어 권리화 (IP 디딤돌)</a><a href="#startup-3">창업 경진대회</a><a href="#startup-4">창업 초기비용·활동비</a></div>
+    <article class="cd" id="startup-0">
+  <header><h3>멘토링·액셀러레이팅</h3><span class="tag">관련 공고 15건</span></header>
+  <p class="desc">선배 창업가·전문가가 사업 아이템과 모델을 함께 다듬습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>1:1 멘토링</li><li>사업모델 검증</li><li>투자 연계 준비</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>중소벤처기업부 · 문화체육관광부 · 부산광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>아이템을 검증받고 싶은 예비창업자</dd>
+      <dt>이런 사업이 있어요</dt><dd>청년큐브 1:1 창업멘토링 지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="startup-1">
+  <header><h3>창업 교육·아카데미</h3><span class="tag">관련 공고 8건</span></header>
+  <p class="desc">창업 기초부터 사업계획서 작성까지 단계별로 가르칩니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>창업 기초·사업모델 교육</li><li>사업계획서 작성 실습</li><li>수료 후 사업화 지원 연계</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상북도 · 문화체육관광부 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>창업을 처음 준비하는 사람</dd>
+      <dt>이런 사업이 있어요</dt><dd>체육인 직업안정 사업 창업교육과정<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="startup-2">
+  <header><h3>아이디어 권리화 (IP 디딤돌)</h3><span class="tag">관련 공고 6건</span></header>
+  <p class="desc">아이디어를 다듬어 특허로 출원하도록 돕습니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>아이디어 상담·고도화 컨설팅</li><li>특허 출원 비용 (최대 200만원 안팎)</li><li>IP 창업 교육</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전남광주통합특별시 · 기후에너지환경부 · 부산광역시</dd>
+      <dt>이런 기업에 맞아요</dt><dd>기술 아이디어가 있는 예비창업자</dd>
+      <dt>이런 사업이 있어요</dt><dd>IP 디딤돌 프로그램 지원사업 · 반려동물 창업 아이디어 경진대회 · 사회적경제 청년 창업 아이디어 경진대회<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="startup-3">
+  <header><h3>창업 경진대회</h3><span class="tag">관련 공고 5건</span></header>
+  <p class="desc">창업 아이디어를 겨뤄 상금과 사업화 자금을 줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>상금·상장</li><li>수상팀 사업화 자금</li><li>후속 지원사업 가점</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>부산광역시 · 전남광주통합특별시 · 기후에너지환경부</dd>
+      <dt>이런 기업에 맞아요</dt><dd>아이디어를 평가받고 싶은 팀</dd>
+      <dt>이런 사업이 있어요</dt><dd>AI 창업 경진대회 · 소셜캠퍼스 온 강원 소셜 튜터 공모전 · 대한민국 물산업 혁신 창업대전<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="startup-4">
+  <header><h3>창업 초기비용·활동비</h3><span class="tag">관련 공고 5건</span></header>
+  <p class="desc">창업 초기에 드는 비용 일부를 현금으로 지원합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>창업 초기 비용 (수백만~천만원대)</li><li>청년 창업자 대상이 많아요</li><li>지역 정착 조건이 붙기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전남광주통합특별시 · 경상북도 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>창업 직전·직후의 청년 창업자</dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 창업 준비 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section>
+<section><div class="wrap"><p class="basis" style="margin-top:0">이 안내는 기업마당에 올라온 공고를 바탕으로 정리했습니다. 지원 금액·횟수·자부담은 공고마다 다르니 신청 전에 반드시 원문 공고를 확인하세요. '흔한 지원 규모'는 그 유형 낱말이 들어간 지원 내용 줄에서 기업당 금액을 찾아 낸 중간값입니다. 출처: 기업마당(bizinfo.go.kr).</p></div></section>
+</main>
+
+<footer class="site"><div class="wrap">사업나침반 · 공고 원문 출처: 기업마당(bizinfo.go.kr)</div></footer>
+</body>
+</html>
