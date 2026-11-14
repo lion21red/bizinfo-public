@@ -1,0 +1,47 @@
+# 사업나침반
+
+> 기업마당 정부지원사업 공고를 매일 모아 첨부 공고문의 자격·가점 조건까지 우리 회사와 대조하고, 신청서·사업계획서 초안까지 작성하는 지원사업 매칭 서비스입니다.
+
+- 공고 출처: 중소벤처기업부 「중소기업 지원사업 공고 조회 서비스」(공공데이터포털·기업마당 bizinfo.go.kr), 매일 수집
+- 판정은 공고 원문의 근거 문장과 함께 보여 주며, 서류로만 확인할 수 있는 조건은 '확인 필요'로 따로 표시한다
+- 매칭·신청서 초안은 로그인 후 앱에서 쓴다 (정식 출시 전 파일럿 기간: 테스터 30명 무료, 출시 뒤 7일 무료 체험)
+
+## 주요 페이지
+
+- [사업나침반 홈](https://biznachim.kr/): 서비스 소개, 접수 중 공고 현황, 자주 묻는 질문
+- [데이터·매칭 방법](https://biznachim.kr/method.html): 공고를 모으고 판정하는 방법과 한계
+- [정부지원사업 매칭 서비스 고르는 법](https://biznachim.kr/matching-guide.html): 매칭 서비스를 고를 때 확인할 7가지와 사업나침반의 방식
+- [지원 서비스 안내](https://biznachim.kr/support_guide.html): 정부·지자체 지원을 12가지 유형으로 정리
+- [2026 지원사업 목록](https://biznachim.kr/plan2026.html): 2026년 정부 지원사업 안내 책자의 사업명과 원문 쪽
+- [게시판](https://biznachim.kr/board.html): 기업지원정보·지원사업 활용사례
+
+## 지원 유형별 안내
+
+- [사업화 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-commercial.html)
+- [컨설팅 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-consulting.html)
+- [경영비용 절감 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-cost.html)
+- [디지털전환 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-dx.html)
+- [수출·해외진출 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-export.html)
+- [인력·고용 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-hire.html)
+- [인증·지식재산 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-ip.html)
+- [정책자금, 무엇을 받을 수 있나요?](https://biznachim.kr/support-loan.html)
+- [판로·마케팅 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-market.html)
+- [기술개발(R&D) 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-rnd.html)
+- [공간·장비 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-space.html)
+- [창업 준비 지원, 무엇을 받을 수 있나요?](https://biznachim.kr/support-startup.html)
+
+## 최근 주요 소식
+
+- [2026년 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 상시 모집 공고](https://biznachim.kr/news-2026-11-13-ef5ef4f7.html) (2026-11-13)
+- [2026년 소상공인 법률ㆍ노무 현장 상담 지원사업 모집 공고](https://biznachim.kr/news-2026-11-13-b1f9e661.html) (2026-11-13)
+- [2026년 2차 권역별 선도서점 육성 사업 컨설팅(경영ㆍ마케팅ㆍ디지털) 참여서점 추가 모집 공고](https://biznachim.kr/news-2026-11-13-e78c0d16.html) (2026-11-13)
+- [2026년 4차 해양수산부 혁신제품 지정 시행 공고](https://biznachim.kr/news-2026-11-13-58f5c18c.html) (2026-11-13)
+- [2026년 해외 온라인 플랫폼 판로지원 사업 참여 소상공인 통합 공고](https://biznachim.kr/news-2026-11-10-d735d9de.html) (2026-11-10)
+- [2026년 ICT 중소기업 글로벌 진출 지원사업 추가 공고](https://biznachim.kr/news-2026-11-10-087688f7.html) (2026-11-10)
+- [2026년 K-BUSINESS DAY(글로벌 해외바이어 초청 수출상담회) 참여기업 모집 공고](https://biznachim.kr/news-2026-11-10-cbca801f.html) (2026-11-10)
+- [2026년 스마트 플래그십 스토어 (소담상회 with LOTTE ON) 모집 공고](https://biznachim.kr/news-2026-11-10-35908c70.html) (2026-11-10)
+- [2026년 5차 방산 중소기업 컨설팅 지원사업 지원대상기업 모집 공고](https://biznachim.kr/news-2026-11-10-d9b97178.html) (2026-11-10)
+- [2026년 11차 정보보호 인증제품 조달청 벤처나라 추천기업 모집 공고(11월 추천)](https://biznachim.kr/news-2026-11-10-50e6ca20.html) (2026-11-10)
+- [중기부, 티메프 피해 중소기업 특별만기연장 시행](https://biznachim.kr/news-2026-11-10-45031678.html) (2026-11-10)
+- [1인 창조기업·중장년 기술창업센터 신규 주관기관 모집](https://biznachim.kr/news-2026-11-10-7f508c18.html) (2026-11-10)
+- [9.3만 명의 도전, 1만 명의 새로운 출발 「2차 모두의 창업」 본격 출범](https://biznachim.kr/news-2026-11-03-90da2c8d.html) (2026-11-03)

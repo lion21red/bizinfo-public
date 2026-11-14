@@ -1,0 +1,1314 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="t4W5c4zUSZXQBlf4jvQX6X6kvQalZDkGAQqLFIYnJ6o">
+<meta name="naver-site-verification" content="d8b98fb55d32798ee214a1e88e9f01d9afbc7dea">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="data/icon_192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="data/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data/icon_180.png">
+<title>사업나침반 — AI 정부지원사업 매칭·자격 판정·신청서 초안</title>
+<meta name="description" content="AI 정부지원사업 매칭 서비스. 정부·지자체 지원사업 공고를 매일 모아 첨부 공고문의 자격·가점 조건을 우리 회사와 대조하고, 신청서·사업계획서 초안까지 작성합니다. 지금은 정식 출시 전 파일럿 테스터를 무료로 모집합니다.">
+<link rel="canonical" href="https://biznachim.kr/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="사업나침반">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="사업나침반 — AI 정부지원사업 매칭·자격 판정·신청서 초안">
+<meta property="og:description" content="AI 정부지원사업 매칭 서비스. 정부·지자체 지원사업 공고를 매일 모아 첨부 공고문의 자격·가점 조건을 우리 회사와 대조하고, 신청서·사업계획서 초안까지 작성합니다. 지금은 정식 출시 전 파일럿 테스터를 무료로 모집합니다.">
+<meta property="og:url" content="https://biznachim.kr/">
+<meta property="og:image" content="https://biznachim.kr/data/og_image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="사업나침반 — 지원사업 찾기부터 신청서 초안까지">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://biznachim.kr/#org","name":"사업나침반","url":"https://biznachim.kr/","logo":"https://biznachim.kr/data/icon_192.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://biznachim.kr/#site","name":"사업나침반","url":"https://biznachim.kr/","inLanguage":"ko-KR","description":"기업마당 정부지원사업 공고를 매일 모아 첨부 공고문의 자격·가점 조건까지 우리 회사와 대조하고, 신청서·사업계획서 초안까지 작성하는 지원사업 매칭 서비스입니다.","publisher":{"@id":"https://biznachim.kr/#org"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"사업나침반","serviceType":"정부지원사업 매칭·신청서 작성 지원","url":"https://biznachim.kr/","inLanguage":"ko-KR","areaServed":{"@type":"Country","name":"대한민국"},"audience":{"@type":"BusinessAudience","audienceType":"소상공인·중소기업·컨설턴트"},"description":"기업마당 정부지원사업 공고를 매일 모아 첨부 공고문의 자격·가점 조건까지 우리 회사와 대조하고, 신청서·사업계획서 초안까지 작성하는 지원사업 매칭 서비스입니다.","provider":{"@id":"https://biznachim.kr/#org"},"availableChannel":{"@type":"ServiceChannel","serviceUrl":"https://app.biznachim.kr"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"무료로 써 볼 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"지금은 정식 출시 전 파일럿 기간이라, 카카오 또는 Google 계정으로 가입한 선착순 30명이 정식 출시일까지 무료로 이용합니다. 일반 회원과 같은 기능을 기업 1곳으로 쓰며, AI 사용량은 10일마다 나누어 드립니다. 정식 출시 뒤에는 파일럿 회원을 포함한 모든 가입자가 7일 동안 무료로 체험한 다음 요금제를 고릅니다."}},{"@type":"Question","name":"어떤 공고를 대상으로 하나요?","acceptedAnswer":{"@type":"Answer","text":"기업마당에 올라오는 중앙 부처·지자체·기관의 지원사업 공고를 매일 수집하고, 첨부된 공고문까지 분석합니다."}},{"@type":"Question","name":"매칭 결과는 얼마나 믿을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"조건마다 공고 원문의 근거 문장을 함께 보여 드립니다. 서류로만 확인할 수 있는 조건은 ‘확인 필요’로 따로 표시하니, 신청 전에 꼭 확인하세요."}},{"@type":"Question","name":"여러 고객사를 관리하는 컨설턴트도 쓸 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"유료 요금제에 따라 관리할 수 있는 기업 수가 늘어납니다. 로그인 후 홈에서 고객 기업 목록과 진행 상황을 한눈에 볼 수 있습니다."}},{"@type":"Question","name":"등록한 회사 정보는 안전한가요?","acceptedAnswer":{"@type":"Answer","text":"회사 정보는 본인 계정에서만 볼 수 있고, 탈퇴·자료 삭제를 요청할 수 있습니다. 자세한 내용은 개인정보 처리방침을 확인하세요."}},{"@type":"Question","name":"사업나침반은 어떤 서비스인가요?","acceptedAnswer":{"@type":"Answer","text":"AI로 정부지원사업을 우리 회사에 매칭해 주는 서비스입니다. 기업마당에 올라오는 정부·지자체 지원사업 공고를 매일 모아, 첨부된 공고문의 자격·가점 조건을 등록한 회사 정보와 대조해 신청할 수 있는 공고를 골라 드리는 서비스입니다. 신청하기로 정한 사업은 AI가 신청서·사업계획서 초안까지 작성합니다."}},{"@type":"Question","name":"정부지원사업 매칭 서비스는 무엇을 보고 고르면 되나요?","acceptedAnswer":{"@type":"Answer","text":"공고 제목·분야만 보고 고르는지, 첨부 공고문의 자격·가점 조건까지 읽고 판정하는지를 먼저 보세요. 사업나침반은 업력·매출·업종·지역·인증 같은 조건마다 충족·미충족·확인 필요로 판정하고 공고 원문의 근거 문장을 함께 보여 드리며, 신청하기로 정한 사업은 지정양식에 맞춘 신청서 초안까지 이어서 작성합니다."}},{"@type":"Question","name":"기업마당에서 직접 찾는 것과 무엇이 다른가요?","acceptedAnswer":{"@type":"Answer","text":"기업마당은 공고를 모아 보여 주고, 사업나침반은 공고문과 첨부파일을 읽어 우리 회사가 자격 조건에 맞는지 조건마다 판정하고 그 근거 문장을 함께 보여 줍니다. 판정은 매우 적합·적합·참고 등급으로 나눕니다."}},{"@type":"Question","name":"올해 어떤 정부 지원사업이 있는지 어디서 보나요?","acceptedAnswer":{"@type":"Answer","text":"2026 지원사업 목록 페이지에 중소벤처기업부 지원사업 안내 책자 2권과 창업지원사업 통합공고의 사업명을 모아 두었습니다. 사업명을 누르면 책자 원문의 해당 쪽이 열립니다."}},{"@type":"Question","name":"AI가 쓴 신청서 초안을 그대로 내도 되나요?","acceptedAnswer":{"@type":"Answer","text":"초안은 공고의 지정양식과 평가 항목에 맞춰 개조식으로 작성하지만, 회사 사정과 다른 내용이 있을 수 있습니다. 숫자·실적·일정은 직접 확인하고 고친 뒤 제출하세요."}}]}</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+/* 토큰: design.py PRIMITIVE / COLOR 와 같은 값 */
+:root{
+  --bg-page:#F8FAFC; --bg-surface:#FFFFFF; --bg-muted:#F1F5F9; --bg-accent:#EFF6FF;
+  --action:#0F172A; --action-hover:#1E293B;
+  --text:#0F172A; --text-2:#475569; --text-3:#64748B; --text-accent:#2563EB; --blue-700:#1D4ED8;
+  --border:#E2E8F0; --border-strong:#CBD5E1; --blue-200:#BFDBFE;
+  --danger-bg:#FDECEC; --danger:#B3261E; --warn-bg:#FFF3E0; --warn:#9A4A00; --ok-bg:#F0FDF4; --ok:#15803D;
+  --violet:#ECE8F5; --mist:#E3E8EF; --teal:#DDF0EF; --rose:#F8E6E4; --sand:#F5ECDF;
+  --r-sm:6px; --r-md:12px; --r-lg:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:76px}
+body{margin:0;background:var(--bg-page);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mock-note{background:#FFFBEB;border-bottom:1px solid #FDE68A;color:#92400E;font-size:12.5px;text-align:center;padding:6px 16px}
+
+/* GNB */
+.gnb{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.gnb .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap}
+.logo i{width:28px;height:28px;border-radius:8px;background:var(--action);display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px}
+.gnb nav{display:flex;gap:22px;flex:1}
+.gnb nav a{text-decoration:none;color:var(--text-2);font-size:14px;font-weight:500}
+.gnb nav a:hover{color:var(--text)}
+.gnb-price{text-decoration:none;color:var(--text);font-size:14px;font-weight:700;white-space:nowrap}
+.gnb-price:hover{color:var(--text-accent)}
+.gnb-cta{display:flex;flex-direction:column;align-items:center;gap:2px;flex:none}
+.trial-note{font-size:11.5px;line-height:1.2;font-weight:700;color:var(--text-accent);white-space:nowrap;text-decoration:underline;text-underline-offset:2px}
+.pilot-list{margin:6px 0 14px;padding-left:20px}.pilot-list li{margin:4px 0;line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:10px;font-weight:600;text-decoration:none;
+  background:var(--action);color:#fff;border:1px solid var(--action);padding:9px 16px;font-size:14px;white-space:nowrap}
+.btn:hover{background:var(--action-hover)}
+.btn.lg{padding:14px 24px;font-size:16px;border-radius:12px}
+.btn.ghost{background:transparent;color:var(--text);border-color:var(--border-strong)}
+
+/* 공통 */
+section{padding:72px 0}
+.eyebrow{font-size:13px;font-weight:600;color:var(--text-accent);letter-spacing:.02em;margin:0 0 8px}
+h2{font-size:28px;line-height:1.3;margin:0 0 10px;letter-spacing:-.02em}
+.lead{color:var(--text-2);margin:0 0 32px;max-width:640px}
+.card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px}
+.meta{font-size:12.5px;color:var(--text-3)}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:#334155}
+.tag.blue{background:var(--bg-accent);color:var(--blue-700)}
+.tag.ok{background:var(--ok-bg);color:var(--ok)} .tag.warn{background:var(--warn-bg);color:var(--warn)} .tag.no{background:var(--danger-bg);color:var(--danger)}
+.tag.sample{background:#FEF3C7;color:#92400E}
+
+/* 히어로 */
+.hero{padding:88px 0 56px;background:
+  radial-gradient(900px 360px at 85% -10%, #DBEAFE 0, transparent 60%),
+  linear-gradient(var(--bg-surface), var(--bg-page))}
+/* 히어로 오른쪽 배경 그림 (PC만): 오른쪽에 흐리게, 왼쪽 글 쪽으로 갈수록 사라짐 */
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:64%;pointer-events:none;
+  background:url(data/hero_bg.webp) right center/cover no-repeat;opacity:.3;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 55%);mask-image:linear-gradient(to right,transparent 0,#000 55%)}
+.hero>.wrap{position:relative;z-index:1}
+@media (max-width:960px){.hero::before{display:none}}
+.hero h1{font-size:44px;line-height:1.22;letter-spacing:-.03em;margin:14px 0 18px;max-width:1040px}
+.hero h1 em{font-style:normal;color:var(--text-accent)}
+.hero p{font-size:18px;color:var(--text-2);max-width:780px;margin:0 0 14px}
+.hero .cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.hero .cta-sub{font-size:13.5px;color:var(--text-3)}
+.hero-points{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;color:var(--text-2);font-size:14px}
+.hero-points b{color:var(--text)}
+/* 첫 화면: 왼쪽 설명·가입 버튼, 오른쪽 결과 화면 캡처 */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:44px;align-items:center}
+.hero-grid .hero-text p{max-width:none}
+.hero .cta-main{margin-top:24px}
+.btn.xl{padding:17px 28px;font-size:18px;border-radius:14px;box-shadow:0 8px 24px rgba(15,23,42,.18)}
+.hero .seats{font-size:14.5px;color:var(--text-2);margin:12px 0 0}
+.hero .seats b{color:var(--danger)}
+.hero p.cta-sub{font-size:13.5px;color:var(--text-3);margin:10px 0 0}
+.hero-grid .hero-points{margin-top:28px;gap:10px 22px}
+.hero-shot{display:block;padding:0;border:1px solid var(--border);border-radius:16px;background:#fff;cursor:zoom-in;
+  overflow:hidden;box-shadow:0 18px 48px rgba(15,23,42,.14);font-family:inherit;text-align:left;transition:transform .15s}
+.hero-shot:hover{transform:translateY(-2px)}
+.hero-shot img{display:block;width:100%;height:auto}
+.hero-shot .shot-cap{display:block;padding:9px 14px;font-size:12.5px;color:var(--text-3);border-top:1px solid var(--border);background:var(--bg-page)}
+.hero-shot .shot-cap b{color:var(--text-2)}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+@media (max-width:640px){.btn.xl{width:100%;font-size:16.5px;padding:15px 18px}.hero .seats{text-align:center}}
+
+/* 대시보드 */
+#status{padding-top:40px}
+.dash-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.dash-head h2{margin:0}
+.asof{font-size:13px;color:var(--text-2);background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;padding:5px 12px}
+.block-title{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;margin:0 0 4px}
+.block-sub{font-size:13px;color:var(--text-3);margin:0 0 18px}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{border:1px solid var(--border);border-radius:var(--r-md);padding:18px;background:var(--bg-page)}
+.plan .k{font-size:13px;color:var(--text-2);font-weight:500}
+.plan .v{font-size:28px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.plan .v small{font-size:15px;font-weight:600;color:var(--text-2);margin-left:2px}
+.plan .d{font-size:13px;color:var(--text-2)}
+.plan .src{margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:12px;color:var(--text-3)}
+.plan{display:flex;flex-direction:column}
+.plan .d2{font-size:13px;color:var(--text-2);margin-top:6px}
+.plan .d2 b{color:var(--text)}
+.plan .src{margin-top:auto;padding-top:10px}
+.plan .d2 + .src, .plan .d + .src{margin-top:12px}
+.plan .more{margin-top:10px;font-size:13px;font-weight:600;color:var(--text-accent);text-decoration:none;display:inline-block;margin-right:14px}
+.plan .more + .more{margin-top:4px}
+.rule{font-size:12.5px;color:var(--text-3);margin-top:14px}
+.plan-list{display:flex;align-items:center;gap:6px 16px;flex-wrap:wrap;margin-top:16px;padding:16px 18px;border-radius:var(--r-md);background:var(--bg-accent);border:1px solid #BFDBFE;text-decoration:none;color:#1E3A8A}
+.plan-list:hover{border-color:var(--text-accent)}
+.plan-list .t{font-size:16px;font-weight:700;color:var(--text)}
+.plan-list .s{flex:1 1 320px;font-size:13.5px}
+.plan-list .go{font-size:14px;font-weight:700;color:#fff;background:var(--text-accent);border-radius:10px;padding:8px 14px;white-space:nowrap}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.kpi{border:1px solid var(--border);border-radius:var(--r-md);padding:16px;background:var(--bg-surface)}
+.kpi .k{font-size:13px;color:var(--text-2)}
+.kpi .v{font-size:30px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.25;margin-top:4px}
+.kpi .v small{font-size:14px;color:var(--text-2);font-weight:600;margin-left:2px}
+.kpi .h{font-size:12px;color:var(--text-3)}
+.kpi.hot .v{color:var(--danger)}
+.weekly{border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;margin-bottom:16px;background:var(--bg-surface)}
+.wk-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap}
+.weekly h3{font-size:14.5px;margin:0}
+.wk-sum{margin:0;font-size:13.5px;color:var(--text-2)} .wk-sum b{color:var(--text)}
+.topics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.topic{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:0 8px;border-radius:10px;padding:10px 12px;background:var(--bg-page)}
+.topic .t{font-size:13.5px;font-weight:600}
+.topic b{font-size:20px;font-variant-numeric:tabular-nums;grid-row:1/3;grid-column:2;align-self:center}
+.topic .w{font-size:12px;color:var(--ok)}
+.wk-note{font-size:12px;color:var(--text-3);margin:10px 0 0}
+.dash-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.sub-card{border:1px solid var(--border);border-radius:var(--r-md);padding:18px;background:var(--bg-surface)}
+.sub-card h3{font-size:14.5px;margin:0 0 14px}
+.bars{display:grid;gap:9px}
+.bar{display:grid;grid-template-columns:48px 1fr 40px;align-items:center;gap:10px;font-size:13.5px}
+.bar .t{height:10px;background:var(--bg-muted);border-radius:99px;overflow:hidden}
+.bar .t span{display:block;height:100%;background:var(--text-accent);border-radius:99px}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--text-2)}
+.split{display:flex;height:14px;border-radius:99px;overflow:hidden;margin:6px 0 10px}
+.split .c{background:var(--action)} .split .g{background:var(--blue-200)}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--text-2);flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.region{margin-top:18px;padding:12px 14px;border-radius:10px;background:var(--bg-accent);font-size:13.5px;color:#1E3A8A}
+.region b{font-size:16px}
+.deadline{list-style:none;margin:0;padding:0}
+.deadline li{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--border)}
+.deadline li:first-child{border-top:0;padding-top:2px}
+.dday{font-size:12.5px;font-weight:700;color:var(--danger);background:var(--danger-bg);border-radius:6px;text-align:center;padding:3px 0}
+.deadline .ttl{font-size:14px;font-weight:600;line-height:1.4;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.deadline .org{font-size:12.5px;color:var(--text-3)}
+.deadline a.out{font-size:12.5px;color:var(--text-accent);text-decoration:none;white-space:nowrap}
+.lock{margin-top:14px;font-size:13px;color:var(--text-2);display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  border:1px dashed var(--border-strong);border-radius:10px;padding:10px 12px}
+.lock a{color:var(--text-accent);font-weight:600;text-decoration:none}
+
+/* 소식 */
+#news{background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.news{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.news .card{padding:20px;display:flex;flex-direction:column;gap:10px}
+.news h3{font-size:15.5px;line-height:1.45;margin:0}
+.news p{font-size:13.5px;color:var(--text-2);margin:0;flex:1}
+.news .foot{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--text-3)}
+.news .foot a{color:var(--text-accent);font-weight:600;text-decoration:none}
+
+/* 왜 필요한가 / 서비스 */
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pain .num{font-size:13px;font-weight:700;color:var(--text-accent)}
+.pain h3{font-size:18px;margin:6px 0 8px}
+.pain p{margin:0;color:var(--text-2);font-size:14.5px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{position:relative}
+.step .no{width:32px;height:32px;border-radius:10px;background:var(--action);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;margin-bottom:14px}
+.step h3{font-size:16.5px;margin:0 0 6px}
+.step p{margin:0;font-size:14px;color:var(--text-2)}
+.step .what{margin-top:12px;font-size:12.5px;color:var(--text-3)}
+
+/* 처리 과정 예시 */
+#example{background:var(--bg-surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.ex-top{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.ex-box{border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;background:var(--bg-page)}
+.ex-box .lab{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.ex-box h3{font-size:15.5px;margin:0 0 6px}
+.ex-box .facts{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.ex-box .facts span{font-size:12.5px;padding:3px 10px;border-radius:999px}
+.ex-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;font-size:14px}
+.ex-table th{background:var(--bg-muted);color:var(--text-2);font-size:12.5px;font-weight:600;text-align:left;padding:10px 14px}
+.ex-table td{padding:13px 14px;border-top:1px solid var(--border);vertical-align:top;background:#fff}
+.ex-table td.src{color:var(--text-2);font-size:13.5px;width:34%}
+.ex-table td.src q{quotes:"“" "”"}
+.ex-table td.item b{display:block;font-size:14px}
+.ex-table td.item span{font-size:12.5px;color:var(--text-3)}
+.ex-table .why{font-size:12.5px;color:var(--text-3);margin-top:4px}
+.arrow{color:var(--text-3)}
+.ex-result{display:grid;grid-template-columns:220px 1fr 1fr;gap:16px;margin-top:16px}
+.score{border-radius:var(--r-md);background:var(--action);color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+.score .k{font-size:13px;opacity:.75}
+.score .v{font-size:44px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.score .v small{font-size:16px;opacity:.7}
+.score .lv{font-size:13px;background:rgba(255,255,255,.14);border-radius:999px;padding:3px 10px;align-self:flex-start}
+.ex-result .card{padding:18px}
+.ex-result h4{font-size:14px;margin:0 0 10px}
+.ex-result ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--text-2)}
+.ex-result li{margin-bottom:6px}
+.draft{font-size:13.5px;color:var(--text);line-height:1.75;background:var(--bg-page);border-radius:10px;padding:12px 14px;position:relative}
+.draft .l1{font-weight:700} .draft .l2{padding-left:12px} .draft .l3{padding-left:26px;color:var(--text-2)}
+.draft:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(transparent,var(--bg-page));border-radius:0 0 10px 10px}
+
+/* FAQ */
+.faq{max-width:820px}
+.faq details{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r-md);padding:0 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;list-style:none;padding:17px 0;font-weight:600;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--text-3);font-weight:400;font-size:20px;line-height:1}
+.faq details[open] summary:after{content:"−"}
+.faq details p{margin:0 0 18px;color:var(--text-2);font-size:14.5px}
+.faq .more{font-size:13.5px;color:var(--text-3);margin-top:14px}
+
+/* 마지막 CTA, 푸터 */
+.final{padding:64px 0}
+.final .card{background:var(--action);border:0;color:#fff;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.final h2{color:#fff;margin:0 0 6px;font-size:24px}
+.final p{margin:0;color:#CBD5E1}
+.final .btn{background:#fff;color:var(--action);border-color:#fff}
+footer{border-top:1px solid var(--border);background:var(--bg-surface);padding:32px 0 40px;font-size:13px;color:var(--text-3)}
+footer .row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
+footer nav a{text-decoration:none;color:var(--text-2)}
+footer .src{margin-top:16px;line-height:1.7}
+
+.mobile-cta{display:none}
+
+.score .v.grade{font-size:30px}
+.textlink{color:var(--text-accent);font-weight:600;text-decoration:none}
+button.btn{cursor:pointer;font-family:inherit}
+.ex-open{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;
+  border:1px solid var(--blue-200);background:var(--bg-accent);border-radius:var(--r-md);padding:16px 18px}
+.ex-open b{display:block;font-size:15px}
+.ex-open span{font-size:13.5px;color:var(--text-2)}
+.ex-open-btns{display:flex;gap:8px;flex-wrap:wrap}
+.ex-open .btn.ghost{background:#fff}
+
+/* ---------- 예시 팝업 (앱 화면 재현) ---------- */
+dialog.ex{width:min(1040px,calc(100vw - 48px));max-height:calc(100vh - 48px);padding:0;border:0;border-radius:var(--r-lg);
+  background:var(--bg-page);color:var(--text);box-shadow:0 24px 64px rgba(15,23,42,.28);overflow:hidden}
+dialog.ex[open]{display:flex;flex-direction:column}
+dialog.ex::backdrop{background:rgba(15,23,42,.55)}
+.exd-head{background:#fff;border-bottom:1px solid var(--border);padding:14px 20px 0}
+.exd-top{display:flex;align-items:center;gap:10px}
+.exd-top .note{font-size:13px;color:var(--text-2);flex:1}
+.exd-close{border:0;background:var(--bg-muted);width:34px;height:34px;border-radius:10px;font-size:18px;cursor:pointer;color:var(--text-2)}
+.exd-tabs{display:flex;gap:4px;margin-top:10px}
+.exd-tabs button{border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--text-3);padding:10px 14px;cursor:pointer;
+  border-bottom:2px solid transparent;white-space:nowrap}
+.exd-tabs button[aria-selected=true]{color:var(--text);border-bottom-color:var(--text-accent)}
+.exd-body{overflow:auto;padding:20px;flex:1}
+.exd-foot{background:#fff;border-top:1px solid var(--border);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.exd-foot span{font-size:13.5px;color:var(--text-2)}
+.panel[hidden]{display:none}
+
+/* 앱 조각: 기업 바, 조건 칩, 요약 카드, 공고 카드 */
+.cobar{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.cobar b{font-size:15px}
+.cobar .meta{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px;align-items:center;font-size:13px;color:var(--text-2)}
+.chip{border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600;color:var(--text)}
+.asof2{font-size:12.5px;color:var(--text-3);margin:8px 0 14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.stat{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;text-align:left}
+.stat.on{border-color:var(--text-accent);box-shadow:inset 0 0 0 1px var(--text-accent)}
+.stat .k{font-size:12.5px;color:var(--text-2)} .stat .v{font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.stat .v.hot{color:var(--danger)}
+.acards{display:grid;gap:10px}
+.acard{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.acard:hover{border-color:var(--border-strong);box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.acard .r1{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.acard .r2{display:flex;justify-content:space-between;gap:12px;font-size:15px;font-weight:700;line-height:1.4}
+.acard .heart{color:var(--danger);font-size:16px}
+.acard .r3{font-size:13px;color:var(--text-3);margin-top:4px}
+.acard .why{font-size:13px;color:var(--text-2);margin-top:6px}
+.acard .go{font-size:12.5px;color:var(--text-accent);font-weight:600;margin-top:8px}
+.tag.tier1{background:var(--ok-bg);color:var(--ok)} .tag.tier2{background:var(--bg-accent);color:var(--blue-700)} .tag.tier3{background:var(--bg-muted);color:#334155}
+.tag.dd{background:var(--danger-bg);color:var(--danger)}
+
+/* 공고 판정 */
+.vhead{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:16px}
+.vhead h3{font-size:17px;margin:6px 0 4px;line-height:1.4}
+.verdict{margin-top:12px;border-radius:10px;padding:12px 14px;background:var(--ok-bg);color:#14532D;font-size:14px}
+.verdict b{font-size:15px}
+.conds{margin-top:12px;display:grid;gap:8px}
+.cond{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:12px 14px;display:grid;grid-template-columns:84px 1fr;gap:4px 12px}
+.cond .tag{align-self:start;justify-self:start;text-align:center}
+.cond b{font-size:14px}
+.cond q{display:block;font-size:13px;color:var(--text-2);background:var(--bg-muted);border-radius:8px;padding:6px 10px;margin:4px 0;quotes:"“" "”"}
+.cond .rs{font-size:13px;color:var(--text-3)}
+.cond > div{grid-column:2}
+.fold{margin-top:8px;background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:0 14px}
+.fold summary{cursor:pointer;padding:12px 0;font-weight:600;font-size:14px}
+.fold ul{margin:0 0 12px;padding-left:18px;font-size:13.5px;color:var(--text-2)}
+.back{border:0;background:none;color:var(--text-accent);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;padding:0;margin-bottom:10px}
+
+/* 신청서 작성 */
+.wsteps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.wsteps span{font-size:12.5px;font-weight:600;border-radius:999px;padding:4px 11px;background:#fff;border:1px solid var(--border);color:var(--text-3)}
+.wsteps .done{color:var(--ok);background:var(--ok-bg);border-color:transparent}
+.wsteps .cur{color:#fff;background:var(--action);border-color:var(--action)}
+.wgrid{display:grid;grid-template-columns:300px 1fr;gap:14px;align-items:start}
+.checklist{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px}
+.checklist h4,.wdraft h4{font-size:14px;margin:0 0 10px}
+.checklist ul{list-style:none;margin:0;padding:0;font-size:13.5px}
+.checklist li{display:flex;gap:8px;padding:7px 0;border-top:1px solid var(--border)}
+.checklist li:first-child{border-top:0}
+.checklist li i{font-style:normal;font-weight:700;width:18px;flex:none}
+.checklist .y i{color:var(--ok)} .checklist .w i{color:var(--warn)}
+.wdraft{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;position:relative;
+  user-select:none;-webkit-user-select:none}
+.wdraft .sec{font-size:13px;color:var(--text-3);margin:14px 0 4px;font-weight:600}
+.wdraft .sec:first-of-type{margin-top:0}
+.gs{font-size:14px;line-height:1.8}
+.gs .l1{font-weight:700} .gs .l2{padding-left:14px} .gs .l3{padding-left:30px;color:var(--text-2)}
+.wm{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:inherit;
+  background-image:repeating-linear-gradient(-30deg,transparent 0 120px,rgba(15,23,42,.035) 120px 122px)}
+.wm:after{content:"예시 · 가상 기업";position:absolute;right:16px;top:12px;font-size:12px;font-weight:700;color:#92400E;background:#FEF3C7;border-radius:999px;padding:2px 10px}
+.viewonly{font-size:12.5px;color:var(--text-3);margin-top:10px}
+.forms{margin-top:16px}
+.forms h4{font-size:14px;margin:0 0 4px}
+.pages{display:flex;gap:14px;overflow-x:auto;padding:8px 2px 6px}
+.a4{flex:0 0 300px;aspect-ratio:210/297;background:#fff;border:1px solid var(--border-strong);box-shadow:0 4px 14px rgba(15,23,42,.08);
+  padding:18px 16px;font-size:8.5px;line-height:1.5;position:relative;overflow:hidden;font-family:"Malgun Gothic",Pretendard,sans-serif;user-select:none}
+.a4 .ft{text-align:center;font-size:12px;font-weight:700;margin-bottom:8px;letter-spacing:.2em}
+.a4 .sh{font-weight:700;font-size:9px;margin:6px 0 4px}
+.a4 .todo{color:#B3261E;background:#FFF3E0}
+.a4 .gs4{line-height:1.65}
+.a4 .gantt td{height:12px} .a4 .gantt td.on{background:#93C5FD} .a4 .gantt th{width:auto}
+.a4 table{width:100%;border-collapse:collapse;margin-bottom:6px}
+.a4 td,.a4 th{border:1px solid #333;padding:3px 4px;vertical-align:top}
+.a4 th{background:#E8EDF3;font-weight:700;width:20%;text-align:center;white-space:nowrap}
+.a4 .filled{color:#1E3A8A}
+.a4:after{content:"예시";position:absolute;top:44%;left:50%;transform:translate(-50%,-50%) rotate(-30deg);font-size:64px;font-weight:800;color:rgba(178,38,30,.12)}
+.a4 .pg{position:absolute;bottom:6px;left:0;right:0;text-align:center;color:#999}
+
+
+/* 주요 소식 (요약 + 원문) */
+.news-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.ngrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+a.nitem{color:inherit;text-decoration:none}
+a.nitem:hover{border-color:var(--action)}
+.nopen{color:var(--text-accent);font-weight:700}
+.nitem{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:18px;display:flex;flex-direction:column;gap:8px}
+.nitem[hidden]{display:none}
+.nitem h3{font-size:15.5px;line-height:1.45;margin:2px 0 0}
+.nitem .nsum{font-size:13.5px;color:var(--text-2);margin:0;line-height:1.65}
+.nitem .nmeta{font-size:12.5px;color:var(--text-3);margin:0}
+.nfoot2{margin-top:auto;padding-top:4px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--text-3)}
+.nfoot2 a{color:var(--text-accent);font-weight:700;text-decoration:none}
+/* 실제 결과 팝업 */
+.needs-q{font-size:13.5px;color:var(--text);background:#fff;border:1px dashed var(--border-strong);border-radius:10px;padding:10px 12px;margin:8px 0 2px}
+.stats{grid-template-columns:repeat(3,1fr)}
+.vhead .sum{font-size:13.5px;color:var(--text-2);margin:8px 0 0}
+.vh{font-size:14px;margin:16px 0 6px}
+.cond > div{font-size:13.5px;color:var(--text);line-height:1.6}
+.doc{background:var(--bg-muted);border:1px solid var(--border);border-radius:var(--r-md);padding:12px}
+.doc-head{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--text-2);margin-bottom:10px}
+.doc .pages{display:flex;flex-direction:column;gap:14px;overflow:visible;padding:0}
+.doc .a4{flex:none;width:100%;aspect-ratio:auto;min-height:0;padding:28px 30px 34px;font-size:12px;line-height:1.7}
+.doc .a4 .sh{font-size:13px;margin:14px 0 6px;padding:4px 8px;background:#E8EDF3;border-left:3px solid #334155}
+.doc .a4 .sh:first-child{margin-top:0}
+.doc .a4 .gs .l1{font-weight:700;margin-top:6px} .doc .a4 .gs .l2{padding-left:12px} .doc .a4 .gs .l3{padding-left:26px;color:#334155} .doc .a4 .gs .lx{color:#334155}
+.doc .a4 table{margin:6px 0 8px;font-size:11px}
+.doc .a4 th{width:auto;white-space:normal}
+.doc .a4:after{font-size:110px}
+.checklist li i{min-width:22px}
+
+
+/* ---------- 요약 + 팝업 구성 ---------- */
+[hidden]{display:none !important}
+section{padding:56px 0}
+.hero{padding:72px 0 40px}
+.sum-row{display:flex;justify-content:space-between;align-items:center;gap:10px 16px;flex-wrap:wrap;margin-top:14px}
+.sum-row .wk-sum{margin:0}
+.more-btn{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--border-strong);background:#fff;border-radius:999px;
+  padding:8px 14px;font:inherit;font-size:13.5px;font-weight:600;color:var(--text);cursor:pointer;white-space:nowrap}
+.more-btn:hover{border-color:var(--text-accent);color:var(--text-accent)}
+.plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 16px;flex-wrap:wrap;margin:22px 0 10px}
+.plan-head .block-title{margin:0}
+.plan-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pstrip{display:flex;flex-direction:column;gap:2px;text-align:left;border:1px solid var(--border);border-radius:var(--r-md);background:#fff;
+  padding:14px 16px;cursor:pointer;font:inherit;color:inherit}
+.pstrip:hover,.sbtn:hover{border-color:var(--border-strong);box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.pstrip .k{font-size:12.5px;color:var(--text-2)} .pstrip .v{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.pstrip .d{font-size:12.5px;color:var(--text-3)} .pstrip .go{font-size:12.5px;color:var(--text-accent);font-weight:600;margin-top:4px}
+#news .ngrid{margin-top:14px}
+/* 지원 서비스 안내 요약 타일 (scripts/build_support_guide.py가 내용을 채운다) */
+.step-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.sbtn{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center;text-align:left;border:1px solid var(--border);
+  border-radius:var(--r-md);background:#fff;padding:14px 16px;cursor:pointer;font:inherit;color:inherit}
+.sbtn .no{grid-row:1/3;width:30px;height:30px;border-radius:9px;background:var(--action);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.sbtn b{font-size:15px} .sbtn span:last-child{font-size:12.5px;color:var(--text-3)}
+.ex-result-2{grid-template-columns:220px 1fr}
+.pop .exd-head{padding-bottom:14px}
+.pop-title{font-size:16px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.price-card{border:1px solid var(--border);border-radius:var(--r-md);padding:18px;background:var(--bg-surface)}
+.price-card h3{font-size:18px;margin:0 0 6px}
+.price-card .inc{font-size:14px;font-weight:700;color:var(--text-accent);margin:0 0 12px}
+.price-card ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--text-2)}
+.price-card li + li{margin-top:5px}
+.price-card.soon{background:var(--bg-page)}
+.price-card.soon .inc{color:var(--text-3)}
+.price-note{font-size:13px;color:var(--text-3);margin:14px 0 0}
+.pop-h{font-size:16px;margin:4px 0 12px}
+.pop .exd-body .pop-h:not(:first-child){margin-top:22px}
+.pop .card{padding:18px}
+
+/* ---------- 태블릿 ---------- */
+@media (max-width:960px){
+  /* 좁은 화면: 메뉴를 숨기지 않고 로고 아래 한 줄로 (넘치면 옆으로 밀어서 본다) */
+  .gnb .wrap{justify-content:space-between;flex-wrap:wrap;height:auto;row-gap:0;padding-top:10px}
+  .gnb nav{order:3;flex:1 1 100%;gap:18px;overflow-x:auto;white-space:nowrap;padding:8px 0 10px;scrollbar-width:none}
+  .gnb-price{margin-left:auto;margin-right:12px}
+  .gnb nav::-webkit-scrollbar{display:none}
+  .gnb nav a{font-size:13.5px}
+  html{scroll-padding-top:104px}
+  .plan-grid{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
+  .dash-grid{grid-template-columns:1fr}
+  .topics{grid-template-columns:1fr 1fr}
+  .news{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .ex-result{grid-template-columns:1fr 1fr}
+  .wgrid{grid-template-columns:240px 1fr}
+  .step-strip{grid-template-columns:1fr 1fr}
+  .ngrid{grid-template-columns:1fr 1fr}
+  .ex-result .score{grid-column:1/-1;flex-direction:row;align-items:center}
+}
+/* ---------- 모바일 ---------- */
+@media (max-width:640px){
+  body{font-size:14.5px;padding-bottom:84px}
+  .wrap{padding:0 16px}
+  section{padding:48px 0}
+  h2{font-size:22px}
+  .lead{margin-bottom:22px}
+  .gnb .wrap{height:auto;padding-top:8px}
+  .gnb .btn{padding:7px 12px;font-size:13px}
+  .hero{padding:44px 0 28px}
+  .hero h1{font-size:29px}
+  .hero p{font-size:15.5px;margin-bottom:10px}
+  .hero-points{gap:8px 18px;margin-top:22px;font-size:13px}
+  #status{padding-top:24px}
+  .card{padding:18px}
+  .plan-grid{grid-template-columns:1fr}
+  .plan .v{font-size:24px}
+  .kpi{padding:13px}
+  .kpi .v{font-size:25px}
+  .deadline li{grid-template-columns:48px 1fr;row-gap:2px}
+  .deadline a.out{grid-column:2}
+  /* 소식: 가로 스와이프 */
+  .news{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -16px;padding:0 16px 6px}
+  .news .card{flex:0 0 82%;scroll-snap-align:start}
+  .three,.steps,.price-grid{grid-template-columns:1fr}
+  .pain,.step{padding:18px}
+  .ex-top{grid-template-columns:1fr}
+  /* 판정 표 → 카드 */
+  .ex-table,.ex-table tbody,.ex-table tr,.ex-table td{display:block;width:100%}
+  .ex-table{border:0;background:transparent}
+  .ex-table thead{display:none}
+  .ex-table tr{border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;margin-bottom:10px;background:#fff}
+  .ex-table td{border-top:0;padding:8px 14px}
+  .ex-table td.src{width:100%;background:var(--bg-muted);padding-top:12px}
+  .ex-table td.arrow{display:none}
+  .ex-result{grid-template-columns:1fr}
+  .final{display:none}
+  .ex-open-btns,.ex-open-btns .btn{width:100%}
+  /* 팝업 → 전체 화면 시트 */
+  dialog.ex{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border-radius:0}
+  .exd-head{padding:10px 16px 0}
+  .exd-top .note{font-size:12px}
+  .exd-tabs{overflow-x:auto}
+  .exd-tabs button{padding:10px 10px;font-size:13.5px}
+  .exd-body{padding:14px 16px}
+  .exd-foot{padding:10px 16px 14px}
+  .exd-foot span{display:none}
+  .exd-foot .btn{width:100%;padding:13px}
+  .stats{grid-template-columns:1fr 1fr 1fr}
+  .plan-strip{grid-template-columns:1fr}
+  .ex-result-2{grid-template-columns:1fr}
+  .more-btn{width:100%;justify-content:center}
+  .ngrid{grid-template-columns:1fr}
+  .doc .a4{padding:18px 14px 26px;font-size:11.5px}
+  .cond{grid-template-columns:1fr}
+  .cond > div{grid-column:1}
+  .wgrid{grid-template-columns:1fr}
+  .wdraft{order:1} .checklist-wrap{order:2}
+  .a4{flex-basis:78%}
+  .mobile-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px 16px;
+    background:linear-gradient(rgba(248,250,252,0),var(--bg-page) 30%)}
+  .mobile-cta .btn{width:100%;padding:14px;font-size:16px;border-radius:12px;box-shadow:0 6px 20px rgba(15,23,42,.18)}
+}
+</style>
+</head>
+<body>
+
+
+<header class="gnb">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="data/icon.svg" width="28" height="28" alt="" style="flex:none">사업나침반</a>
+    <nav>
+      <a href="#status">현황</a>
+      <a href="#news">지원사업 소식</a>
+      <a href="support_guide.html">지원 서비스 안내</a>
+      <a href="plan2026.html">2026 지원사업 목록</a>
+      <a href="board.html">새로운 지원소식</a>
+      <a href="#ex-match" data-open="match">결과 예시</a>
+      <a href="#pop-faq" data-pop="faq">FAQ</a>
+    </nav>
+    <a class="gnb-price" href="#pop-pricing" data-pop="pricing">요금제</a>
+    <div class="gnb-cta">
+      <a class="btn" href="https://app.biznachim.kr" data-track="gnb">로그인·가입</a>
+      <a class="trial-note" href="#pop-pilot" data-pop="pilot">파일럿 테스터 모집 중</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. 히어로 -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="tag blue">소상공인 · 중소기업 · 컨설턴트</span>
+    <h1><em>지원사업 찾기부터 신청서 초안까지</em>,<br>한 곳에서 끝냅니다</h1>
+    <div class="hero-grid">
+    <div class="hero-text">
+    <p>올해 나온 공고만 <span id="yearStat">약 9,700건</span>, 지금도 하루 평균 <span id="dailyStat">31건</span>씩 늘어납니다. AI 정부지원사업 매칭 서비스 사업나침반이 매일 새 공고를 확인하고, 공고문의 자격·가점 조건을 우리 회사와 대조해 맞는 사업을 골라 드립니다. 신청하기로 정한 사업은 AI가 신청서(사업계획서) 초안까지 작성합니다.</p>
+    <div class="cta-main">
+      <a class="btn xl" href="https://app.biznachim.kr" data-track="hero">무료로 우리 회사 맞는 공고 찾기 →</a>
+      <p class="seats" id="pilotSeats">정식 출시 전 <b>파일럿 테스터 30명</b> 무료 모집 중</p>
+    </div>
+    <p class="cta-sub">정식 출시일까지 무료 · 카카오·Google 계정으로 가입<br><a class="textlink" href="#pop-pilot" data-pop="pilot">파일럿 안내 보기 →</a> · <a class="textlink" href="#ex-match" data-open="match">결과 화면 예시 보기 →</a></p>
+    <div class="hero-points">
+      <span><b>매일</b> 기업마당 공고 수집</span>
+      <span><b>첨부문서</b>의 자격·가점 조건 분석</span>
+      <span><b>항목별 근거</b>를 붙인 적합 판정</span>
+    </div>
+    </div>
+    <button class="hero-shot" type="button" data-open="match" aria-label="매칭 결과 화면 예시 크게 보기">
+      <img src="data/hero_match.webp" width="1040" height="640" alt="매칭 결과 화면: 가상 기업의 매칭 조건, 신청 가능 공고 수, 적합 판정과 근거가 붙은 공고 카드">
+      <span class="shot-cap"><b>실제 결과 화면</b> · 가상 기업으로 실행 · 눌러서 크게 보기</span>
+    </button>
+    </div>
+  </div>
+</div>
+
+<!-- 2. 현황 (요약은 화면, 상세는 '현황 자세히' 팝업) -->
+<section id="status">
+  <div class="wrap">
+    <div class="dash-head">
+      <div>
+        <p class="eyebrow">현황</p>
+        <h2>지금 접수 중인 공고와 올해 지원 규모</h2>
+      </div>
+      <span class="asof" id="asof"></span>
+    </div>
+
+    <!-- ② 공고 집계 요약 (data/stats.js) -->
+    <div class="card" id="liveBlock">
+      <p class="block-title">지금 접수 중인 공고</p>
+      <p class="block-sub">기업마당(bizinfo.go.kr)에 올라온 공고의 원본 항목만 집계했습니다.</p>
+      <div class="kpis" id="kpis"></div>
+      <div class="sum-row">
+        <p class="wk-sum" id="wkSum"></p>
+        <button class="more-btn" type="button" data-pop="status">주제·분야·마감 임박 자세히 →</button>
+      </div>
+    </div>
+    <!-- /② -->
+
+    <div class="plan-head">
+      <p class="block-title">2026년 정부 지원 예산 <span class="tag ok">정부 보도자료</span></p>
+      <span class="meta">중소벤처기업부 발표 기준 · 4월 추경까지 반영</span>
+    </div>
+    <div class="plan-strip">
+      <button class="pstrip" type="button" data-pop="plan"><span class="k">중소벤처기업부 올해 예산</span><span class="v">18조 2,136억 원</span><span class="d">본예산 16조 5,233억 + 4월 추경 1조 6,903억</span><span class="go">자세히 →</span></button>
+      <button class="pstrip" type="button" data-pop="plan"><span class="k">정부·지자체 창업 지원</span><span class="v">3조 4,645억 원</span><span class="d">111개 기관이 508개 사업으로 지원</span><span class="go">자세히 →</span></button>
+      <button class="pstrip" type="button" data-pop="plan"><span class="k">소상공인 지원 (중기부)</span><span class="v">5.4조 원</span><span class="d">지원사업 1조 3,410억 · 정책자금 융자 3조 3,620억</span><span class="go">자세히 →</span></button>
+    </div>
+    <!-- 2026 지원사업 목록 바로가기: 예산 팝업 안에 있던 것을 밖으로 (2026-11-10 의견) -->
+    <a class="plan-list" href="plan2026.html">
+      <span class="t">2026 지원사업 목록</span>
+      <span class="s">정부 안내 책자에 실린 올해 지원사업을 한곳에 모았어요. 사업 이름으로 찾고, 대상·규모는 책자 원문 쪽에서 바로 확인할 수 있어요.</span>
+      <span class="go">목록 보기 →</span>
+    </a>
+  </div>
+</section>
+
+<!-- 2-1. 지원 서비스 안내 (scripts/build_support_guide.py가 채운다) -->
+<style>
+/* 지원 서비스 안내: 요약 타일 + 유형별 팝업 (scripts/build_support_guide.py가 채운다) */
+#guide{padding-top:0}
+.gtiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gtile{display:flex;flex-direction:column;gap:6px;border:1px solid var(--border);border-radius:var(--r-md);background:#fff;padding:16px;text-decoration:none;color:inherit;cursor:pointer}
+.gtile:hover{border-color:var(--border-strong);box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.gtile .gt{font-size:15.5px;font-weight:700}
+.gtile .gd{font-size:12.5px;color:var(--text-3)}
+.gtile .gn{list-style:none;margin:4px 0 0;padding:8px 0 0;border-top:1px dashed var(--border);display:flex;flex-direction:column;gap:3px}
+.gtile .gn li{font-size:13px;color:var(--text-2);padding-left:10px;position:relative;line-height:1.45}
+.gtile .gn li::before{content:"";position:absolute;left:0;top:.6em;width:4px;height:4px;border-radius:50%;background:var(--text-3)}
+.gtile .go{font-size:12.5px;color:var(--text-accent);font-weight:600;margin-top:auto;padding-top:6px}
+.guide-asof{margin:14px 0 0}
+.guide-asof a{color:var(--text-accent);font-weight:600;text-decoration:none}
+#guidePop .exd-body{background:var(--bg-page)}
+.gp-asof{background:var(--bg-accent);border:1px solid #BFDBFE;border-radius:10px;padding:8px 12px;font-size:13px;color:#1E3A8A;margin:0 0 16px}
+.gp-title{font-size:20px;margin:0 0 6px}
+.gp-lead{color:var(--text-2);margin:0 0 16px;font-size:14.5px}
+.gp-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 16px}
+.gp-facts div{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.gp-facts b{display:block;font-size:20px;line-height:1.2;font-variant-numeric:tabular-nums}
+.gp-facts span{font-size:12.5px;color:var(--text-2)}
+.gp-tip{background:var(--bg-accent);border:1px solid #BFDBFE;border-radius:10px;padding:12px 16px;color:#1E3A8A;font-size:13.5px;margin:0 0 18px}
+.gp-tip ul{margin:4px 0 0;padding-left:18px}
+.gp-h{font-size:15px;margin:0 0 10px}
+.gp-cd{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:16px 18px;margin-bottom:10px}
+.gp-cd header{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.gp-cd h3{margin:0;font-size:16px}
+.gp-cd header span{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:#334155}
+.gp-desc{margin:4px 0 12px;color:var(--text-2);font-size:14px}
+.gp-cols{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;font-size:13.5px}
+.gp-cols h4{margin:0 0 6px;font-size:12.5px;color:var(--text-3)}
+.gp-cols ul{margin:0;padding-left:18px}
+.gp-cols dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px}
+.gp-cols dt{color:var(--text-3);white-space:nowrap}
+.gp-cols dd{margin:0}
+.gp-cols small{color:var(--text-3);font-size:11.5px;margin-left:4px}
+.gp-more{margin:14px 0 0;font-size:13.5px}
+.gp-more a{color:var(--text-accent);font-weight:600;text-decoration:none}
+@media (max-width:960px){.gtiles{grid-template-columns:1fr 1fr}.gp-facts{grid-template-columns:1fr 1fr}.gp-cols{grid-template-columns:1fr;gap:12px}}
+@media (max-width:640px){.gtile{padding:12px}.gtile .gd{display:none}.gtile .gn li{font-size:12.5px}
+  .gp-cols dl{grid-template-columns:1fr;gap:0}.gp-cols dt{margin-top:6px}}
+</style>
+<section id="guide">
+  <div class="wrap">
+    <p class="eyebrow">지원 서비스 안내</p>
+    <h2>정부·지자체는 기업에 실제로 무엇을 해 줄까요?</h2>
+    <p class="lead">공고문과 첨부파일까지 읽어 지원 내용을 12가지로 정리했어요. 유형마다 실제로 나왔던 대표 사업을 함께 적었습니다. 누르면 무엇을 받을 수 있는지 자세히 볼 수 있어요.</p>
+    <div class="gtiles"><a class="gtile" href="support_guide.html#market" data-guide="market"><span class="gt">판로·마케팅</span><span class="gd">국내 판로·홍보·온라인몰 입점·국내 전시회·디자인</span><ul class="gn"><li>동행축제 우수 소상공인 제품 현장 라이브커머스</li><li>소방산업 해외 마케팅 홍보물 제작경비 지원사업</li><li>전시박람회 참가 지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#consulting" data-guide="consulting"><span class="gt">교육·컨설팅</span><span class="gd">교육·컨설팅·멘토링·경영 진단</span><ul class="gn"><li>OK FTA 컨설팅 지원사업</li><li>중소기업 정보보호 지원 사업</li><li>지식재산 긴급지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#cost" data-guide="cost"><span class="gt">경영비용 절감</span><span class="gd">카드 수수료·보험료·공과금 등 운영비 절감</span><ul class="gn"><li>소상공인 특례보증 지원사업</li><li>소상공인 고용보험료 지원사업</li><li>소상공인 카드수수료 지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#commercial" data-guide="commercial"><span class="gt">사업화</span><span class="gd">사업화 자금·시제품 제작 등 보조금</span><ul class="gn"><li>수산식품 가공설비 지원사업</li><li>TRYOUT 글로벌실증 사업</li><li>시제품제작센터</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#export" data-guide="export"><span class="gt">수출·해외진출</span><span class="gd">수출·해외 전시회·바이어 발굴·통번역·수출 물류·수출 보험</span><ul class="gn"><li>수출물류비 지원사업</li><li>해외규격인증획득지원사업</li><li>글로벌 IP스타기업 육성 해외등록비용지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#ip" data-guide="ip"><span class="gt">인증·지식재산</span><span class="gd">인증 취득·특허·상표·지식재산</span><ul class="gn"><li>소상공인 IP출원 지원 사업</li><li>해외규격인증획득지원사업</li><li>청년기업 인증</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#loan" data-guide="loan"><span class="gt">정책자금</span><span class="gd">융자·보증·이자 지원 등 자금 조달</span><ul class="gn"><li>중소기업육성자금 융자지원</li><li>소상공인 특례보증 지원사업</li><li>중소기업육성자금 이차보전금 지원</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#space" data-guide="space"><span class="gt">공간·장비</span><span class="gd">입주 공간·시설·장비 사용·임차비</span><ul class="gn"><li>소규모 사업장 방지시설 설치 지원사업</li><li>사회적기업 시설장비 지원사업</li><li>청년 창업자 임차료 지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#hire" data-guide="hire"><span class="gt">인력·고용</span><span class="gd">채용·고용 지원금·인건비·인력 양성</span><ul class="gn"><li>청년일자리도약장려금</li><li>현장실습 훈련 지원사업</li><li>신중년 고용지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#dx" data-guide="dx"><span class="gt">디지털전환</span><span class="gd">디지털 전환·스마트공장·AI·자동화 도입</span><ul class="gn"><li>중소기업 정보보호 지원 사업</li><li>지역특화형 스마트공장 구축지원사업</li><li>사물인터넷 측정기기 부착 지원사업</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#rnd" data-guide="rnd"><span class="gt">기술개발</span><span class="gd">R&amp;D·기술개발·연구 과제</span><ul class="gn"><li>대학-기업 공동 기술ㆍ제품 기획 지원 과제</li><li>대학ㆍ기업 협업 프로젝트</li><li>미래개척융합과학기술개발사업 신규과제</li></ul><span class="go">자세히 보기 →</span></a><a class="gtile" href="support_guide.html#startup" data-guide="startup"><span class="gt">창업 준비</span><span class="gd">창업 교육·창업 아이템 발굴 등 창업 전 단계 지원</span><ul class="gn"><li>IP 디딤돌 프로그램 지원사업</li><li>청년큐브 1:1 창업멘토링 지원</li><li>체육인 직업안정 사업 창업교육과정</li></ul><span class="go">자세히 보기 →</span></a></div>
+    <p class="meta guide-asof">2026년 10월 24일 기준 · 기업마당 공고 2,189건 분석 · 사업 이름은 공고명에서 연도·지역을 뗀 것이니 정확한 내용은 공고 원문을 확인하세요 · <a href="support_guide.html">전체 안내 보기 →</a></p>
+  </div>
+</section>
+<dialog class="ex" id="guidePop" aria-label="지원 서비스 안내" data-page="support_guide.html">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">지원 서비스 안내</b>
+      <span class="note"></span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body"></div>
+  <div class="exd-foot">
+    <span>가입하면 우리 회사가 신청할 수 있는 공고만 골라 볼 수 있어요.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+<script>
+// 지원 서비스 안내 팝업: 타일을 누르면 그 유형 파일(GUIDE_BASE + 아이디.js)을 읽어 띄운다. 스크립트가 꺼져 있으면 안내 페이지로 간다.
+(function () {
+  const GUIDE_BASE = 'data/guide/';
+  const d = document.getElementById('guidePop');
+  const body = d.querySelector('.exd-body');
+  function fill(id) { body.innerHTML = window.GUIDE_POP[id]; body.scrollTop = 0; }
+  function open(id, title) {
+    d.querySelector('.pop-title').textContent = title;
+    body.innerHTML = '<p class="gp-lead">불러오는 중…</p>';
+    d.showModal();
+    history.pushState({guide: id}, '');            // 휴대폰 뒤로 가기로 닫기
+    if (window.GUIDE_POP && window.GUIDE_POP[id]) return fill(id);
+    const s = document.createElement('script');
+    s.src = GUIDE_BASE + id + '.js';
+    s.onload = () => fill(id);
+    s.onerror = () => { body.innerHTML = '<p class="gp-lead">안내를 불러오지 못했어요. <a href="' + d.dataset.page + '#' + id + '">안내 페이지에서 보기 →</a></p>'; };
+    document.head.appendChild(s);
+  }
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-guide]');
+    if (!t) return;
+    e.preventDefault();
+    open(t.dataset.guide, t.querySelector('.gt').textContent);
+  });
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+  d.addEventListener('close', () => { if (history.state && history.state.guide) history.back(); });
+  addEventListener('popstate', () => { if (d.open) d.close(); });
+})();
+</script>
+<!-- /2-1. 지원 서비스 안내 -->
+
+<!-- 3. 주요 소식 (data/news.js: 구분이 기업지원정보이고 게시자가 운영자인 최근 게시판 글) -->
+<section id="news">
+  <div class="wrap">
+    <div class="news-head">
+      <div>
+        <p class="eyebrow">정부지원사업 주요 소식</p>
+        <h2>최근 소식</h2>
+        <p class="lead" style="margin-bottom:0">사업자에게 필요한 지원사업 소식을 운영자가 원문을 읽고 정리했습니다. 카드를 누르면 게시판의 해당 글이 열립니다.</p>
+      </div>
+      <span class="asof" id="newsAsof"></span>
+    </div>
+    <div class="ngrid" id="newsGrid"></div>
+    <div class="sum-row">
+      <span class="meta">요약은 원문을 바탕으로 정리하고 운영자가 확인했습니다.</span>
+      <a class="more-btn" href="board.html#news">지난 소식까지 전체 보기 →</a>
+    </div>
+  </div>
+</section>
+<!-- /3. 주요 소식 -->
+
+<!-- 4. 제공 서비스 (단계 설명·왜 필요한가는 팝업) -->
+<section id="service">
+  <div class="wrap">
+    <p class="eyebrow">제공 서비스</p>
+    <h2>등록 한 번으로 신청서 초안까지</h2>
+    <div class="step-strip">
+      <button class="sbtn" type="button" data-pop="service" data-anchor="step-1"><span class="no">1</span><b>기업 등록</b><span>기본 정보 + 회사 자료</span></button>
+      <button class="sbtn" type="button" data-pop="service" data-anchor="step-2"><span class="no">2</span><b>정밀 매칭</b><span>조건별 판정과 근거</span></button>
+      <button class="sbtn" type="button" data-pop="service" data-anchor="step-3"><span class="no">3</span><b>공고 분석</b><span>첨부 공고문 핵심 정리</span></button>
+      <button class="sbtn" type="button" data-pop="service" data-anchor="step-4"><span class="no">4</span><b>신청서 초안</b><span>양식에 맞춘 개조식 초안</span></button>
+    </div>
+    <div class="sum-row">
+      <span class="meta">공고는 많은데 우리 회사 것을 찾기 어렵다면, 이 네 단계로 줄여 드립니다.</span>
+      <button class="more-btn" type="button" data-pop="service">왜 필요한지·단계별 설명 →</button>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 처리 과정과 결과 예시 (요약은 화면, 전체는 '실제 결과 예시' 팝업) -->
+<section id="example">
+  <div class="wrap">
+    <p class="eyebrow">처리 과정 예시</p>
+    <h2>정밀 매칭은 이렇게 판단합니다</h2>
+    <p class="lead">가상 기업으로 이 서비스를 실제로 실행한 결과입니다. 공고 1,409건 중 338건을 신청 가능으로 골랐습니다.</p>
+    <div class="ex-top">
+      <div class="ex-box">
+        <div class="lab"><span class="tag blue">실제 공고</span><span class="meta">2026년 10월 19일 마감</span></div>
+        <h3>[경남] 2026년 스마트공장 기초구축 지원사업 추가모집</h3>
+        <div class="meta">경상남도 · (재)경남테크노파크 · 도비+시비 최대 7,200만 원 · 기업마당 원문</div>
+      </div>
+      <div class="ex-box">
+        <div class="lab"><span class="tag sample">가상 기업</span><span class="meta">실제 기업이 아닌 예시입니다</span></div>
+        <h3>주식회사 예시정밀</h3>
+        <div class="facts">
+          <span style="background:var(--violet)">법인 · 금형·프레스 부품 제조</span><span style="background:var(--mist)">경남 창원</span>
+          <span style="background:var(--teal)">상시 32명</span><span style="background:var(--rose)">매출 48.2억</span><span style="background:var(--sand)">필요: 공정 자동화·불량률 개선</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ex-result ex-result-2">
+      <div class="score"><div><div class="k">적합도 등급</div><div class="v grade">매우 적합</div></div><span class="lv">필수 자격 충족 · 확인 3건</span></div>
+      <div class="card">
+        <h4>신청 전 확인할 점</h4>
+        <ul>
+          <li>자부담 40%: 희망(10~20%)보다 높아 현금 부담 능력 검토</li>
+          <li>최대 7,200만 원: 희망 규모(1억~5억 원)보다 작음</li>
+          <li>함께 수행할 공급기업을 먼저 찾아 매칭</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ex-open">
+      <div><b>실제 결과 화면으로 보기</b><span>매칭 결과, 판정 근거, 실제 작성한 사업계획서 5쪽을 볼 수 있습니다.</span></div>
+      <div class="ex-open-btns">
+        <button class="btn ghost" type="button" data-open="match">매칭 결과 보기</button>
+        <button class="btn ghost" type="button" data-open="draft">신청서 초안 보기</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ (3개만 화면, 전체는 팝업) -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq" style="margin-top:20px">
+      <details open><summary>무료로 써 볼 수 있나요?</summary><p>지금은 정식 출시 전 파일럿 기간이라, 카카오 또는 Google 계정으로 가입한 선착순 30명이 정식 출시일까지 무료로 이용합니다. 일반 회원과 같은 기능을 기업 1곳으로 쓰며, AI 사용량은 10일마다 나누어 드립니다. 정식 출시 뒤에는 파일럿 회원을 포함한 모든 가입자가 7일 동안 무료로 체험한 다음 요금제를 고릅니다.</p></details>
+      <details><summary>어떤 공고를 대상으로 하나요?</summary><p>기업마당에 올라오는 중앙 부처·지자체·기관의 지원사업 공고를 매일 수집하고, 첨부된 공고문까지 분석합니다.</p></details>
+      <details><summary>매칭 결과는 얼마나 믿을 수 있나요?</summary><p>조건마다 공고 원문의 근거 문장을 함께 보여 드립니다. 서류로만 확인할 수 있는 조건은 ‘확인 필요’로 따로 표시하니, 신청 전에 꼭 확인하세요.</p></details>
+      <button class="more-btn" type="button" data-pop="faq">질문 전체 보기 (10개) →</button>
+    </div>
+  </div>
+</section>
+
+<div class="final" id="signup">
+  <div class="wrap">
+    <div class="card">
+      <div><h2>우리 회사에 맞는 공고, 지금 찾아보세요</h2><p>정식 출시 전 파일럿 테스터 30명 무료 모집 · 정식 출시일까지 · <a href="#pop-pilot" data-pop="pilot" style="color:#fff">파일럿 안내</a></p></div>
+      <a class="btn lg" href="https://app.biznachim.kr">로그인·가입</a>
+    </div>
+  </div>
+</div>
+
+<div style="border-top:1px solid var(--border);background:#EFF6FF"><div class="wrap" style="padding:14px 24px;font-size:13.5px;color:var(--text-2)"><b>개인정보 처리방침 변경 안내 (2026년 11월 20일 시행)</b> · 공개 홈 방문 분석(구글·네이버 애널리틱스) 추가 (회원 정보는 보내지 않음). <a class="textlink" href="privacy.html#a-9">자세히 →</a></div></div>
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <a class="logo" href="#top"><img src="data/icon.svg" width="28" height="28" alt="" style="flex:none">사업나침반</a>
+      <nav><a href="matching-guide.html">매칭 서비스 고르는 법</a><a href="method.html">데이터·매칭 방법</a><a href="terms.html">이용약관</a><a href="privacy.html"><b>개인정보 처리방침</b></a><a href="https://pf.kakao.com/_eDgxeX/chat" target="_blank" rel="noopener">카톡 문의</a><a href="https://app.biznachim.kr">문의하기 (로그인 후 [문제 신고])</a></nav>
+    </div>
+    <div class="src">
+      <b>공고 정보</b>: 중소벤처기업부 「중소기업 지원사업 공고 조회 서비스」(공공데이터포털·기업마당 bizinfo.go.kr), 공공누리 제3유형(출처표시·변경금지). 공고 제목·기관·마감일은 원문 그대로 싣고 원문으로 연결하며, 건수는 이 서비스가 집계했습니다.<br>
+      <b>정부 지원계획</b>: 중소벤처기업부 「2026년도 중소벤처기업 지원사업」 1·2권(2026.1.), 「2026년 중소벤처기업부 소상공인 지원사업 통합 공고」(제2025-652호, 2025.12.29.),
+      「2026년도 중앙부처 및 지자체 창업지원사업 통합공고」(2026.1.). 원문 PDF는 고치지 않고 그대로 싣습니다.<br>
+      <b>정부지원사업 소식</b>: 중소벤처기업부 보도자료·소상공인시장진흥공단 공지를 요약하고 원문으로 연결합니다.<br>
+      <b>지원 서비스 안내</b>: 기업마당 공고를 지원 방식별로 묶어 세고 정리했습니다. 기준일 이후 달라질 수 있으니 공고 원문을 확인하세요.<br>
+      <span id="footAsof">공고 집계 매일 갱신</span> · 지원 계획 수치는 각 자료의 공고일 기준<br>운영: 전재훈 · 개인정보 보호책임자: 전재훈 (lion21red@gmail.com)
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta"><a class="btn" href="https://app.biznachim.kr" data-track="mobile_bar">로그인·가입 · 파일럿 무료 참여</a></div>
+
+<!-- 팝업: 화면에는 요약만 두고 상세는 여기서 연다 (#pop-이름 으로 바로 열기) -->
+<dialog class="ex pop" id="pop-status" aria-label="현황 자세히">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">현황 자세히</b>
+      <span class="note">기업마당 원본 항목 집계 · 매일 갱신</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+<!-- 팝업 본문: 현황 (data/stats.js) -->
+      <div class="weekly">
+        <div class="wk-head">
+          <h3>이번 주 많이 찾는 주제 <span class="meta">· 접수 중 공고, 공고명 기준</span></h3>
+        </div>
+        <div class="topics" id="topics"></div>
+        <p class="wk-note">공고명에 들어 있는 낱말로 나눴습니다. 한 공고가 여러 주제에 들어갈 수 있습니다.</p>
+      </div>
+      <div class="dash-grid">
+        <div class="sub-card">
+          <h3>분야별 <span class="meta">· 기업마당 지원분야</span></h3>
+          <div class="bars" id="bars"></div>
+          <h3 style="margin-top:22px">소관기관별</h3>
+          <div class="split" id="split"></div>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div class="sub-card">
+          <h3>마감 임박 <span class="meta">· 7일 이내, 5건</span></h3>
+          <ul class="deadline" id="deadline"></ul>
+          <div class="lock"><span>공고 검색·첨부문서 분석은 로그인 후에 볼 수 있습니다.</span><a href="https://app.biznachim.kr">로그인·가입 →</a></div>
+        </div>
+      </div>
+      <p class="rule" id="liveRule"></p>
+<!-- /팝업 본문: 현황 -->
+  </div>
+  <div class="exd-foot">
+    <span>가입하면 우리 회사 정보로 바로 확인할 수 있습니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<dialog class="ex pop" id="pop-plan" aria-label="2026년 정부 지원 예산">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">2026년 정부 지원 예산</b>
+      <span class="note">중소벤처기업부 보도자료 기준</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+    <!-- ① 정부 지원 계획 -->
+    <div class="card">
+      <p class="block-title">2026년 정부 지원 예산 <span class="tag ok">정부 보도자료</span></p>
+      <p class="block-sub">중소벤처기업부가 발표한 보도자료의 숫자를 그대로 옮겼습니다. 연초 발표 뒤 바뀐 것(4월 추가경정예산)은 함께 적었습니다.</p>
+      <div class="plan-grid">
+        <div class="plan">
+          <div class="k">중소벤처기업부 올해 예산</div>
+          <div class="v">18조 2,136<small>억 원</small></div>
+          <div class="d">중기부가 올해 쓰는 돈 전체 (지원사업·융자·출연 등)</div>
+          <div class="d2">본예산 <b>16조 5,233억 원</b> (2025년 12월 국회 확정, 중소기업 R&amp;D 2조 1,959억 원 포함)<br>+ 4월 추경 <b>1조 6,903억 원</b>: 수출 중소기업 4,622억 · 소상공인 민생안정 4,952억 · 스타트업 6,719억 · 지역 제조 AI 전환 610억</div>
+          <div class="src">중소벤처기업부 「2026년 중소벤처기업부 예산 확정」(2025.12.5.), 「'26년 추경예산 1조 6,903억원 확정」(2026.4.11.)</div>
+          <a class="more" href="https://www.korea.kr/news/policyNewsView.do?newsId=148955950" target="_blank" rel="noopener">본예산 보도자료 ↗</a><a class="more" href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156754060" target="_blank" rel="noopener">추경 보도자료 ↗</a>
+        </div>
+        <div class="plan">
+          <div class="k">정부·지자체 창업 지원</div>
+          <div class="v">3조 4,645<small>억 원</small></div>
+          <div class="d">15개 중앙부처와 96개 지자체, 111개 기관 · 508개 사업</div>
+          <div class="d2">예비창업자·창업기업이 받을 수 있는 사업을 모은 「창업지원사업 통합공고」 금액. 4월 추경의 스타트업 예산 6,719억 원은 이 금액에 들어 있지 않습니다.</div>
+          <div class="src">중소벤처기업부 「정부·지자체, 2026년 창업지원에 3조 4,645억원 투입」(2025.12.19.)</div>
+          <a class="more" href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156736001" target="_blank" rel="noopener">보도자료 ↗</a>
+        </div>
+        <div class="plan">
+          <div class="k">소상공인 지원 (중기부)</div>
+          <div class="v">5.4<small>조 원</small></div>
+          <div class="d">중기부 소상공인 예산 (역대 최대)</div>
+          <div class="d2">소상공인이 직접 신청하는 지원사업 <b>1조 3,410억 원</b> (7개 분야 26개 사업)<br>정책자금 융자 <b>3조 3,620억 원</b> (3개 분야 11개 사업)<br>4월 추경으로 소상공인 민생안정 4,952억 원 추가</div>
+          <div class="src">중소벤처기업부 「2026년 소상공인 지원사업‧융자 통합 공고」(2025.12.29.)</div>
+          <a class="more" href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156737177" target="_blank" rel="noopener">보도자료 ↗</a>
+        </div>
+      </div>
+      <p class="rule">세 숫자는 범위가 겹쳐(중기부 예산 안에 창업·소상공인 예산이 들어 있음) 더하지 않습니다. 개별 공고의 지원금과 1:1로 대응하는 값도 아닙니다. 보도자료 대조: 2026년 10월 24일.</p>
+    </div>
+
+  </div>
+  <div class="exd-foot">
+    <span>가입하면 우리 회사 정보로 바로 확인할 수 있습니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<dialog class="ex pop" id="pop-service" aria-label="왜 필요하고, 무엇을 해 드리나요">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">왜 필요하고, 무엇을 해 드리나요</b>
+      <span class="note">4단계 서비스</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+    <h3 class="pop-h">좋은 지원사업은 많은데, 우리 회사 것을 찾기가 어렵습니다</h3>
+    <div class="three">
+      <div class="card pain"><div class="num">01</div><h3>공고가 흩어져 있습니다</h3><p>중앙 부처, 17개 광역자치단체, 전담기관 공고를 매번 찾아다녀야 하고 마감을 놓치기 쉽습니다.</p></div>
+      <div class="card pain"><div class="num">02</div><h3>자격 조건 판단이 어렵습니다</h3><p>업력·매출·업종·지역·인증 조건은 대부분 첨부 공고문 안에 있어, 끝까지 읽어야 신청 가능 여부를 압니다.</p></div>
+      <div class="card pain"><div class="num">03</div><h3>신청서 작성이 부담입니다</h3><p>양식마다 요구 항목이 달라 같은 회사 정보를 매번 다시 정리해야 합니다.</p></div>
+    </div>
+    <h3 class="pop-h">등록 한 번으로 신청서 초안까지</h3>
+    <div class="steps">
+      <div class="card step" id="step-1"><div class="no">1</div><h3>기업 등록</h3><p>기본 정보를 불러오고 회사 자료로 보완합니다.</p><div class="what">업종·업력·매출·인증·필요사항</div></div>
+      <div class="card step" id="step-2"><div class="no">2</div><h3>정밀 매칭</h3><p>접수 중인 공고의 자격 조건을 항목별로 대조해 신청 가능한 공고를 고릅니다.</p><div class="what">충족 / 미충족 / 확인 필요 + 근거</div></div>
+      <div class="card step" id="step-3"><div class="no">3</div><h3>공고 분석</h3><p>첨부 공고문의 필수 보유 조건, 가점, 제출 서류, 접수 방법을 한 화면에 정리합니다.</p><div class="what">공고 상세 · 마감 일정</div></div>
+      <div class="card step" id="step-4"><div class="no">4</div><h3>신청서 초안</h3><p>공고 양식에 맞춰 회사 정보를 채우고 사업계획 초안을 작성합니다.</p><div class="what">요건 체크리스트 · 개조식 초안</div></div>
+    </div>
+  </div>
+  <div class="exd-foot">
+    <span>가입하면 우리 회사 정보로 바로 확인할 수 있습니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<dialog class="ex pop" id="pop-pilot" aria-label="파일럿 테스터 모집 안내">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">파일럿 테스터 모집 안내</b>
+      <span class="note">무료</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+    <h3 class="pop-h">정식 출시 전, 실제 기업과 함께 서비스를 점검합니다</h3>
+    <p>정식 출시(2027년 1월 4일 예정)까지 파일럿 테스터로만 가입을 받습니다. 쓰시면서 불편하거나 틀린 부분을 알려 주시면 출시 전에 고칩니다.</p>
+    <ul class="pilot-list">
+      <li><b>요금</b>: 무료입니다. 결제 기능은 열지 않습니다.</li>
+      <li><b>이용 범위</b>: 일반 회원과 같은 기능을 쓰며, 등록 기업은 계정당 1곳입니다(지운 기업도 셉니다).</li>
+      <li><b>AI 사용량</b>: 일반 회원의 한 달 사용량을 10일마다 3분의 1씩, 최대 3번 드립니다. 남은 양은 넘어가지 않습니다.</li>
+      <li><b>기간</b>: 정식 출시일까지입니다. 운영상 필요하면 미리 알린 뒤 일찍 끝날 수 있습니다.</li>
+      <li><b>정식 출시 뒤</b>: 모든 가입자와 같이 출시일부터 7일 무료 체험을 드리고, 등록한 기업 정보와 신청서는 그대로 이어 씁니다.</li>
+      <li><b>부탁드리는 일</b>: 오류나 불편은 앱 안의 [문제 신고]나 <a href="https://pf.kakao.com/_eDgxeX/chat" target="_blank" rel="noopener">카카오톡 채널 '사업나침반'</a>으로 알려 주세요. 제출하는 신청서는 꼭 직접 확인해 주세요.</li>
+    </ul>
+    <p>자세한 조건은 <a href="terms.html#a-pilot">이용약관의 파일럿 이용 특칙</a>에 있습니다.</p>
+  </div>
+  <div class="exd-foot">
+    <span>카카오·Google 계정으로 가입하면 파일럿 테스터가 됩니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<dialog class="ex pop" id="pop-pricing" aria-label="요금제 안내">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">요금제 안내</b>
+      <span class="note">지금은 파일럿 기간 (무료)</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+    <h3 class="pop-h">지금은 정식 출시 전 파일럿 기간입니다</h3>
+    <p>정식 출시일까지 파일럿 테스터 30명을 무료로 받습니다 (<a href="#pop-pilot" data-pop="pilot">파일럿 안내</a>). 정식 출시 뒤에는 모든 가입자가 7일 동안 무료로 체험한 다음, 아래 요금제 중 하나로 전환해 계속 이용할 수 있습니다.</p>
+    <h3 class="pop-h">요금제</h3>
+    <div class="price-grid">
+      <div class="price-card"><h3>간편제</h3><p class="inc">매칭 + 메일링 서비스</p><ul><li>기업 1곳</li><li>맞는 지원사업 매칭과 공고 분석</li><li>정기 메일로 새 공고 안내</li><li>신청서가 필요할 때는 1주 이용권으로 작성</li></ul></div>
+      <div class="price-card"><h3>일반</h3><p class="inc">매칭 + 신청서 작성 + 메일링 서비스</p><ul><li>기업 3곳</li><li>맞는 지원사업 매칭과 공고 분석</li><li>정기 메일로 새 공고 안내</li><li>신청서 건수 제한 없이 작성 (월 AI 사용량 안에서)</li></ul></div>
+      <div class="price-card soon"><h3>전문가</h3><p class="inc">준비중</p><ul><li>여러 고객사를 관리하는 분을 위한 요금제를 준비하고 있습니다</li></ul></div>
+    </div>
+    <p class="price-note">금액과 결제 방법은 출시 때 안내합니다.</p>
+  </div>
+  <div class="exd-foot">
+    <span>지금 가입하면 파일럿 테스터로 무료 이용합니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<dialog class="ex pop" id="pop-faq" aria-label="자주 묻는 질문">
+  <div class="exd-head">
+    <div class="exd-top">
+      <b class="pop-title">자주 묻는 질문</b>
+      <span class="note"></span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+  </div>
+  <div class="exd-body">
+    <div class="faq">
+      <details open><summary>무료로 써 볼 수 있나요?</summary><p>지금은 정식 출시 전 파일럿 기간이라, 카카오 또는 Google 계정으로 가입한 선착순 30명이 정식 출시일까지 무료로 이용합니다. 일반 회원과 같은 기능을 기업 1곳으로 쓰며, AI 사용량은 10일마다 나누어 드립니다. 정식 출시 뒤에는 파일럿 회원을 포함한 모든 가입자가 7일 동안 무료로 체험한 다음 요금제를 고릅니다.</p></details>
+      <details><summary>어떤 공고를 대상으로 하나요?</summary><p>기업마당에 올라오는 중앙 부처·지자체·기관의 지원사업 공고를 매일 수집하고, 첨부된 공고문까지 분석합니다.</p></details>
+      <details><summary>매칭 결과는 얼마나 믿을 수 있나요?</summary><p>조건마다 공고 원문의 근거 문장을 함께 보여 드립니다. 서류로만 확인할 수 있는 조건은 ‘확인 필요’로 따로 표시하니, 신청 전에 꼭 확인하세요.</p></details>
+      <details><summary>여러 고객사를 관리하는 컨설턴트도 쓸 수 있나요?</summary><p>유료 요금제에 따라 관리할 수 있는 기업 수가 늘어납니다. 로그인 후 홈에서 고객 기업 목록과 진행 상황을 한눈에 볼 수 있습니다.</p></details>
+      <details><summary>등록한 회사 정보는 안전한가요?</summary><p>회사 정보는 본인 계정에서만 볼 수 있고, 탈퇴·자료 삭제를 요청할 수 있습니다. 자세한 내용은 개인정보 처리방침을 확인하세요.</p></details>
+      <details><summary>사업나침반은 어떤 서비스인가요?</summary><p>AI로 정부지원사업을 우리 회사에 매칭해 주는 서비스입니다. 기업마당에 올라오는 정부·지자체 지원사업 공고를 매일 모아, 첨부된 공고문의 자격·가점 조건을 등록한 회사 정보와 대조해 신청할 수 있는 공고를 골라 드리는 서비스입니다. 신청하기로 정한 사업은 AI가 신청서·사업계획서 초안까지 작성합니다.</p></details>
+      <details><summary>정부지원사업 매칭 서비스는 무엇을 보고 고르면 되나요?</summary><p>공고 제목·분야만 보고 고르는지, 첨부 공고문의 자격·가점 조건까지 읽고 판정하는지를 먼저 보세요. 사업나침반은 업력·매출·업종·지역·인증 같은 조건마다 충족·미충족·확인 필요로 판정하고 공고 원문의 근거 문장을 함께 보여 드리며, 신청하기로 정한 사업은 지정양식에 맞춘 신청서 초안까지 이어서 작성합니다.</p></details>
+      <details><summary>기업마당에서 직접 찾는 것과 무엇이 다른가요?</summary><p>기업마당은 공고를 모아 보여 주고, 사업나침반은 공고문과 첨부파일을 읽어 우리 회사가 자격 조건에 맞는지 조건마다 판정하고 그 근거 문장을 함께 보여 줍니다. 판정은 매우 적합·적합·참고 등급으로 나눕니다.</p></details>
+      <details><summary>올해 어떤 정부 지원사업이 있는지 어디서 보나요?</summary><p>2026 지원사업 목록 페이지에 중소벤처기업부 지원사업 안내 책자 2권과 창업지원사업 통합공고의 사업명을 모아 두었습니다. 사업명을 누르면 책자 원문의 해당 쪽이 열립니다.</p></details>
+      <details><summary>AI가 쓴 신청서 초안을 그대로 내도 되나요?</summary><p>초안은 공고의 지정양식과 평가 항목에 맞춰 개조식으로 작성하지만, 회사 사정과 다른 내용이 있을 수 있습니다. 숫자·실적·일정은 직접 확인하고 고친 뒤 제출하세요.</p></details>
+      <p class="more">공고별 질문과 후기는 로그인 후 공고 상세 화면에서 볼 수 있습니다.</p>
+    </div>
+  </div>
+  <div class="exd-foot">
+    <span>가입하면 우리 회사 정보로 바로 확인할 수 있습니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+
+<script src="data/stats.js"></script>
+<script src="data/news.js"></script>
+<script>
+// ---------------------------------------------------------------- 현황·소식 그리기 (data/*.js는 자동 생성)
+(function () {
+  const e = s => String(s ?? '').replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const n = v => Number(v || 0).toLocaleString('ko-KR');
+  const S = window.SITE_STATS;
+  if (S) {
+    document.getElementById('asof').textContent = `${S.asof_label} · 매일 갱신`;
+    if (S.year_count_label) {  // 히어로의 올해 공고 수·일평균
+      document.getElementById('yearStat').textContent = S.year_count_label;
+      document.getElementById('dailyStat').textContent = S.daily_avg_label;
+    }
+    const seats = document.getElementById('pilotSeats');
+    if (seats && S.pilot_max != null) {   // 첫 화면 가입 버튼 아래: 파일럿 남은 자리 (매일 갱신)
+      const day = S.asof ? `${+S.asof.slice(5, 7)}월 ${+S.asof.slice(8, 10)}일 기준` : '';
+      seats.innerHTML = S.pilot_left > 0
+        ? `파일럿 테스터 ${n(S.pilot_max)}명 중 <b>${n(S.pilot_left)}자리 남음</b> <span class="meta">· ${day}</span>`
+        : `파일럿 테스터 ${n(S.pilot_max)}명 모집이 마감되었습니다 <span class="meta">· ${day}</span>`;
+    }
+    document.getElementById('kpis').innerHTML = [
+      ['접수 중', S.open, '전체 공고', ''], ['이번 주 신규', S.new_week, '최근 7일 등록', ''],
+      ['이번 주 마감', S.closing_week, '7일 이내', 'hot'],
+      // 예전 데이터 파일(no_deadline 없음)이면 이 칸은 빼고 그린다
+      ...(S.no_deadline == null ? [] : [['상시·마감일 미정', S.no_deadline, '접수 중 공고 중', '']])
+    ].map(([k, v, h, c]) => `<div class="kpi ${c}"><div class="k">${k}</div><div class="v">${n(v)}<small>건</small></div><div class="h">${h}</div></div>`).join('');
+    document.getElementById('wkSum').textContent = S.summary;
+    document.getElementById('topics').innerHTML = S.topics.map(t =>
+      `<div class="topic"><span class="t">${e(t.name)}</span><b>${n(t.count)}</b><span class="w">이번 주 +${n(t.new_week)}</span></div>`).join('');
+    const max = Math.max(1, ...S.by_category.map(c => c.count));
+    document.getElementById('bars').innerHTML = S.by_category.map(c =>
+      `<div class="bar"><span>${e(c.name)}</span><div class="t"><span style="width:${Math.round(c.count * 100 / max)}%"></span></div><span class="n">${n(c.count)}</span></div>`).join('');
+    const total = Math.max(1, S.central + S.local), cw = Math.round(S.central * 100 / total);
+    document.getElementById('split').innerHTML = `<div class="c" style="width:${cw}%"></div><div class="g" style="width:${100 - cw}%"></div>`;
+    document.getElementById('legend').innerHTML =
+      `<span><i style="background:var(--action)"></i>중앙 부처·청 ${n(S.central)}건</span><span><i style="background:var(--blue-200)"></i>광역자치단체 ${n(S.local)}건</span>`;
+    document.getElementById('deadline').innerHTML = S.closing_soon.length ? S.closing_soon.map(c => {
+      const [, m, d] = c.end_date.split('-');
+      return `<li><span class="dday">${c.d_day === 0 ? 'D-day' : 'D-' + c.d_day}</span><div><div class="ttl">${e(c.title)}</div><div class="org">${e(c.department)} · ${+m}.${+d} 마감</div></div>${c.url ? `<a class="out" href="${e(c.url)}" target="_blank" rel="noopener">원문 ↗</a>` : ''}</li>`;
+    }).join('') : '<li><div class="org">7일 안에 마감하는 공고가 없습니다.</div></li>';
+    document.getElementById('liveRule').textContent = `출처: 중소벤처기업부 「중소기업 지원사업 공고 조회 서비스」(공공데이터포털·기업마당 bizinfo.go.kr), 공공누리 제3유형(출처표시·변경금지) · ${S.asof_label}. 지원 유형·적합도 등 AI가 만든 값은 이 화면에 쓰지 않습니다.`;
+    document.getElementById('footAsof').textContent = `공고 집계 ${S.asof_label} (매일 갱신)`;
+  }
+
+  // 소식: 운영자가 쓴 기업지원정보 최근 글을 카드로 그린다. 누르면 게시판의 해당 글이 열린다.
+  const N = window.SITE_NEWS;
+  const items = (N && N.items) || [];
+  const fmt = d => { if (!d) return ''; const [y, m, dd] = String(d).slice(0, 10).split('-'); return `${y}.${m}.${dd}`; };
+  if (!items.length) {
+    // 실을 소식이 없으면 '곧 올라옵니다' 같은 빈 자리 대신 소식 구역과 메뉴를 숨긴다
+    document.getElementById('news').style.display = 'none';
+    document.querySelectorAll('a[href="#news"]').forEach(a => { a.style.display = 'none'; });
+  } else {
+    document.getElementById('newsAsof').textContent = `전체 ${n(N.total)}건`;
+    document.getElementById('newsGrid').innerHTML = items.map(it => `<a class="nitem" href="board.html#post-${encodeURIComponent(it.id)}">
+      <h3>${e(it.title)}</h3><p class="nsum">${e(it.summary)}</p>
+      ${it.source || it.deadline ? `<p class="nmeta">${e([it.source ? '출처 ' + it.source : '', it.deadline ? '마감 ' + it.deadline : ''].filter(Boolean).join(' · '))}</p>` : ''}
+      <div class="nfoot2"><span>${fmt(it.date)}</span><span class="nopen">자세히 →</span></div></a>`).join('');
+  }
+})();
+</script>
+
+<!-- 예시 팝업: 실제 서비스 결과(예시 기업으로 실행한 매칭·신청서 초안). 데이터는 examples_data.js -->
+<dialog class="ex" id="exDialog" aria-labelledby="exTitle">
+  <div class="exd-head">
+    <div class="exd-top">
+      <span class="tag sample" id="exTitle">실제 결과 예시</span>
+      <span class="note">가상 기업으로 이 서비스를 실제로 실행한 결과입니다. 공고는 실제 공고입니다.</span>
+      <button class="exd-close" type="button" aria-label="닫기" data-close>✕</button>
+    </div>
+    <div class="exd-tabs" role="tablist">
+      <button role="tab" data-tab="match">① 매칭 결과</button>
+      <button role="tab" data-tab="verdict">② 공고 판정</button>
+      <button role="tab" data-tab="draft">③ 신청서 작성</button>
+    </div>
+  </div>
+
+  <div class="exd-body">
+    <!-- ① 매칭 결과 -->
+    <div class="panel" data-panel="match">
+      <div class="cobar">
+        <span class="tag sample">가상 기업</span><b>주식회사 예시정밀</b>
+        <span class="meta">법인 · 자동차 부품용 정밀 금형·프레스 부품 제조 · 경남 창원 · 업력 10.6년 · 상시 32명 · 벤처·이노비즈·ISO 9001</span>
+      </div>
+      <div class="chips">매칭 조건
+        <span class="chip" style="background:var(--violet)">디지털전환</span>
+        <span class="chip" style="background:var(--teal)">수출·해외진출</span>
+        <span class="chip" style="background:var(--mist)">기술개발</span>
+        <span class="chip" style="background:var(--sand)">자부담 10~20%</span>
+        <span class="chip" style="background:var(--rose)">융자 제외</span>
+      </div>
+      <div class="needs-q">“공정 자동화로 불량률을 낮추고 싶다. 동남아 수출을 늘리고 싶다.” <span class="meta">— 기업이 적은 필요사항</span></div>
+      <div class="asof2" id="exAsof"></div>
+      <div class="stats" id="exStats"></div>
+      <div class="acards" id="exCards"></div>
+      <p class="viewonly" id="exMore"></p>
+    </div>
+
+    <!-- ② 공고 판정 -->
+    <div class="panel" data-panel="verdict" hidden>
+      <button class="back" type="button" data-tab="match">← 매칭 결과로</button>
+      <div id="exVerdict"></div>
+    </div>
+
+    <!-- ③ 신청서 작성 -->
+    <div class="panel" data-panel="draft" hidden>
+      <div class="wsteps">
+        <span class="done">1 공고 확인 ✓</span><span class="done">2 작성 항목 확인 ✓</span><span class="done">3 초안 생성 ✓</span>
+        <span class="cur">4 검토·수정</span><span>5 완성·내려받기 🔒</span>
+      </div>
+      <div class="vhead" style="margin-bottom:12px">
+        <div class="meta">신청서 · [경남] 2026년 스마트공장 기초구축 지원사업 추가모집 · 지정양식</div>
+        <b id="exFormTitle"></b>
+      </div>
+      <div class="wgrid">
+        <div class="checklist-wrap">
+          <div class="checklist">
+            <h4>제출 서류 체크리스트</h4>
+            <ul id="exDocs"></ul>
+          </div>
+          <div class="checklist" style="margin-top:12px">
+            <h4>평가 배점 (공고문)</h4>
+            <ul id="exEval"></ul>
+          </div>
+        </div>
+        <div class="doc">
+          <div class="doc-head"><span id="exDocNote"></span><span class="tag sample">예시 · 가상 기업</span></div>
+          <div class="pages" id="exPages"></div>
+        </div>
+      </div>
+      <p class="viewonly">예시 화면은 보기만 가능합니다 (복사·내려받기 없음). 가입 후 체험 중에도 신청서는 화면에서 보기만 할 수 있습니다.</p>
+    </div>
+  </div>
+
+  <div class="exd-foot">
+    <span>가입하면 우리 회사 정보로 바로 확인할 수 있습니다.</span>
+    <a class="btn" href="https://app.biznachim.kr" data-close>로그인·가입</a>
+  </div>
+</dialog>
+
+<script src="data/examples.js"></script>
+<script>
+const TIERCLS = {"매우 적합":"tier1","적합":"tier2","참고":"tier3"};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const dlg = document.getElementById('exDialog');
+const R = EX_REAL;
+
+// ① 매칭 결과
+document.getElementById('exAsof').textContent = `${R.run.date} 매칭 · 공고 ${R.run.total.toLocaleString()}건을 검토`;
+document.getElementById('exStats').innerHTML = [
+  ['신청 가능', R.run.eligible, true], ['AI추천', R.run.recommended], ['관심 공고', R.run.favorites]
+].map(([k, v, on]) => `<div class="stat ${on ? 'on' : ''}"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+document.getElementById('exMore').textContent = `예시에서는 신청 가능 ${R.run.eligible}건 중 신청서까지 작성해 본 3건만 보여 드립니다. 카드를 누르면 판정 근거를 볼 수 있습니다.`;
+document.getElementById('exCards').innerHTML = R.cards.map((a, i) => `
+  <button class="acard" type="button" data-ann="${i}">
+    <div class="r1"><span class="tag ${TIERCLS[a.tier]}">${a.tier}</span>
+      <span class="tag ${a.dday.startsWith('D-') ? 'dd' : ''}">${esc(a.dday)}</span><span class="tag">${esc(a.field)}</span></div>
+    <div class="r2"><span>${esc(a.title)}</span><span class="heart">${a.fav ? '♥' : '♡'}</span></div>
+    <div class="r3">${esc(a.org)} · ${esc(a.end)}</div>
+    <div class="why">${esc(a.why || a.reasons.join(' · '))}</div>
+    <div class="go">판정 근거 보기 →</div>
+  </button>`).join('');
+
+// ② 공고 판정
+function showVerdict(i){
+  const a = R.cards[i];
+  const list = (xs, cls, label) => xs.map(x => `<div class="cond"><span class="tag ${cls}">${label}</span><div>${esc(x)}</div></div>`).join('');
+  document.getElementById('exVerdict').innerHTML = `
+    <div class="vhead">
+      <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag ${TIERCLS[a.tier]}">${a.tier}</span><span class="tag">${esc(a.field)}</span></div>
+      <h3>${esc(a.title)}</h3>
+      <div class="meta">${esc(a.org)} · ${esc(a.end)} · 기업마당 원문</div>
+      <p class="sum">${esc(a.summary)}</p>
+      <div class="verdict"><b>결론: ${a.tier}</b>${a.needs_note ? ' — ' + esc(a.needs_note) : ''}</div>
+    </div>
+    <h4 class="vh">맞는 점</h4>
+    <div class="conds">${list(a.fit.length ? a.fit : a.reasons, 'ok', '충족')}</div>
+    ${a.cautions.length ? `<h4 class="vh">신청 전 확인할 점</h4><div class="conds">${list(a.cautions, 'warn', '확인 필요')}</div>` : ''}
+    ${a.needs_fit ? `<p class="viewonly">필요사항 부합도: ${esc(a.needs_fit)}</p>` : ''}`;
+}
+
+// ③ 신청서: 실제 초안 5쪽 분량 (□○- 개조식, 표는 | 로 구분된 줄)
+function renderText(t){
+  const lines = t.split('\n'); let html = '', table = [];
+  const flush = () => {
+    if (!table.length) return;
+    const rows = table.filter(r => !/^\|\s*-{2,}/.test(r)).map(r => r.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
+    html += '<table>' + rows.map((r, i) => '<tr>' + r.map(c => i === 0 ? `<th>${esc(c)}</th>` : `<td>${esc(c)}</td>`).join('') + '</tr>').join('') + '</table>';
+    table = [];
+  };
+  for (const raw of lines) {
+    const l = raw.replace(/\s+$/, '');
+    if (/^\s*\|/.test(l)) { table.push(l.trim()); continue; }
+    flush();
+    if (!l.trim()) continue;
+    const cls = /^\s*□/.test(l) ? 'l1' : /^\s*○/.test(l) ? 'l2' : /^\s*-/.test(l) ? 'l3' : 'lx';
+    html += `<div class="${cls}">${esc(l.trim())}</div>`;
+  }
+  flush(); return html;
+}
+document.getElementById('exFormTitle').textContent = R.draft.form_title;
+document.getElementById('exDocNote').textContent = `사업계획서 초안 · 전체 ${R.draft.sections_total}개 항목 중 5쪽 분량 발췌`;
+document.getElementById('exPages').innerHTML = R.draft.pages.map((p, i) => `
+  <div class="a4">${p.map(s => `<div class="sh">${esc(s.name)}</div><div class="gs">${renderText(s.text)}</div>`).join('')}
+    <div class="pg">- ${i + 1} -</div></div>`).join('');
+document.getElementById('exDocs').innerHTML = R.draft.documents.map(d => `<li class="${/해당 시|해당시/.test(d) ? 'w' : 'y'}"><i>${/해당 시|해당시/.test(d) ? '!' : '✓'}</i>${esc(d)}</li>`).join('');
+document.getElementById('exEval').innerHTML = R.draft.evaluation.map(e => `<li class="y"><i>${e.points}</i>${esc(e.item)}</li>`).join('');
+
+function setTab(name){
+  dlg.querySelectorAll('[role=tab]').forEach(b => b.setAttribute('aria-selected', b.dataset.tab === name));
+  dlg.querySelectorAll('.panel').forEach(p => p.hidden = p.dataset.panel !== name);
+  dlg.querySelector('.exd-body').scrollTop = 0;
+}
+function openEx(tab){
+  showVerdict(0);
+  setTab(tab === 'draft' ? 'draft' : 'match');
+  dlg.showModal();
+  history.pushState({ex:1}, '');            // 휴대폰 뒤로 가기로 닫기
+}
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); openEx(b.dataset.open); }));
+dlg.addEventListener('click', e => {
+  const t = e.target.closest('[data-tab],[data-ann],[data-close]');
+  if (e.target === dlg) return dlg.close();  // 바깥(배경) 누르면 닫기
+  if (!t) return;
+  if (t.dataset.ann) { showVerdict(+t.dataset.ann); setTab('verdict'); }
+  else if (t.dataset.tab) setTab(t.dataset.tab);
+  else if (t.hasAttribute('data-close')) dlg.close();
+});
+dlg.addEventListener('close', () => { if (history.state && history.state.ex) history.back(); });
+addEventListener('popstate', () => { if (dlg.open) dlg.close(); });
+dlg.addEventListener('copy', e => e.preventDefault());
+// 시안 캡처용: 주소 끝에 #ex-match / #ex-verdict / #ex-draft
+const m = location.hash.match(/^#ex-(match|verdict|draft)$/);
+if (m) { openEx(m[1] === 'draft' ? 'draft' : 'match'); if (m[1] === 'verdict') setTab('verdict'); }
+</script>
+
+
+<script>
+// ---------------------------------------------------------------- 상세 팝업 (현황·지원계획·소식·서비스·FAQ) 열기/닫기
+(function () {
+  function openPop(id, anchor) {
+    const d = document.getElementById('pop-' + id);
+    if (!d) return;
+    d.showModal();
+    history.pushState({pop: id}, '');            // 휴대폰 뒤로 가기로 닫기
+    const body = d.querySelector('.exd-body');
+    const target = anchor && d.querySelector('#' + anchor);
+    if (target) target.scrollIntoView({block: 'start'}); else body.scrollTop = 0;
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-pop]');
+    if (!b) return;
+    e.preventDefault();
+    openPop(b.dataset.pop, b.dataset.anchor);
+  });
+  document.querySelectorAll('dialog.pop').forEach(d => {
+    d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+    d.addEventListener('close', () => { if (history.state && history.state.pop) history.back(); });
+  });
+  addEventListener('popstate', () => document.querySelectorAll('dialog.pop[open]').forEach(d => d.close()));
+  const m = location.hash.match(/^#pop-(\w+)$/);
+  if (m) openPop(m[1]);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="data/icon_192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="data/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data/icon_180.png">
+<title>게시판 · 사업나침반</title>
+<meta name="description" content="운영자가 정리한 정부지원사업 소식과 지원사업 활용사례·서비스 개선의견을 나누는 게시판입니다.">
+<link rel="canonical" href="https://biznachim.kr/board.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="사업나침반">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="게시판 · 사업나침반">
+<meta property="og:description" content="운영자가 정리한 정부지원사업 소식과 지원사업 활용사례·서비스 개선의견을 나누는 게시판입니다.">
+<meta property="og:url" content="https://biznachim.kr/board.html">
+<meta property="og:image" content="https://biznachim.kr/data/og_image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="사업나침반 — 지원사업 찾기부터 신청서 초안까지">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://biznachim.kr/#org","name":"사업나침반","url":"https://biznachim.kr/","logo":"https://biznachim.kr/data/icon_192.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"게시판","headline":"게시판","description":"운영자가 정리한 정부지원사업 소식과 지원사업 활용사례·서비스 개선의견을 나누는 게시판입니다.","url":"https://biznachim.kr/board.html","inLanguage":"ko-KR","publisher":{"@id":"https://biznachim.kr/#org"},"isPartOf":{"@id":"https://biznachim.kr/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://biznachim.kr/"},{"@type":"ListItem","position":2,"name":"게시판","item":"https://biznachim.kr/board.html"}]}</script>
+
+<style>
+:root{
+  --bg-page:#F8FAFC; --bg-surface:#FFFFFF; --bg-muted:#F1F5F9; --bg-accent:#EFF6FF;
+  --text:#0F172A; --text-2:#475569; --text-3:#64748B; --text-accent:#2563EB; --blue-700:#1D4ED8;
+  --border:#E2E8F0; --border-strong:#CBD5E1; --r-md:10px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg-page);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.6;word-break:keep-all}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.gnb{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.gnb .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:var(--text);white-space:nowrap}
+.logo i{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--text-accent);color:#fff;font-style:normal;font-size:14px}
+.gnb .crumb{flex:1;font-size:14px;color:var(--text-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gnb .crumb a{text-decoration:none;color:var(--text-2)}
+.btn{display:inline-block;background:var(--text-accent);color:#fff;font-weight:600;font-size:14px;border-radius:8px;padding:9px 16px;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--blue-700)}
+.head{padding:44px 0 20px;background:linear-gradient(var(--bg-surface),var(--bg-page))}
+.head h1{font-size:28px;margin:0 0 8px}
+.lead{color:var(--text-2);margin:0}
+.tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 16px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{border:1px solid var(--border);background:#fff;border-radius:999px;font:inherit;font-size:13px;font-weight:500;color:var(--text-2);padding:5px 14px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--text-accent);border-color:var(--text-accent);color:#fff}
+.post.focus{border-color:var(--text-accent);box-shadow:0 0 0 1px var(--text-accent)}
+.more{display:block;width:100%;border:1px solid var(--border-strong);background:#fff;border-radius:var(--r-md);font:inherit;font-weight:600;color:var(--text-2);padding:10px;cursor:pointer}
+.post{scroll-margin-top:80px;background:#fff;border:1px solid var(--border);border-radius:var(--r-md);margin-bottom:10px}
+.post summary{list-style:none;cursor:pointer;padding:14px 18px;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline}
+.post summary::-webkit-details-marker{display:none}
+.post .tag{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:var(--text-2);white-space:nowrap}
+.post .tag.info{background:var(--bg-accent);color:var(--blue-700)}
+.post .tag.case{background:#F0FDF4;color:#15803D}
+.post .title{font-weight:600;overflow-wrap:anywhere}
+.post .meta{grid-column:2;font-size:12.5px;color:var(--text-3)}
+.post .row{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;width:100%;padding:14px 18px;border:0;background:none;font:inherit;color:inherit;text-align:left;cursor:pointer;border-radius:var(--r-md)}
+.post .row:hover .title{color:var(--text-accent)}
+.post .row:focus-visible{outline:2px solid var(--text-accent);outline-offset:-2px}
+.pop{border:0;padding:0;border-radius:14px;width:min(680px,calc(100% - 32px));max-width:none;max-height:min(80vh,760px);box-shadow:0 20px 50px rgba(15,23,42,.25);color:var(--text);background:#fff}
+.pop::backdrop{background:rgba(15,23,42,.45)}
+.pop .phead{position:sticky;top:0;background:#fff;display:flex;align-items:flex-start;gap:10px;padding:18px 20px 12px;border-bottom:1px solid var(--border)}
+.pop .phead > div{flex:1;min-width:0}
+.pop h2{font-size:18px;margin:6px 0 2px;overflow-wrap:anywhere}
+.pop .meta{font-size:12.5px;color:var(--text-3)}
+.pop .x{flex:none;border:0;background:var(--bg-muted);border-radius:8px;width:34px;height:34px;font-size:18px;line-height:1;color:var(--text-2);cursor:pointer}
+.pop .x:hover{background:var(--border)}
+.pop .tag{font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:var(--text-2);white-space:nowrap}
+.pop .tag.info{background:var(--bg-accent);color:var(--blue-700)}
+.pop .tag.case{background:#F0FDF4;color:#15803D}
+.pop .body{padding:16px 20px 18px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text-2)}
+.pop .body a{color:var(--text-accent)}
+.pop .answer{margin:0 20px 20px;padding:12px 14px;background:var(--bg-accent);border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere}
+.pop .answer b{display:block;font-size:13px;color:var(--blue-700);margin-bottom:2px}
+body.popped{overflow:hidden}
+.post .body{padding:0 18px 16px;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text-2)}
+.post .body a{color:var(--text-accent)}
+.post .answer{margin:0 18px 16px;padding:12px 14px;background:var(--bg-accent);border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere}
+.post .answer b{display:block;font-size:13px;color:var(--blue-700);margin-bottom:2px}
+.empty{padding:36px 18px;text-align:center;color:var(--text-3);background:#fff;border:1px dashed var(--border-strong);border-radius:var(--r-md)}
+.note{font-size:12.5px;color:var(--text-3);margin:20px 0 48px}
+@media (max-width:640px){
+  .gnb .wrap{gap:10px}
+  .gnb .crumb{display:none}
+  .logo{flex:1}
+  .head{padding:28px 0 14px}
+  .head h1{font-size:24px}
+  .tools .btn{width:100%;text-align:center}
+  .post summary,.post .row{padding:12px 14px}
+  .pop{width:100%;max-height:88vh;margin:auto 0 0;border-radius:14px 14px 0 0}
+  .pop .phead{padding:16px 16px 10px}
+  .pop .body{padding:14px 16px 16px}
+  .pop .answer{margin:0 16px 16px}
+  .post .body{padding:0 14px 14px}
+  .post .answer{margin:0 14px 14px}
+}
+</style>
+</head>
+<body>
+<header class="gnb">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="data/icon.svg" width="28" height="28" alt="" style="flex:none">사업나침반</a>
+    <span class="crumb"><a href="index.html">홈</a> › 게시판</span>
+    <a class="btn" href="https://app.biznachim.kr">로그인·가입</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <h1>게시판</h1>
+    <p class="lead">기업지원정보·지원사업 활용사례·서비스 개선의견을 나누는 곳입니다. 회원 글은 운영자가 확인한 뒤 공개되고, 게시자 별칭은 첫 글자만 보입니다.</p>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="tools">
+    <div class="chips" id="chips" role="group" aria-label="구분"></div>
+    <a class="btn" href="https://app.biznachim.kr/board">로그인하고 글쓰기</a>
+  </div>
+  <div id="list">
+<details class="post" id="post-ef5ef4f7-e6a6-520d-b433-a4419ed16901"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 중소ㆍ중견기업 재생에너지 사용 컨설팅 참여기업 상시 모집 공고</span><span class="meta">운영자 · 2026-11-13</span></summary><div class="body">기후에너지환경부가 중소·중견기업을 대상으로 현장진단과 이행전략 수립 등 재생에너지 사용 컨설팅을 전액 무료로 지원합니다.
+
+규모: 현장진단 65건, 이행전략 15건
+기간: ’26. 11. 2. ~ 선착순 마감 시
+대상: 중소기업 및 중견기업
+신청: 이메일 또는 지원센터 홈페이지 온라인 접수
+지원: 현장진단 및 이행전략 컨설팅 전액 무료
+
+· 2021년부터 2025년까지 기존 컨설팅 지원 사업에 참여했던 기업은 지원 대상에서 제외됩니다.
+· 공급망의 재생에너지 사용 요구가 있는 기업은 선정 시 우대받을 수 있습니다.
+
+신청 마감일: 상시 접수 (원문에서 확인)
+
+출처: 기후에너지환경부 · 2026-11-06 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127696" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127696</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-b1f9e661-ac92-5702-8096-f5d8a19d4e66"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 소상공인 법률ㆍ노무 현장 상담 지원사업 모집 공고</span><span class="meta">운영자 · 2026-11-13</span></summary><div class="body">전국 소상공인을 대상으로 전문가가 사업장으로 직접 찾아가는 무료 1:1 맞춤형 법률·노무 현장 상담을 지원합니다.
+
+기간: 예산 소진시까지
+대상: 전국 소상공인
+신청: 이메일 접수
+지원: 전문가 방문 1:1 맞춤형 무료 상담
+
+· 노무 부문은 근로계약서 작성, 최저임금, 퇴직금, 인사 제도 점검을 상담합니다.
+· 법률 부문은 상가임대차 분쟁, 불공정 거래, 계약서 검토 등을 자문합니다.
+
+출처: 중소벤처기업부 · 2026-11-12 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127845" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127845</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-e78c0d16-18dc-5ba5-844f-1268b92d9584"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 2차 권역별 선도서점 육성 사업 컨설팅(경영ㆍ마케팅ㆍ디지털) 참여서점 추가 모집 공고</span><span class="meta">운영자 · 2026-11-13</span></summary><div class="body">문화체육관광부가 정상 영업 중인 오프라인 매장 운영 지역서점을 대상으로 선도서점 육성 사업 컨설팅 참여서점을 추가 모집합니다. 선도서점 아카데미 교육과정과 심화 컨설팅을 지원합니다.
+
+기간: 지원분야별 상이
+대상: 정상 영업 중인 오프라인 매장 운영 지역서점
+신청: 구글폼 및 서점 ON 온라인 접수
+지원: 선도서점 아카데미 및 심화 컨설팅
+
+· 출판문화산업 진흥법상 지역서점 요건과 e나라도움 사용 가능 조건을 모두 충족해야 합니다.
+· 아카데미는 디지털 전환, 브랜드 마케팅, 생성형 AI 실무 교육 등으로 구성됩니다.
+
+출처: 문화체육관광부 · 2026-11-12 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127808" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127808</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-58f5c18c-5080-5bed-99e7-728de153a96b"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 4차 해양수산부 혁신제품 지정 시행 공고</span><span class="meta">운영자 · 2026-11-13</span></summary><div class="body">해양수산부가 해양수산 R&amp;D 완료기술을 사업화한 제품 등을 대상으로 공공조달 수의계약이 가능한 혁신제품 지정을 모집합니다.
+
+기간: 2026.11.10 ~ 2026.12.11 15:00
+대상: 해양수산 R&amp;D 완료기술 사업화 중소기업 등
+신청: 바다봄 시스템 전산접수(나라장터 식별번호 필요)
+지원: 혁신제품 지정 및 수의계약 가능 지원
+
+· 신규지정 외에도 기존 혁신제품의 지정기간 연장(총 3년 범위 내) 및 규격추가·변경 신청을 함께 받습니다.
+· 혁신제품 평가 소요비용은 정부지원으로 전액 무료입니다.
+
+신청 마감일: 2026-12-11
+
+출처: 해양수산부 · 2026-11-13 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127888" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127888</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-d735d9de-540b-50e1-b1a5-fd3b76a9089f"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 해외 온라인 플랫폼 판로지원 사업 참여 소상공인 통합 공고</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">중소벤처기업부가 소상공인의 온라인 수출 활성화를 위해 2026년 해외 온라인 플랫폼 입점·활용·물류지원 사업에 참여할 소상공인을 모집합니다.
+
+규모: 총 1,500개사 내외
+기간: 2026. 11. 3 ~ 11. 20 18:00
+대상: 정상 영업 중인 소상공인
+신청: 소상공인24 온라인 접수
+지원: 입점·활용·물류 국비 지원
+
+· 입점 최대 4,500천원, 활용 최대 3,500천원, 물류 최대 6,000천원의 국비를 지원합니다.
+· 공급가액 기준 20%의 자부담금과 부가가치세 10%를 소상공인이 부담합니다.
+
+신청 마감일: 2026-11-20
+
+출처: 중소벤처기업부 · 2026-11-04 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127664" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127664</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-087688f7-8aa2-5d6b-9694-844abb6c6057"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 ICT 중소기업 글로벌 진출 지원사업 추가 공고</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">국내 ICT 중소기업의 해외시장 진출을 위해 해외규격인증 획득 비용과 컨설팅을 지원합니다. 과제당 최대 14백만원 이내의 정부지원금을 지원합니다.
+
+규모: 기업당 1개 제품 최대 14백만원 이내
+기간: 2026.11.09 ~ 2026.11.20 18시
+대상: 중소기업기본법 제2조에 따른 중소기업
+신청: 이메일 접수(swhan@rapa.or.kr)
+지원: 인증비용 70% 이내(최대 14백만원) 및 컨설팅
+
+· 국내 중소기업 개발 제품만 신청 가능하며 단순 수입제품이나 KC인증 비용은 지원에서 제외됩니다.
+· 정부지원금은 해외인증 획득 완료 및 완료보고서 확인 후 1회 교부됩니다.
+
+신청 마감일: 2026-11-20
+
+출처: 과학기술정보통신부 · 2026-11-10 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127785" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127785</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-cbca801f-a7d1-544a-a5ad-b41e02493bfa"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 K-BUSINESS DAY(글로벌 해외바이어 초청 수출상담회) 참여기업 모집 공고</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">국내 수출중소기업을 대상으로 해외바이어 1:1 대면 상담, 통역, 샘플발송비 등을 무료로 지원하는 &#x27;K-BUSINESS DAY 2026&#x27; 참여기업을 모집합니다.
+
+규모: 국내 수출중소기업 500개사
+기간: 2026. 11. 4 ~ 11. 17
+대상: 국내 수출중소기업
+신청: 중소기업 해외전시포탈 온라인 신청
+지원: 1:1 매칭 상담, 통역, 샘플발송비 등
+
+· 지원품목은 유망 소비재(뷰티, 패션, 라이프, 푸드)이며 참가비는 전액 무료입니다.
+· 매칭 바이어 대상 샘플발송비(100만원 한도)와 인플루언서 현장 인터뷰를 지원합니다.
+
+신청 마감일: 2026-11-17
+
+출처: 중소벤처기업부 · 2026-11-06 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127713" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127713</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-35908c70-9d78-5ff6-a2e5-04f7f3c194e7"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 스마트 플래그십 스토어 (소담상회 with LOTTE ON) 모집 공고</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">중소벤처기업부와 한국중소벤처기업유통원이 소상공인을 대상으로 코엑스 내 오프라인 전시·판매 및 유통사 MD 컨설팅 등을 지원합니다.
+
+기간: 2026.11.02 ~ 2026.11.16
+대상: 소상공인기본법 제2조에 따른 소상공인
+신청: 판판대로 온라인 신청
+지원: 제품 전시·판매 및 MD 컨설팅 지원
+
+· 서울 코엑스 행사장에서 B2C 판매 부스와 제품 홍보 기회를 제공합니다.
+· 대형 유통사 MD와의 1:1 판로지원 컨설팅 및 AI 활용 체험 프로그램을 운영합니다.
+
+신청 마감일: 2026-11-16
+
+출처: 중소벤처기업부 · 2026-11-05 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127674" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127674</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-d9b97178-ae9d-5191-94aa-36f3956dbad8"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 5차 방산 중소기업 컨설팅 지원사업 지원대상기업 모집 공고</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">방위사업청이 기술력을 갖춘 방산 중소기업과 진출 희망 중소기업에 기술·경영 등 맞춤형 전문가 컨설팅 비용의 75% 이내를 지원합니다.
+
+규모: 잔여 예산(0.9억원) 범위 내
+기간: 2026.11.02 ~ 2026.11.13 17:00
+대상: 방산 또는 진출 희망 기술력 보유 중소기업
+신청: 이메일(consul@kdia.or.kr) 접수
+지원: 전문가 컨설팅 비용의 75% 이내
+
+· 기업당 1개 과제 한도는 3천만 원이며 기술분야는 5천만 원까지입니다.
+· 기술·경영·법률·행정 분야를 대상으로 10일 이내 컨설팅을 수행합니다.
+
+신청 마감일: 2026-11-13
+
+출처: 방위사업청 · 2026-11-03 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127629" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127629</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-50e6ca20-08d5-5084-a5ce-ebbec67b11da"><summary><span class="tag info">기업지원정보</span><span class="title">2026년 11차 정보보호 인증제품 조달청 벤처나라 추천기업 모집 공고(11월 추천)</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">과학기술정보통신부와 한국인터넷진흥원이 정보보호 인증제품을 보유한 창업·벤처·청년·사회적기업을 대상으로 조달청 벤처나라 등록을 위한 기관추천 신청을 받습니다.
+
+기간: 2026.11.02 ~ 2026.11.20 18:00
+대상: 정보보호 인증 취득 창업·벤처·청년·사회적기업
+신청: 이메일 접수(audshdud24@kisa.or.kr)
+지원: 조달청 벤처나라 등록을 위한 기관추천 지원
+
+· 보유한 정보보호 인증 유효기간이 지정심사 월 첫날 기준 6개월 이상 남아 있어야 합니다.
+· 추천 효력은 추천일로부터 6개월간 유효하며 별도로 벤처나라 온라인 신청을 마쳐야 합니다.
+
+신청 마감일: 2026-11-20
+
+출처: 과학기술정보통신부 · 2026-11-03 게시
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127626" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127626</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-45031678-f93f-5b25-8b43-08914879b447"><summary><span class="tag info">기업지원정보</span><span class="title">중기부, 티메프 피해 중소기업 특별만기연장 시행</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">중소벤처기업부가 2024년 티메프 피해 긴급경영안정자금을 지원받은 중소기업을 대상으로 원금상환 거치기간을 1년 연장하는 특별만기연장을 시행합니다.
+
+기간: 2026.11.04 ~ 2027.02.26
+대상: &#x27;24년 티메프 피해 긴급경영안정자금 지원 중소기업
+신청: 중소벤처기업진흥공단 누리집 온라인 접수
+지원: 원금상환 거치기간 1년 연장
+
+· 중소기업정책자금 대출에 대해 30일 이내 단기연체가 발생한 기업도 지원 대상에 포함됩니다.
+· 최소 원금 상환조건을 적용하지 않으며 만기연장에 따른 가산금리를 부과하지 않습니다.
+
+신청 마감일: 2027-02-26
+
+출처: 중소벤처기업부 보도자료 · 2026-11-04
+원문: <a href="https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=86&amp;bcIdx=1072285" target="_blank" rel="noopener noreferrer nofollow">https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=86&amp;bcIdx=1072285</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-7f508c18-7a48-56cb-9202-99acada529e8"><summary><span class="tag info">기업지원정보</span><span class="title">1인 창조기업·중장년 기술창업센터 신규 주관기관 모집</span><span class="meta">운영자 · 2026-11-10</span></summary><div class="body">1인 창조기업 지원센터와 중장년 기술창업센터를 운영할 신규 주관기관을 모집합니다. 선정된 기관에는 센터 운영비와 사업화 지원금 등을 지원합니다.
+
+규모: 총 6개 센터 이내
+기간: 2026.11.03 ~ 2026.11.13
+대상: 인프라를 갖춘 지자체, 대학, 공공기관, 비영리법인 등
+신청: 관할 지방중소벤처기업청 담당자 이메일 접수
+지원: 총사업비 80% 이내, 최대 130백만원 지원
+
+· 센터 미지정 지역 소재 법인 및 단체만 신청 가능하며 2개 단체 컨소시엄 구성도 가능합니다.
+· 선정된 주관기관은 2027년 4월까지 창업보육센터 사업자로 지정받아야 합니다.
+
+신청 마감일: 2026-11-13
+
+출처: 중소벤처기업부
+원문: <a href="https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127739" target="_blank" rel="noopener noreferrer nofollow">https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127739</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+<details class="post" id="post-90da2c8d-f220-5b25-a758-ae7c76de1d3e"><summary><span class="tag info">기업지원정보</span><span class="title">9.3만 명의 도전, 1만 명의 새로운 출발 「2차 모두의 창업」 본격 출범</span><span class="meta">운영자 · 2026-11-03</span></summary><div class="body">중소벤처기업부가 &#x27;2차 모두의 창업&#x27; 출범식을 개최하고 선발된 도전자 1만 명의 창업 지원 프로그램을 본격 가동합니다.
+
+규모: 1만 명
+대상: 2차 모두의 창업 선발 도전자
+지원: 창업활동자금, 전문 멘토링, AI 솔루션
+
+· 이번 2차 사업에는 총 9만 3천여 명이 지원했습니다.
+· 전국 17개 시·도에서 오리엔테이션과 멘토 네트워킹을 진행했습니다.
+
+출처: 중소벤처기업부 보도자료 · 2026-10-20
+원문: <a href="https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=86&amp;bcIdx=1071860" target="_blank" rel="noopener noreferrer nofollow">https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=86&amp;bcIdx=1071860</a>
+
+요약은 원문을 바탕으로 운영자가 확인했습니다. 신청 조건과 일정은 반드시 원문에서 확인하세요.</div></details>
+</div>
+  <p class="note">오류·장애는 로그인 후 프로그램 안의 [문제 신고]를 이용해 주세요. <span id="updated"></span></p>
+</main>
+<!-- 팝업은 main 밖에 둔다: 글 미리 그리기(public_seo.prerender_board)가 목록~안내문 사이를 통째로 바꾼다 -->
+<dialog class="pop" id="pop" aria-labelledby="popTitle">
+  <div class="phead"><div><span class="tag" id="popTag"></span><h2 id="popTitle"></h2><div class="meta" id="popMeta"></div></div>
+    <button type="button" class="x" id="popClose" aria-label="닫기">✕</button></div>
+  <div class="body" id="popBody"></div>
+  <div class="answer" id="popAnswer" hidden></div>
+</dialog>
+
+<script src="data/board.js"></script>
+<script>
+(function () {
+  // 글은 textContent로만 넣는다 (회원이 쓴 글자가 HTML로 해석되지 않게). 주소 링크는 운영자 글과 공식 주소만 받은 기업지원정보(links)에서만 만든다.
+  var data = window.SITE_BOARD || {categories: {info: '기업지원정보', case: '지원사업활용사례', improve: '개선의견', free: '자유의견'}, items: []};
+  var list = document.getElementById('list'), chips = document.getElementById('chips');
+  var current = '', shown = 0, PAGE = 20;
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function fillBody(box, text, links) {
+    if (!links) { box.textContent = text; return; }
+    text.split(/(https?:\/\/[^\s<>"']+)/).forEach(function (part, i) {
+      if (i % 2) {
+        var a = el('a', '', part);
+        a.href = part; a.target = '_blank'; a.rel = 'noopener noreferrer nofollow';
+        box.appendChild(a);
+      } else if (part) {
+        box.appendChild(document.createTextNode(part));
+      }
+    });
+  }
+
+  function metaText(item) {
+    return item.author + ' · ' + item.date + (item.answer ? ' · 답변 있음' : '');
+  }
+
+  // 목록에는 구분·제목·게시자만 두고, 누르면 팝업(dialog)으로 본문을 연다.
+  function card(item) {
+    var d = el('article', 'post'), b = el('button', 'row');
+    if (item.id) d.id = 'post-' + item.id;
+    b.type = 'button';
+    b.setAttribute('aria-haspopup', 'dialog');
+    b.appendChild(el('span', 'tag ' + item.category, item.category_label));
+    b.appendChild(el('span', 'title', item.title));
+    b.appendChild(el('span', 'meta', metaText(item)));
+    b.addEventListener('click', function () { openPost(item, true); });
+    d.appendChild(b);
+    return d;
+  }
+
+  var pop = document.getElementById('pop'), opener = null;
+
+  function mark(id) {
+    Array.prototype.forEach.call(list.querySelectorAll('.post'), function (o) {
+      o.classList.toggle('focus', !!id && o.id === 'post-' + id);
+    });
+  }
+
+  function openPost(item, fromClick) {
+    var tag = document.getElementById('popTag');
+    tag.className = 'tag ' + item.category; tag.textContent = item.category_label;
+    document.getElementById('popTitle').textContent = item.title;
+    document.getElementById('popMeta').textContent = metaText(item);
+    var body = document.getElementById('popBody');
+    body.textContent = '';
+    fillBody(body, item.body, item.links);
+    var ans = document.getElementById('popAnswer');
+    ans.textContent = '';
+    ans.hidden = !item.answer;
+    if (item.answer) {
+      ans.appendChild(el('b', '', '운영자 답변' + (item.answer_date ? ' · ' + item.answer_date : '')));
+      ans.appendChild(document.createTextNode(item.answer));
+    }
+    opener = fromClick ? document.activeElement : null;
+    mark(item.id);
+    if (item.id) history.replaceState(null, '', '#post-' + item.id);
+    if (!pop.open) { if (pop.showModal) pop.showModal(); else pop.setAttribute('open', ''); }
+    document.body.classList.add('popped');
+    pop.scrollTop = 0;
+    document.getElementById('popClose').focus();
+  }
+
+  // 닫기는 close 이벤트에 맡기지 않고 직접 마무리한다 (이벤트가 늦거나 오지 않는 브라우저가 있다). Esc도 여기로 온다.
+  function closePost() {
+    if (pop.open) { if (pop.close) pop.close(); else pop.removeAttribute('open'); }
+    onClosed();
+  }
+
+  // 닫으면 주소(#post-글번호)와 선택 표시를 지우고, 누른 글로 초점을 돌려준다.
+  function onClosed() {
+    if (!document.body.classList.contains('popped')) return;
+    document.body.classList.remove('popped');
+    mark('');
+    if (location.hash.indexOf('#post-') === 0) history.replaceState(null, '', location.pathname + location.search);
+    if (opener && opener.focus) opener.focus();
+    opener = null;
+  }
+  pop.addEventListener('close', onClosed);
+  pop.addEventListener('cancel', function (e) { e.preventDefault(); closePost(); });   // Esc
+  document.getElementById('popClose').addEventListener('click', closePost);
+  pop.addEventListener('click', function (e) { if (e.target === pop) closePost(); });   // 바깥(어두운 곳)을 누르면 닫힌다
+
+  function matches() {
+    return data.items.filter(function (i) {
+      if (current === 'news') return i.category === 'info' && i.author === '운영자';   // 공개 홈 주요 소식과 같은 조건
+      return !current || i.category === current;
+    });
+  }
+
+  function render(openId) {
+    list.textContent = '';
+    var items = matches();
+    if (!items.length) { list.appendChild(el('div', 'empty', '아직 글이 없습니다.')); return; }
+    // 글이 쌓여도 화면이 무겁지 않게 나눠 그린다. 열어야 할 글이 뒤에 있으면 거기까지 그린다.
+    if (openId) shown = Math.max(shown, items.findIndex(function (i) { return i.id === openId; }) + 1);
+    items.slice(0, shown).forEach(function (i) { list.appendChild(card(i)); });
+    if (items.length > shown) {
+      var more = el('button', 'more', '더 보기 (' + (items.length - shown) + '건 남음)');
+      more.type = 'button';
+      more.addEventListener('click', function () { shown += PAGE; render(); });
+      list.appendChild(more);
+    }
+  }
+
+  function setFilter(key, openId) {
+    current = key;
+    shown = PAGE;
+    Array.prototype.forEach.call(chips.children, function (c) {
+      c.setAttribute('aria-pressed', c.dataset.key === key ? 'true' : 'false');
+    });
+    render(openId);
+  }
+
+  function chip(key, label) {
+    var b = el('button', '', label);
+    b.type = 'button';
+    b.dataset.key = key;
+    b.addEventListener('click', function () { setFilter(key); });
+    chips.appendChild(b);
+  }
+
+  // 공개 홈 소식 카드에서 오면 #post-글번호, 전체 보기에서 오면 #news
+  function fromAddress() {
+    var hash = decodeURIComponent(location.hash.slice(1));
+    if (hash.indexOf('post-') === 0) {
+      var id = hash.slice(5), item = data.items.filter(function (i) { return i.id === id; })[0];
+      if (item) {
+        setFilter('', id);
+        var row = document.getElementById('post-' + id);
+        if (row) row.scrollIntoView({block: 'center'});
+        openPost(item, false);
+        return;
+      }
+    }
+    setFilter(hash === 'news' || data.categories[hash] ? hash : '');
+  }
+
+  chip('', '전체');
+  chip('news', '주요 소식');
+  Object.keys(data.categories).forEach(function (k) { chip(k, data.categories[k]); });
+  if (data.updated_at) document.getElementById('updated').textContent = '갱신 ' + data.updated_at.slice(0, 10);
+  window.addEventListener('hashchange', fromAddress);
+  fromAddress();
+})();
+</script>
+</body>
+</html>

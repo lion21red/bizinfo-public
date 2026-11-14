@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="data/icon_192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="data/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="data/icon_180.png">
+<title>정책자금 지원 안내 · 사업나침반</title>
+<meta name="description" content="정책자금은 대부분 갚아야 하는 돈(융자) 이에요. 대신 시중보다 금리가 낮거나, 담보 대신 보증서로 빌리거나, 이자 일부를 지자체가 대신 내 줍니다. 공고 280건을 6가지로 나눠 정리했어요.">
+<link rel="canonical" href="https://biznachim.kr/support-loan.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="사업나침반">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="정책자금 지원 안내 · 사업나침반">
+<meta property="og:description" content="정책자금은 대부분 갚아야 하는 돈(융자) 이에요. 대신 시중보다 금리가 낮거나, 담보 대신 보증서로 빌리거나, 이자 일부를 지자체가 대신 내 줍니다. 공고 280건을 6가지로 나눠 정리했어요.">
+<meta property="og:url" content="https://biznachim.kr/support-loan.html">
+<meta property="og:image" content="https://biznachim.kr/data/og_image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="사업나침반 — 지원사업 찾기부터 신청서 초안까지">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://biznachim.kr/#org","name":"사업나침반","url":"https://biznachim.kr/","logo":"https://biznachim.kr/data/icon_192.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"정책자금, 무엇을 받을 수 있나요?","headline":"정책자금, 무엇을 받을 수 있나요?","description":"정책자금은 대부분 갚아야 하는 돈(융자) 이에요. 대신 시중보다 금리가 낮거나, 담보 대신 보증서로 빌리거나, 이자 일부를 지자체가 대신 내 줍니다. 공고 280건을 6가지로 나눠 정리했어요.","url":"https://biznachim.kr/support-loan.html","inLanguage":"ko-KR","publisher":{"@id":"https://biznachim.kr/#org"},"isPartOf":{"@id":"https://biznachim.kr/#site"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://biznachim.kr/"},{"@type":"ListItem","position":2,"name":"지원 서비스 안내","item":"https://biznachim.kr/support_guide.html"},{"@type":"ListItem","position":3,"name":"정책자금","item":"https://biznachim.kr/support-loan.html"}]}</script>
+
+<style>
+/* 토큰: design.py / plan2026.html 과 같은 값. scripts/build_support_guide.py가 빈자리를 채워 docs/mockups/support_guide.html을 만든다 */
+:root{
+  --bg-page:#F8FAFC; --bg-surface:#FFFFFF; --bg-muted:#F1F5F9; --bg-accent:#EFF6FF;
+  --action:#0F172A; --text:#0F172A; --text-2:#475569; --text-3:#64748B; --text-accent:#2563EB;
+  --border:#E2E8F0; --border-strong:#CBD5E1; --blue-200:#BFDBFE; --ok-bg:#F0FDF4; --ok:#15803D;
+  --r-md:12px; --r-lg:16px;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg-page);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Malgun Gothic",sans-serif;
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mock-note{background:#FFFBEB;border-bottom:1px solid #FDE68A;color:#92400E;font-size:12.5px;text-align:center;padding:6px 16px}
+.gnb{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.gnb .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap}
+.logo i{width:28px;height:28px;border-radius:8px;background:var(--action);display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px}
+.gnb .crumb{flex:1;font-size:14px;color:var(--text-2)}
+.gnb .crumb a{text-decoration:none;color:var(--text-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:10px;font-weight:600;text-decoration:none;
+  background:var(--action);color:#fff;border:1px solid var(--action);padding:9px 16px;font-size:14px;white-space:nowrap}
+.btn.ghost{background:#fff;color:var(--text);border-color:var(--border-strong)}
+.tag{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 10px;background:var(--bg-muted);color:#334155;white-space:nowrap}
+
+.head{padding:48px 0 28px;background:linear-gradient(var(--bg-surface),var(--bg-page))}
+.asof{background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:var(--r-md);padding:10px 14px;font-size:13.5px;color:#1E3A8A;margin:0 0 24px}
+.asof a{color:var(--text-accent);font-weight:700}
+.eyebrow{font-size:13px;font-weight:600;color:var(--text-accent);margin:0 0 8px}
+h1{font-size:34px;line-height:1.25;letter-spacing:-.02em;margin:0 0 10px}
+h2{font-size:24px;letter-spacing:-.01em;margin:0 0 6px}
+.lead{color:var(--text-2);margin:0;max-width:720px}
+section{padding:36px 0}
+.sec-lead{color:var(--text-2);margin:0 0 20px;font-size:14.5px}
+
+/* 분류표 */
+.taxgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tx{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:18px;display:flex;flex-direction:column;gap:10px}
+.tx.hot{border-color:var(--text-accent);box-shadow:inset 0 0 0 1px var(--text-accent)}
+.tx header{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.tx h3{margin:0;font-size:16.5px}
+.tx .n{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.tx .n small{font-size:12.5px;color:var(--text-2);margin-left:1px}
+.tx p{margin:0;font-size:13.5px;color:var(--text-2)}
+.subs{display:flex;flex-wrap:wrap;gap:6px}
+.subs span{font-size:12.5px;background:var(--bg-muted);border-radius:999px;padding:3px 10px;color:#334155}
+.subs b{color:var(--text-3);font-weight:600;margin-left:2px;font-variant-numeric:tabular-nums}
+.tx footer{margin-top:auto;display:flex;gap:10px;flex-wrap:wrap;font-size:12.5px;color:var(--text-3);padding-top:8px;border-top:1px solid var(--border)}
+.tx footer a{margin-left:auto;font-weight:700;color:var(--text-accent);text-decoration:none}
+.tx footer em{margin-left:auto;font-style:normal}
+
+/* 컨설팅 */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 24px}
+.fact{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:14px 16px}
+.fact b{display:block;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.2}
+.fact span{font-size:13px;color:var(--text-2)}
+.toc{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.toc a{font-size:13px;font-weight:600;color:var(--text-2);text-decoration:none;border:1px solid var(--border);background:#fff;border-radius:999px;padding:5px 12px}
+.toc a:hover{border-color:var(--text-accent);color:var(--text-accent)}
+.cd{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin-bottom:14px}
+.cd header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.cd h3{margin:0;font-size:18px}
+.cd .desc{margin:6px 0 16px;color:var(--text-2)}
+.cols{display:grid;grid-template-columns:1fr 1.15fr;gap:24px}
+.cd h4{margin:0 0 8px;font-size:13px;color:var(--text-3);font-weight:700}
+.cd ul{margin:0;padding-left:18px}
+.cd li{margin:2px 0}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px}
+dt{color:var(--text-3);white-space:nowrap}
+dd{margin:0}
+dd small{color:var(--text-3);font-size:12px;margin-left:4px}
+.ex{margin-top:16px;padding-top:14px;border-top:1px solid var(--border)}
+.ex ul{list-style:none;padding:0}
+.ex li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14px}
+.ex li a{text-decoration:none}
+.ex li a:hover{color:var(--text-accent);text-decoration:underline}
+.ex li span{color:var(--text-3);font-size:12.5px;white-space:nowrap}
+.tip{background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:var(--r-md);padding:16px 18px;color:#1E3A8A;font-size:14px;margin:0 0 20px}
+.tip b{display:block;margin-bottom:4px}
+.tip ul{margin:0;padding-left:18px}
+.cta{background:var(--action);color:#fff;border-radius:var(--r-lg);padding:28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.cta p{margin:0;color:#CBD5E1;font-size:14px}
+.cta h3{margin:0 0 4px;font-size:19px}
+.cta .btn{background:#fff;color:var(--action);border-color:#fff}
+section.alt{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.jump{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px;font-size:13px;color:var(--text-3)}
+.jump a{font-weight:700;color:var(--text-accent);text-decoration:none;background:var(--bg-accent);border:1px solid var(--blue-200);border-radius:999px;padding:4px 12px}
+.basis{font-size:12.5px;color:var(--text-3);line-height:1.8;margin-top:28px}
+footer.site{border-top:1px solid var(--border);background:#fff;padding:24px 0 32px;font-size:12.5px;color:var(--text-3);line-height:1.8}
+
+@media (max-width:900px){.taxgrid{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr;gap:16px}}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  .gnb .wrap{height:56px;gap:12px}
+  .gnb .crumb{display:none}
+  .gnb .logo{margin-right:auto}
+  .gnb .btn{padding:7px 12px;font-size:13px}
+  .head{padding:28px 0 16px}
+  h1{font-size:25px} h2{font-size:20px}
+  .taxgrid{grid-template-columns:1fr}
+  .cd{padding:16px}
+  .ex li{flex-direction:column;gap:0}
+  dl{grid-template-columns:1fr;gap:0}
+  dt{margin-top:6px}
+}
+</style>
+</head>
+<body>
+
+<header class="gnb">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="data/icon.svg" width="28" height="28" alt="" style="flex:none">사업나침반</a>
+    <span class="crumb"><a href="index.html">홈</a> › <a href="support_guide.html">지원 서비스 안내</a> › 정책자금</span>
+    <a class="btn" href="https://app.biznachim.kr">로그인·가입</a>
+  </div>
+</header>
+
+<div class="head">
+  <div class="wrap">
+    <p class="asof"><b>2026년 10월 24일 기준 분석</b> · 기업마당에서 2026년 7월부터 10월 24일까지 모은 공고 2,189건을 바탕으로 정리했어요. 지원 내용·금액·조건은 공고마다, 해마다 달라질 수 있으니 신청 전에 반드시 <a href="https://www.bizinfo.go.kr" target="_blank" rel="noopener">기업마당</a>과 공고 원문을 확인해 주세요.</p>
+    <p class="eyebrow">지원 서비스 안내 · 정책자금</p>
+    <h1>정책자금, 무엇을 받을 수 있나요?</h1>
+    <p class="lead">정책자금은 대부분 <b>갚아야 하는 돈(융자)</b>이에요. 대신 시중보다 금리가 낮거나, 담보 대신 보증서로 빌리거나, 이자 일부를 지자체가 대신 내 줍니다. 공고 280건을 6가지로 나눠 정리했어요.</p>
+  </div>
+</div>
+
+<main>
+<section id="loan">
+  <div class="wrap">
+
+    <div class="facts"><div class="fact"><b>73%</b><span>융자(대출)로 지원</span></div><div class="fact"><b>42%</b><span>보증서 발급과 함께 지원</span></div><div class="fact"><b>82%</b><span>시·도가 여는 공고</span></div><div class="fact"><b>57%</b><span>방문·우편으로 접수</span></div></div>
+    <div class="tip"><b>신청 전에 알아두면 좋은 점</b><ul><li>시·군 육성자금은 정해진 은행·신용보증재단을 거쳐 신청하는 경우가 많고, 약 57%는 방문·우편 접수예요.</li><li>약 49%는 국세·지방세 체납이 있으면 신청할 수 없다고 적혀 있어요. 신청 전에 납세 상태를 확인하세요.</li><li>공고 하나에 경영안정·시설·창업자금처럼 여러 자금이 함께 들어 있는 경우가 많아요. 우리 회사에 맞는 자금 이름을 먼저 찾으세요.</li><li>이자 지원과 보증 수수료 지원은 &#x27;경영비용 절감&#x27; 안내에도 함께 정리돼 있어요.</li></ul></div>
+    <div class="toc"><a href="#loan-0">이자 지원 (이차보전)</a><a href="#loan-1">경영안정(운전)자금 융자</a><a href="#loan-2">특례보증·신용보증</a><a href="#loan-3">시설자금 융자</a><a href="#loan-4">긴급·재해·위기 대응 자금</a><a href="#loan-5">창업기업 전용 자금</a></div>
+    <article class="cd" id="loan-0">
+  <header><h3>이자 지원 (이차보전)</h3><span class="tag">관련 공고 141건</span></header>
+  <p class="desc">은행에서 빌린 돈의 이자 일부를 지자체가 대신 냅니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>대출 이자 중 연 1.5~5%p 지원</li><li>보통 1~2년, 길면 4년</li><li>벤처·우수기업은 더 높게 지원하기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 88%<small> (자부담이 적힌 공고 25건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>인천광역시 · 경기도 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>이미 대출이 있거나 받을 예정인 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업육성자금 이차보전금 지원 · 소상공인 융자금 이차보전 지원 · 지역산업위기대응 이차보전 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-1">
+  <header><h3>경영안정(운전)자금 융자</h3><span class="tag">관련 공고 136건</span></header>
+  <p class="desc">인건비·원자재비 같은 운영 자금을 낮은 금리로 빌려줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>운영 자금 대출 (업체당 수천만~수억원 한도)</li><li>시중보다 낮은 금리, 또는 이자 일부 지원</li><li>보통 1~2년 거치 후 나눠 갚기</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 74%<small> (자부담이 적힌 공고 19건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 전남광주통합특별시 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>일시적으로 자금이 부족한 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>중소기업육성자금 융자지원 · 소상공인 경영안정자금 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-2">
+  <header><h3>특례보증·신용보증</h3><span class="tag">관련 공고 67건</span></header>
+  <p class="desc">담보가 없어도 보증서를 발급해 은행 대출을 받을 수 있게 합니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>신용보증재단 보증서로 은행 대출</li><li>일반 보증보다 심사 기준 완화 (특례보증)</li><li>보증 수수료를 함께 지원하는 경우가 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 86%<small> (자부담이 적힌 공고 22건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경기도 · 인천광역시 · 강원특별자치도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>담보가 부족한 소상공인·창업기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>소상공인 특례보증 지원사업 · 중소기업 특례보증 지원 · 중소기업 신용보증수수료 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-3">
+  <header><h3>시설자금 융자</h3><span class="tag">관련 공고 53건</span></header>
+  <p class="desc">공장·설비·사업장 마련처럼 오래 쓰는 시설 투자 자금을 빌려줍니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>기계·설비 구입, 공장 확보 자금 대출</li><li>상환 기간이 길어요 (최대 10년 안팎)</li><li>에너지 절약 설비 등 목적별 자금도 있어요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 33%<small> (자부담이 적힌 공고 6건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>전남광주통합특별시 · 강원특별자치도 · 경상북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>설비를 늘리거나 사업장을 옮기려는 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>구조고도화자금 지원 · 산업재해예방시설자금 융자금 지원사업 · 중소유통업 시설투자 및 운전자금 융자지원<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-4">
+  <header><h3>긴급·재해·위기 대응 자금</h3><span class="tag">관련 공고 27건</span></header>
+  <p class="desc">경기 침체·재해·통상 위기로 어려워진 기업에 특별 자금을 풉니다.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>우대 금리·한도의 특별 자금</li><li>재해·위기 피해 기업 우선 지원</li><li>재기·대환 대출이 포함되기도 해요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>공고마다 다름</dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 인천광역시 · 충청북도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>매출이 갑자기 줄었거나 피해를 입은 기업</dd>
+      <dt>이런 사업이 있어요</dt><dd>긴급 운전자금 융자 지원 · 산업재해예방 우수기업 인증사업 · 보증기업 위기극복 패키지 지원사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article><article class="cd" id="loan-5">
+  <header><h3>창업기업 전용 자금</h3><span class="tag">관련 공고 23건</span></header>
+  <p class="desc">업력이 짧은 창업기업만 신청할 수 있는 자금이에요.</p>
+  <div class="cols">
+    <div><h4>실제로 받는 것</h4><ul><li>창업 초기 운영·시설 자금 대출</li><li>청년 창업자 우대</li><li>특례보증과 묶어 주는 경우가 많아요</li></ul></div>
+    <div><h4>한눈에</h4><dl>
+      <dt>비용 부담</dt><dd>자부담 없음 71%<small> (자부담이 적힌 공고 7건 중)</small></dd>
+      <dt>흔한 지원 규모</dt><dd>공고마다 다름</dd>
+      <dt>주로 여는 곳</dt><dd>경상남도 · 인천광역시 · 경기도</dd>
+      <dt>이런 기업에 맞아요</dt><dd>창업 7년 이내 기업, 청년 창업자</dd>
+      <dt>이런 사업이 있어요</dt><dd>창업기업자금 동행지원 · 창업기업 신용보증수수료 지원사업 · 청년창업자금 무이자 대출지원 사업<small> (공고명에서 연도·지역을 뗀 이름)</small></dd>
+    </dl></div>
+  </div>
+</article>
+    <div class="cta">
+      <div><h3>우리 회사에 맞는 정책자금 지원만 골라 볼까요?</h3><p>지금 접수 중인 공고는 로그인하면 매일 새로 확인할 수 있어요. 회사 정보를 넣으면 신청 자격이 되는 공고를 찾아 드리고, 첨부파일까지 분석해 보여 드려요.</p></div>
+      <a class="btn" href="https://app.biznachim.kr">무료로 시작하기</a>
+    </div>
+  </div>
+</section>
+<section><div class="wrap"><p class="basis" style="margin-top:0">다른 유형은 <a href="support_guide.html#types">지원 서비스 분류표</a>에서 볼 수 있습니다.</p></div></section>
+<section><div class="wrap"><p class="basis" style="margin-top:0">이 안내는 기업마당에 올라온 공고를 바탕으로 정리했습니다. 지원 금액·횟수·자부담은 공고마다 다르니 신청 전에 반드시 원문 공고를 확인하세요. '흔한 지원 규모'는 그 유형 낱말이 들어간 지원 내용 줄에서 기업당 금액을 찾아 낸 중간값입니다. 출처: 기업마당(bizinfo.go.kr).</p></div></section>
+</main>
+
+<footer class="site"><div class="wrap">사업나침반 · 공고 원문 출처: 기업마당(bizinfo.go.kr)</div></footer>
+</body>
+</html>
